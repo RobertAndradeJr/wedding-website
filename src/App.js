@@ -1,28 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import { Home } from "./Home";
+
+function Form(props) {
+  const onChange = props.onChange;
+  const handleSubmit = props.handleSubmit;
+  return (
+    <form>
+      <label>
+        Password:
+        <input type="text" onChange={onChange} />
+        <input type="submit" onClick={handleSubmit} />
+      </label>
+    </form>
+  );
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Wedding Time</h1>
-        <img src="https://scontent-lga3-1.cdninstagram.com/vp/4c559794eb62cafcebe7f883b173a04c/5D65B56D/t51.2885-15/sh0.08/e35/s640x640/41203721_691517357888913_5430100155676178400_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com" className="App-logo" alt="logo" />
-        <p>
-          Let's have a great wedding
-        </p>
-        
-        <a
-          className="App-link"
-          href="https://www.instagram.com/me_hoy_minoyyy/?hl=en"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ILYSM
-        </a>
-      </header>
-    </div>
-  );
+  const correctPassword = "butt";
+  const [input, setInput] = useState('');
+  const [message, setMessage] = useState('')
+  const [password, setPassword] = useState(false);
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (input === correctPassword) {
+      setPassword(true);
+    } else {
+      setMessage('Sorry! Only COOL people can come to our wedding');
+      setInput('')
+    }
+  };
+  const onChange = (e)=> setInput(e.target.value)
+
+  return <div className="App">{password ? <Home /> : <div><h1>{message}</h1><Form handleSubmit={handleSubmit} onChange={onChange} /></div>}</div>;
 }
 
 export default App;
