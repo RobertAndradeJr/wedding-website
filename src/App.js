@@ -17,7 +17,7 @@ function Form(props) {
 }
 
 function App() {
-  const correctPassword = "butt";
+  const correctPassword = "wedding";
   const [input, setInput] = useState('');
   const [message, setMessage] = useState('')
   const [password, setPassword] = useState(false);
