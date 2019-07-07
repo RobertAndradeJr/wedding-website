@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import "./App.css";
-import { Home } from "./Home";
+import React, { useState } from 'react';
+import './App.css';
+import { Home } from './Home';
 
 function Form(props) {
-  const onChange = props.onChange;
-  const handleSubmit = props.handleSubmit;
+  const { onChange } = props;
+  const { handleSubmit } = props;
   return (
     <form>
       <label>
@@ -17,22 +17,31 @@ function Form(props) {
 }
 
 function App() {
-  const correctPassword = "wedding";
+  const correctPassword = 'wedding';
   const [input, setInput] = useState('');
-  const [message, setMessage] = useState('')
+  const [message, setMessage] = useState('');
   const [password, setPassword] = useState(false);
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (input === correctPassword) {
       setPassword(true);
     } else {
       setMessage('Sorry! Only COOL people can come to our wedding');
-      setInput('')
+      setInput('');
     }
   };
-  const onChange = (e)=> setInput(e.target.value)
+  const onChange = e => setInput(e.target.value);
 
-  return <div className="App">{password ? <Home /> : <div><h1>{message}</h1><Form handleSubmit={handleSubmit} onChange={onChange} /></div>}</div>;
+  return (
+    <div className="App">
+      {password ? <Home /> : (
+        <div>
+          <h1>{message}</h1>
+          <Form handleSubmit={handleSubmit} onChange={onChange} />
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default App;
