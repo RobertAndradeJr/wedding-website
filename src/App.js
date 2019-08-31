@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
-import './App.css'
-import { Home } from './Home'
+import './App.css';
+import Home from './Home';
+
+const formTitle = 'Password:'
 
 function Form(props) {
-  const { onChange } = props
-  const { handleSubmit } = props
+  const { onChange, handleSubmit } = props
   return (
     <form>
-      <label>
-        Password:
-        <input type="text" onChange={onChange} />
-        <input type="submit" onClick={handleSubmit} />
-      </label>
+      {formTitle}
+      <input type="text" onChange={onChange} />
+      <input type="submit" onClick={handleSubmit} />
     </form>
   )
 }
@@ -21,6 +20,13 @@ function App() {
   const [input, setInput] = useState('')
   const [message, setMessage] = useState('')
   const [password, setPassword] = useState(false)
+  const checkLocalHost = () => {
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      return true // eslint-disable-line no-console
+    }
+    return false
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (input === correctPassword) {
@@ -34,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      {password ? <Home /> : (
+      { (checkLocalHost() || password) ? <Home /> : (
         <div>
           <h1>{message}</h1>
           <Form handleSubmit={handleSubmit} onChange={onChange} />
