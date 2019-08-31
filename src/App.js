@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import './App.css';
-import { Home } from './Home';
+import React, { useState } from 'react'
+import './App.css'
+import { Home } from './Home'
 
 function Form(props) {
-  const { onChange } = props;
-  const { handleSubmit } = props;
+  const { onChange } = props
+  const { handleSubmit } = props
   return (
     <form>
       <label>
@@ -13,24 +13,24 @@ function Form(props) {
         <input type="submit" onClick={handleSubmit} />
       </label>
     </form>
-  );
+  )
 }
 
 function App() {
-  const correctPassword = 'wedding';
-  const [input, setInput] = useState('');
-  const [message, setMessage] = useState('');
-  const [password, setPassword] = useState(false);
+  const correctPassword = 'wedding'
+  const [input, setInput] = useState('')
+  const [message, setMessage] = useState('')
+  const [password, setPassword] = useState(false)
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (input === correctPassword) {
-      setPassword(true);
+      setPassword(true)
     } else {
-      setMessage('Sorry! Only COOL people can come to our wedding');
-      setInput('');
+      setMessage('Sorry! Only COOL people can come to our wedding')
+      setInput('')
     }
-  };
-  const onChange = e => setInput(e.target.value);
+  }
+  const onChange = e => setInput(e.target.value)
 
   return (
     <div className="App">
@@ -41,7 +41,7 @@ function App() {
         </div>
       )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
