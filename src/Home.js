@@ -1,4 +1,5 @@
 import React from 'react'
+import Template from './Template';
 
 const title = 'Wedding Time!'
 const detail = 'Let\'s have a great wedding!'
@@ -26,9 +27,9 @@ export function Home() {
           {subtitle}
         </a>
       </div>
-      <div>
-      <h1 className="info">"heyhdfh"</h1>
-      </div>
+      <>
+        <Template />
+      </>
     </>
 
   )
