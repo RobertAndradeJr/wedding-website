@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './App.css';
 import Home from './Home';
 
 const formTitle = 'Password:'
