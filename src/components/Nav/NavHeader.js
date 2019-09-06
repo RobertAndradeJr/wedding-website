@@ -1,5 +1,5 @@
 import React from 'react'
-import titleText from './NavStrings'
+import titleText from '../Strings/NavStrings'
 
 export default function NavHeader() {
   return (

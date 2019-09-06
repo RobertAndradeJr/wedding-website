@@ -1,5 +1,5 @@
 import React from 'react'
-import { leftButtons } from './NavStrings'
+import { leftButtons } from '../Strings/NavStrings'
 import ButtonText from './ButtonText'
 
 export default function LeftNavButtons() {

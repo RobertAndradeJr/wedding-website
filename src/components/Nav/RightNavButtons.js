@@ -1,5 +1,5 @@
 import React from 'react'
-import { rightButtons } from './NavStrings'
+import { rightButtons } from '../Strings/NavStrings'
 import ButtonText from './ButtonText'
 
 export default function RightNavButtons() {
