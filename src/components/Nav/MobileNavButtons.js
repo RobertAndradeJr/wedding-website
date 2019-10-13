@@ -1,5 +1,5 @@
 import React from 'react'
-import mobileTitle from '../Strings/NavStrings'
+import { mobileTitle } from '../Strings/NavStrings'
 
 export default function MobileNavButtons() {
   return (

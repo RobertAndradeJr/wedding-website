@@ -1,5 +1,5 @@
 import React from 'react'
-import titleText from '../Strings/NavStrings'
+import { titleText } from '../Strings/NavStrings'
 import HeartLogo from './HeartLogo'
 
 export default function NavHeader() {
