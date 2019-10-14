@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  buttonText,
   detail,
   title,
 } from '../Strings/HomeStrings'
