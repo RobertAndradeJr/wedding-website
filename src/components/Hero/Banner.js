@@ -5,7 +5,7 @@ import {
   title,
 } from '../Strings/HomeStrings'
 
-const detailStyles = 'flex items-center justify-around'
+const detailStyles = 'flex items-center justify-between px-40'
 const Banner = () => (
   <div className="text-white" style={{ backgroundColor: 'rgb(0,0,0,.85)' }}>
     <div className="opacity-1">

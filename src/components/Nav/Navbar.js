@@ -5,7 +5,7 @@ import NavHeader from './NavHeader'
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+    <nav className="flex items-center justify-between flex-wrap bg-yellow-500 p-6 fixed w-full">
       <NavHeader />
       <MobileNavButtons />
       <NavButtons />

@@ -9,10 +9,10 @@ import Banner from './components/Hero/Banner'
 import RSVPButton from './components/Hero/RSVPButton'
 
 export function Home() {
-  const heroStyles = 'bg-center bg-fixed bg-no-repeat bg-contain h-screen flex flex-col justify-between items-between'
+  const heroStyles = 'bg-center bg-fixed bg-no-repeat bg-contain h-screen flex flex-col justify-between items-between p-20 pb-4'
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <header className={heroStyles} style={{ backgroundImage: `url(${EngagementPhoto})` }}>
         <Banner />
         <RSVPButton />
