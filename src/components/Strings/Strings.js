@@ -1,5 +1,6 @@
 export const CountdownStrings = {
-  weddingDate: 'Oct 31, 2020 18:00:00',
+  TITLE: 'countdown',
+  WEDDING_DATE: 'Oct 31, 2020 18:00:00',
 }
 
 export const CityStrings = {
@@ -57,14 +58,7 @@ export const HomeStrings = {
 
 export const HowWeMetStrings = {
   TITLE: 'How we met',
-  DESCRIPTION: `I first saw Mandi in the Fall of 2008 when we started our undergrad.
-  I was instantly attracted to her but was far too nervous to speak to
-  her. I had told my friend I liked her and news had traveled fast and
-  she soon found out. Her first reaction was &ldquo;Who is Robert?&quot; and she
-  began searching for me in the className. She started to take notice
-  of me and no matter how boring the lecture was, we never missed a
-  className after that. After a good few months I finally plucked up
-  the courage to ask her out and the rest is history.`,
+  DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
 }
 
 export const InstagramPicsStrings = {

@@ -3,30 +3,13 @@ import { HomeStrings } from '../Strings/Strings'
 
 const { detail, title } = HomeStrings
 const {
-  WHEN,
-  WHERE,
-  ADDRESS,
-  WEDDING_ADDRESS,
   WEDDING_DATE,
-  WEDDING_LOCATION,
 } = detail
-const detailStyles = 'flex items-center justify-between px-40'
 const Banner = () => (
   <div className="text-white" style={{ backgroundColor: 'rgb(0,0,0,.85)' }}>
     <div className="opacity-1">
       <h1 className="text-6xl">{title}</h1>
-      <div className={detailStyles}>
-        <h2>{WHEN}</h2>
-        <p>{WEDDING_DATE}</p>
-      </div>
-      <div className={detailStyles}>
-        <h2>{WHERE}</h2>
-        <p>{WEDDING_LOCATION}</p>
-      </div>
-      <div className={detailStyles}>
-        <h2>{ADDRESS}</h2>
-        <p>{WEDDING_ADDRESS}</p>
-      </div>
+      <h2 className=" py-2">{WEDDING_DATE}</h2>
     </div>
   </div>
 )
