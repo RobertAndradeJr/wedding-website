@@ -1,6 +1,7 @@
 import React from 'react'
-import { mobileTitle } from '../Strings/NavStrings'
+import { NavStrings } from '../Strings/Strings'
 
+const { mobileTitle } = NavStrings
 export default function MobileNavButtons() {
   return (
     <div className="block lg:hidden">

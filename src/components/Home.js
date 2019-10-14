@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/home.css'
 import Navbar from './Nav/Navbar'
 
+import Countdown from './Countdown/Countdown'
 import HowWeMetSection from './PageSections/HowWeMetSection'
 import EventsList from './PageSections/EventsListSection'
 import InstagramPicsSection from './PageSections/InstagramPicsSection'
@@ -18,6 +19,7 @@ export function Home() {
     <>
       <Navbar />
       <HeroSection />
+      <Countdown />
       <InvitationSection />
       <HowWeMetSection />
       <EventsList />
@@ -27,7 +29,6 @@ export function Home() {
       <MapSection />
       <RsvpSection />
       <FooterSection />
-      {/* <Countdown /> */}
     </>
   )
 }

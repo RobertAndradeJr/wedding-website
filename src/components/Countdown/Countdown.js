@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { weddingDate } from '../Strings/CountdownStrings'
+import { CountdownStrings } from '../Strings/Strings'
 
 const Countdown = () => {
   const [days, setDays] = useState(0)
@@ -7,7 +7,7 @@ const Countdown = () => {
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(0)
   // Set the date we're counting down to
-  const countDownDate = new Date(weddingDate).getTime()
+  const countDownDate = new Date(CountdownStrings.weddingDate).getTime()
   const x = setInterval(() => {
     // Get today's date and time
     const now = new Date().getTime()
@@ -32,7 +32,7 @@ const Countdown = () => {
   }, 1000)
 
   const countdownOutput = `${days}d ${hours}h ${minutes}m ${seconds}s`
-  return (<h2>{countdownOutput}</h2>)
+  return (<h2 className="h-24 bg-red-500">{countdownOutput}</h2>)
 }
 
 export default Countdown

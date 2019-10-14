@@ -1,9 +1,7 @@
 import React from 'react'
-import {
-  detail,
-  title,
-} from '../Strings/HomeStrings'
+import { HomeStrings } from '../Strings/Strings'
 
+const { detail, title } = HomeStrings
 const detailStyles = 'flex items-center justify-between px-40'
 const Banner = () => (
   <div className="text-white" style={{ backgroundColor: 'rgb(0,0,0,.85)' }}>
