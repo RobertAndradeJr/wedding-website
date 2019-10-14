@@ -1,6 +1,6 @@
 export const title = 'Robert & Mandi are getting married!'
 export const detail = {
-  WEDDING_DATE: 'October 31st, 2019',
+  WEDDING_DATE: 'October 31st, 2020',
   WEDDING_LOCATION: 'Bell Museum',
   WEDDING_ADDRESS: '2088 Larpenteur Ave W, St Paul, MN 55113',
 }
