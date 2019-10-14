@@ -3,11 +3,11 @@ import {
   buttonText,
 } from '../Strings/HomeStrings'
 
-const detailStyles = ''
-/* 'flex items-center justify-around' */
+const styles = 'text-black text-2xl border-2 rounded-full m-4 py-4 px-8 border-purple-600 bg-purple-100 hover:bg-purple-600 hover:text-white'
+
 const RSVPButton = () => (
   <div>
-    <button className="text-white text-2xl border rounded border-purple-600 bg-transparent hover:bg-purple-600" type="button">
+    <button className={styles} type="button">
       {buttonText}
     </button>
   </div>
