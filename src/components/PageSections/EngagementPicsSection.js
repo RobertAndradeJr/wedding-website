@@ -1,11 +1,14 @@
-import React from "react";
+import React from 'react'
+import { EngagementPicsStrings } from '../Strings/Strings'
+
+const { TITLE } = EngagementPicsStrings
 
 const EngagementPicsSection = () => (
-  <section id="eng-pics" className="h-screen bg-orange-100">
+  <section id="Engagement" className="h-screen bg-orange-100">
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-12 text-center">
-          <h3 className="header">Engagement Pics</h3>
+          <h3 className="header">{TITLE}</h3>
         </div>
       </div>
       <div className="row">
@@ -17,7 +20,7 @@ const EngagementPicsSection = () => (
           >
             <div className="img-wrap">
               <div className="overlay">
-                <i className="fa fa-search"></i>
+                <i className="fa fa-search" />
               </div>
               <img src="img/eng_pics/_RFX2942-sm.jpg" alt="" />
             </div>
@@ -31,7 +34,7 @@ const EngagementPicsSection = () => (
           >
             <div className="img-wrap">
               <div className="overlay">
-                <i className="fa fa-search"></i>
+                <i className="fa fa-search" />
               </div>
               <img src="img/eng_pics/IMG_3483-sm.jpg" alt="" />
             </div>
@@ -45,7 +48,7 @@ const EngagementPicsSection = () => (
           >
             <div className="img-wrap">
               <div className="overlay">
-                <i className="fa fa-search"></i>
+                <i className="fa fa-search" />
               </div>
               <img src="img/eng_pics/_RFX2992-sm.jpg" alt="" />
             </div>
@@ -59,7 +62,7 @@ const EngagementPicsSection = () => (
           >
             <div className="img-wrap">
               <div className="overlay">
-                <i className="fa fa-search"></i>
+                <i className="fa fa-search" />
               </div>
               <img src="img/eng_pics/_RFX3064-sm.jpg" alt="" />
             </div>
@@ -73,7 +76,7 @@ const EngagementPicsSection = () => (
           >
             <div className="img-wrap">
               <div className="overlay">
-                <i className="fa fa-search"></i>
+                <i className="fa fa-search" />
               </div>
               <img src="img/eng_pics/NGP_4089-sm.jpg" alt="" />
             </div>
@@ -87,7 +90,7 @@ const EngagementPicsSection = () => (
           >
             <div className="img-wrap">
               <div className="overlay">
-                <i className="fa fa-search"></i>
+                <i className="fa fa-search" />
               </div>
               <img src="img/eng_pics/NGP_4119-sm.jpg" alt="" />
             </div>
@@ -97,14 +100,14 @@ const EngagementPicsSection = () => (
     </div>
     <div className="container">
       <div className="row hidden-lg hidden-md hidden-xs">
-        <div className="col-xs-12 section-border section-padding"></div>
+        <div className="col-xs-12 section-border section-padding" />
       </div>
     </div>
     <div className="row">
       <div className="col-md-12">
         <div className="diamond floating-logo">
           <img src="img/sketch-logo.png" alt="Sketch Logo" />
-          <div className="ring"></div>
+          <div className="ring" />
         </div>
       </div>
     </div>

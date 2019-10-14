@@ -1,29 +1,14 @@
-import React from "react";
+import React from 'react'
+import { RsvpStrings } from '../Strings/Strings'
+
+const { RSVP } = RsvpStrings
 
 const RsvpSection = () => (
-  <section id="instagram" className="section-padding h-screen bg-yellow-100">
+  <section id="RSVP" className="section-padding h-screen bg-yellow-100">
     <div className="container">
-      <div className="row">
-        <div className="col-md-12 text-center">
-          <h3>A picture is worth a thousand words!</h3>
-          <p>
-            Help us capture the moment, tag your photos with the hashtag
-            <a
-              href="https://instagram.com/explore/tags/ramandantara/"
-              target="_blank"
-            >
-              #RamAndAntara
-            </a>
-          </p>
-        </div>
-      </div>
-      <div className="row section-border wp7">
-        <div className="col-md-4 col-md-offset-4">
-          <img src="img/iphone_instagram.jpg" />
-        </div>
-      </div>
+      <h2>{RSVP}</h2>
     </div>
   </section>
-);
+)
 
 export default RsvpSection

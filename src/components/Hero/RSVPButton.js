@@ -5,11 +5,11 @@ const styles = 'text-black text-2xl border-2 rounded-full  py-4 px-8 border-purp
 const { buttonText } = HomeStrings
 
 const RSVPButton = () => (
-  <div>
+  <a href="#RSVP">
     <button className={styles} type="button">
       {buttonText}
     </button>
-  </div>
+  </a>
 )
 
 export default RSVPButton
