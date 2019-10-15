@@ -4,7 +4,7 @@ import { HowWeMetStrings } from '../Strings/Strings'
 const { DESCRIPTION, TITLE } = HowWeMetStrings
 
 const HowWeMetSection = () => (
-  <section id="How We Met" className="intro text-white bg-green-200 h-screen">
+  <section id="HowWeMet" className="intro text-white bg-green-200 h-screen">
 
     <h3 className="">{TITLE}</h3>
 

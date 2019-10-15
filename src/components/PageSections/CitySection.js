@@ -4,7 +4,7 @@ import { CityStrings } from '../Strings/Strings'
 const { CITY_NAME, CITY_MOTTO } = CityStrings
 
 const CitySection = () => (
-  <section id="Glimpse of the city" className="h-screen bg-green-100">
+  <section id="Glimpseofthecity" className="h-screen bg-green-100">
     <div
       id="bgndVideo"
       className="player"
