@@ -1,5 +1,5 @@
 export const CountdownStrings = {
-  TITLE: 'countdown',
+  TITLE: 'Countdown: ',
   WEDDING_DATE: 'Oct 31, 2020 18:00:00',
 }
 
@@ -98,4 +98,10 @@ export const NavStrings = {
 
 export const RsvpStrings = {
   RSVP: 'RSVP',
+}
+
+export const ShareBarStrings = {
+  TWITTER: 'Tweet #RobertMandiWedding',
+  FACEBOOK: 'Like us on Facebook',
+  INSTAGRAM: 'Post on Instagram',
 }

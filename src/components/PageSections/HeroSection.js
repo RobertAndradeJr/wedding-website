@@ -12,7 +12,6 @@ const HeroSection = () => (
     className={heroStyles}
     style={{ backgroundImage: `url(${EngagementPhoto})` }}
   >
-    <Banner />
     <RSVPButton />
   </header>
 )
