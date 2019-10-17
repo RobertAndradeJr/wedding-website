@@ -31,10 +31,10 @@ function App() {
       { (checkLocalHost() || password) ? <Home /> : (
         <div>
           <h1>{message}</h1>
-          <form>
+          <form> 
             {formTitle}
-            <input type="text" onChange={onChange} />
-            <input type="submit" onClick={handleSubmit} />
+            <input className="text-black" type="text" onChange={onChange} />
+            <input className="text-black" type="submit" onClick={handleSubmit} />
           </form>
         </div>
       )}
