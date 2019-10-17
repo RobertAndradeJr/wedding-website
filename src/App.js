@@ -31,7 +31,7 @@ function App() {
       { (checkLocalHost() || password) ? <Home /> : (
         <div>
           <h1>{message}</h1>
-          <form> 
+          <form>
             {formTitle}
             <input className="text-black" type="text" onChange={onChange} />
             <input className="text-black" type="submit" onClick={handleSubmit} />
