@@ -1,7 +1,7 @@
 import React from 'react'
 import { HomeStrings } from '../Strings/Strings'
 
-const styles = 'text-black text-2xl border-2 rounded-full  py-4 px-8 border-purple-600 bg-purple-100 hover:bg-purple-600 hover:text-white'
+const styles = 'text-white text-2xl rounded-full  py-4 px-8 bg-purple-500 bg-purple-100 hover:bg-purple-400 focus:outline-none focus:shadow-outline active:bg-purple-800 '
 const { buttonText } = HomeStrings
 
 const RSVPButton = () => (

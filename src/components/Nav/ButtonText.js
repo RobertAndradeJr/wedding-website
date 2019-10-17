@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 export default function buttonsComponent(props) {
   const { buttons } = props
@@ -8,9 +8,8 @@ export default function buttonsComponent(props) {
     <button
       type="button"
       key={article}
-      // href={`#${article}`}
       onClick={() => handleClick(article)}
-      className="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+      className="block mt-4 lg:inline-block lg:mt-0  text-white hover:text-black mr-4"
     >
       {article}
     </button>
