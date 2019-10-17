@@ -15,7 +15,7 @@ import HeroSection from './PageSections/HeroSection'
 
 export function Home() {
   return (
-    <>
+    <div className="App">
       <Navbar />
       <HeroSection />
       <InvitationSection />
@@ -27,7 +27,7 @@ export function Home() {
       <MapSection />
       <RsvpSection />
       <FooterSection />
-    </>
+    </div>
   )
 }
 
