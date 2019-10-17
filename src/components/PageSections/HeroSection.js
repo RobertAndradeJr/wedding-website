@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from '../Hero/Banner'
 import RSVPButton from '../Hero/RSVPButton'
 import EngagementPhoto from '../../assets/engagement_photo.jpg'
 
