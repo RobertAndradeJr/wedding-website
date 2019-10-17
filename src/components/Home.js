@@ -19,7 +19,6 @@ export function Home() {
     <>
       <Navbar />
       <HeroSection />
-      <Countdown />
       <InvitationSection />
       <HowWeMetSection />
       <EventsList />

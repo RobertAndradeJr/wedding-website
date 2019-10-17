@@ -35,9 +35,11 @@ const Countdown = () => {
 
   const countdownOutput = `${days}d ${hours}h ${minutes}m ${seconds}s`
   return (
-    <div className="h-24 text-white">
-      <h1>{TITLE}</h1>
-      <h2>{countdownOutput}</h2>
+    <div className="h-24 text-white text-4xl  p-4 h-12">
+      <h1>
+        {TITLE}
+        {countdownOutput}
+      </h1>
     </div>
   )
 }
