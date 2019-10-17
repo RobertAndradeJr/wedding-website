@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function buttonsComponent(props) {
   const { buttons } = props
-  const handleClick = article => document.querySelector(`#${article.replace(/\s/g, '')}`).scrollIntoView({ behavior: 'smooth' })
+  const handleClick = (article) => document.querySelector(`#${article.replace(/\s/g, '')}`).scrollIntoView({ behavior: 'smooth' })
 
-  return buttons.map(article => (
+  const ButtonsList = buttons.map((article) => (
     <button
       type="button"
       key={article}
@@ -14,4 +14,5 @@ export default function buttonsComponent(props) {
       {article}
     </button>
   ))
+  return ButtonsList
 }
