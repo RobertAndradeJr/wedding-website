@@ -1,7 +1,7 @@
 import React from 'react'
 import { ShareBarStrings } from '../Strings/Strings'
 
-const {FACEBOOK, TWITTER, INSTAGRAM } = ShareBarStrings
+const { TWITTER } = ShareBarStrings
 const ShareBar = () => (
   <div className="flex items-center justify-around py-6 ">
     <div className="fb-like" data-href="https://robertandmandi.wedding/" data-width="50" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true" />
