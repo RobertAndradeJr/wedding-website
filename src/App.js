@@ -27,7 +27,7 @@ function App() {
   const onChange = (e) => setInput(e.target.value)
 
   return (
-    <div className="App">
+    <div className="App h-screen text-white">
       { (checkLocalHost() || password) ? <Home /> : (
         <div>
           <h1>{message}</h1>
