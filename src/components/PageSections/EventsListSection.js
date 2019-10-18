@@ -2,75 +2,61 @@ import React from 'react'
 import { EventsListStrings } from '../Strings/Strings'
 
 const {
-  TITLE, DATE, CEREMONY, COCKTAIL, DINNER, DANCE,
+  TITLE, DRESS_CODE, CEREMONY, COCKTAIL, DINNER, DANCE,
 } = EventsListStrings
 
 const EventsListSection = () => (
-  <section id="Events" className="h-screen bg-red-100">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <h3 className="header">{TITLE}</h3>
-        </div>
+  <section id="Events" className="flex flex-row flex-wrap text-white items-center justify-around">
+    <h3 className="header text-6xl w-full">{TITLE}</h3>
+    <div className="w-6/12 border-r-2 border-white">
+      <div className="m-8">
+        <h5>
+          {CEREMONY.TITLE}
+        </h5>
+        <h6>
+          {CEREMONY.TIME}
+        </h6>
+        <p>
+          {CEREMONY.DESCRIPTION}
+        </p>
       </div>
-      <div className="row">
-        <div className="wp3">
-          <p>
-            <strong>{DATE}</strong>
-          </p>
-          <h5>
-            {CEREMONY.TITLE}
-            <span className="time">{CEREMONY.TIME}</span>
-          </h5>
-          <p>
-            {CEREMONY.DESCRIPTION}
-          </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="wp3">
-          <p>
-            <strong>{DATE}</strong>
-          </p>
-          <h5>
-            {COCKTAIL.TITLE}
-            <span className="time">{COCKTAIL.TIME}</span>
-          </h5>
-          <p>
-            {COCKTAIL.DESCRIPTION}
-          </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="wp3">
-          <p>
-            <strong>{DATE}</strong>
-          </p>
-          <h5>
-            {DINNER.TITLE}
-            <span className="time">{DINNER.TIME}</span>
-          </h5>
-          <p>
-            {DINNER.DESCRIPTION}
-          </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="wp3">
-          <p>
-            <strong>{DATE}</strong>
-          </p>
-          <h5>
-            {DANCE.TITLE}
-            <span className="time">{DANCE.TIME}</span>
-          </h5>
-          <p>
-            {DANCE.DESCRIPTION}
-          </p>
-        </div>
+      <div className="m-8">
+        <h5>
+          {COCKTAIL.TITLE}
+        </h5>
+        <h6 className="time">
+          {COCKTAIL.TIME}
+        </h6>
+        <p>
+          {COCKTAIL.DESCRIPTION}
+        </p>
       </div>
     </div>
-
+    <div className="w-6/12">
+      <div className="m-8">
+        <h5>
+          {DINNER.TITLE}
+        </h5>
+        <h6>
+          {DINNER.TIME}
+        </h6>
+        <p>
+          {DINNER.DESCRIPTION}
+        </p>
+      </div>
+      <div className="m-8">
+        <h5>
+          {DANCE.TITLE}
+        </h5>
+        <h6 className="time">
+          {DANCE.TIME}
+        </h6>
+        <p>
+          {DANCE.DESCRIPTION}
+        </p>
+      </div>
+    </div>
+    <button className="btn btn--yellow hover:bg-yellow-400 focus:outline-none focus:shadow-outline active:bg-yellow-600 m-8" type="button">{DRESS_CODE.TITLE}</button>
   </section>
 )
 
