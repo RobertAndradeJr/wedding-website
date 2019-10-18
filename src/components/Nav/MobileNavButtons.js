@@ -1,13 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { NavStrings } from '../Strings/Strings'
 
+
 const { mobileTitle } = NavStrings
-export default function MobileNavButtons() {
+export default function MobileNavButtons(props) {
+  const { clickHandler } = props
   return (
     <div className="block lg:hidden">
       <button
-        className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+        className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white focus:outline-none"
         type="button"
+        onClick={clickHandler}
       >
         <svg
           className="fill-current h-3 w-3"
@@ -20,4 +24,12 @@ export default function MobileNavButtons() {
       </button>
     </div>
   )
+}
+
+MobileNavButtons.defaultProps = {
+  clickHandler: PropTypes.func,
+}
+
+MobileNavButtons.propTypes = {
+  clickHandler: PropTypes.func,
 }
