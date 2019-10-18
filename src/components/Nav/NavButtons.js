@@ -9,8 +9,8 @@ export default function NavButtons(props) {
   return (
     <Fade top>
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <LeftNavButtons onClick={clickHandler} />
-        <RightNavButtons onClick={clickHandler} />
+        <LeftNavButtons clickHandler={clickHandler} />
+        <RightNavButtons clickHandler={clickHandler} />
       </div>
     </Fade>
   )

@@ -1,8 +1,11 @@
 import React from 'react'
 
 export default function buttonsComponent(props) {
-  const { buttons } = props
-  const handleClick = (article) => document.querySelector(`#${article.replace(/\s/g, '')}`).scrollIntoView({ behavior: 'smooth' })
+  const { buttons, clickHandler } = props
+  const handleClick = (article) => {
+    document.querySelector(`#${article.replace(/\s/g, '')}`).scrollIntoView({ behavior: 'smooth' })
+    clickHandler()
+  }
 
   const ButtonsList = buttons.map((article) => (
     <button
