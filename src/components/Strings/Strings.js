@@ -35,6 +35,10 @@ export const EventsListStrings = {
     TIME: '8-midnight',
     DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
   },
+  DRESS_CODE: {
+    TITLE: 'Dress Code',
+    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
+  },
 }
 
 export const FooterStrings = {
