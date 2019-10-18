@@ -7,7 +7,7 @@ const { leftButtons } = NavStrings
 export default function LeftNavButtons(props) {
   const { clickHandler } = props
   return (
-    <div className="text-sm lg:flex-grow">
+    <div className="text-sm flex-grow">
       <ButtonText clickHandler={clickHandler} buttons={leftButtons} />
     </div>
   )
@@ -20,4 +20,3 @@ LeftNavButtons.defaultProps = {
 LeftNavButtons.propTypes = {
   clickHandler: PropTypes.func,
 }
-

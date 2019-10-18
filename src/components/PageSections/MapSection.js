@@ -1,4 +1,6 @@
 import React from 'react'
+import ScrollableAnchor from 'react-scrollable-anchor'
+
 import { MapStrings } from '../Strings/Strings'
 
 const {
@@ -12,13 +14,14 @@ const {
 } = MapStrings
 
 const MapSection = () => (
-  <section id="Venue" className="h-screen bg-blue-100">
-    <div className="text-center">
+  <ScrollableAnchor id="Venue">
+    <section className="h-screen bg-blue-100">
+      <div className="text-center">
       <h3>{HOW_DO_I_GET_THERE}</h3>
       <p>{EASIER_THAN_YOU_THINK}</p>
     </div>
-    <div id="map-canvas" />
-    <div id="map-content-wrapper" className="container pointer-events-none">
+      <div id="map-canvas" />
+      <div id="map-content-wrapper" className="container pointer-events-none">
       <div className="row">
         <div className="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
           <div className="text-center">
@@ -58,7 +61,8 @@ const MapSection = () => (
         </div>
       </div>
     </div>
-  </section>
+    </section>
+  </ScrollableAnchor>
 )
 
 export default MapSection
