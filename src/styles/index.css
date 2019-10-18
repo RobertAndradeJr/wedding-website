@@ -5,5 +5,25 @@
  .HowWeMet--img {
    @apply p-4  w-6/12;
  }
+
+ .btn {
+   @apply text-white  rounded-full  py-4 px-8 
+ }
+
+ .btn--lg {
+   @apply text-2xl 
+ }
+
+ .btn--purple {
+  @apply bg-purple-500 
+ }
+
+ .btn--yellow {
+   @apply bg-yellow-500
+ }
+
+ .btn--sm {
+   @apply
+ }
  
  @tailwind utilities;

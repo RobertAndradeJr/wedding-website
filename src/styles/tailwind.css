@@ -634,6 +634,30 @@ video {
   width: 50%;
 }
 
+.btn {
+  color: #fff;
+  border-radius: 9999px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem
+}
+
+.btn--lg {
+  font-size: 1.5rem
+}
+
+.btn--purple {
+  background-color: #9f7aea
+}
+
+.btn--yellow {
+  background-color: #ecc94b
+}
+
+.btn--sm {
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
