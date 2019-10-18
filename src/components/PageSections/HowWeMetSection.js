@@ -5,19 +5,20 @@ import HowWeMetRobert from '../../assets/howwemet-robert.jpg'
 import HowWeMetMandi from '../../assets/howwemet-mandi.jpg'
 
 const { DESCRIPTION, TITLE } = HowWeMetStrings
+const imageFlexBox = 'flex flex-row items-center justify-around py-16 flex-wrap'
 
 const HowWeMetSection = () => (
   <section id="HowWeMet" className="intro text-white">
     <h3 className="text-6xl">{TITLE}</h3>
-    <div className="flex flex-row justify-around py-16">
+    <div className={imageFlexBox}>
       <Fade left>
-        <img className="w-2/12" src={HowWeMetMandi} alt="Mandi" />
+        <img className="HowWeMet--img order-2 md:order-1 md:w-3/12" src={HowWeMetMandi} alt="Mandi" />
       </Fade>
-      <p className="text-white w-4/12">
+      <p className=" order-1 md:order-2 w-10/12 md:w-4/12">
         {DESCRIPTION}
       </p>
       <Fade right>
-        <img className="w-2/12 h-auto" src={HowWeMetRobert} alt="Robert" />
+        <img className="HowWeMet--img order-3 md:w-3/12" src={HowWeMetRobert} alt="Robert" />
       </Fade>
     </div>
   </section>

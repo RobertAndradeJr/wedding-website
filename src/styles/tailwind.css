@@ -629,6 +629,11 @@ video {
   }
 }
 
+.HowWeMet--img {
+  padding: 1rem;
+  width: 50%;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

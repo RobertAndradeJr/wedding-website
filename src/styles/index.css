@@ -2,5 +2,8 @@
  @tailwind base;
  @tailwind components;
 
+ .HowWeMet--img {
+   @apply p-4  w-6/12;
+ }
  
  @tailwind utilities;
