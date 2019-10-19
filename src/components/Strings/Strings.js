@@ -88,14 +88,15 @@ export const MapStrings = {
 export const NavStrings = {
   mobileTitle: 'Menu',
   titleText: 'Robert + Mandi',
-  leftButtons: [
+  buttonLabels: [
     'How We Met',
     'Events',
     'Instagram',
     'Engagement',
     'Glimpse of the city',
+    'Venue',
+    'RSVP',
   ],
-  rightButtons: ['Venue', 'RSVP'],
   test: 'yeet',
 }
 
