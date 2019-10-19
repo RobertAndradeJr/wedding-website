@@ -1,5 +1,6 @@
 /* Do some tailwind */
- /* eslint-disable */
+
+/* eslint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -3871,6 +3872,26 @@ video {
 }
 
 .self-stretch {
+  align-self: stretch;
+}
+
+.last\:self-auto:last-child {
+  align-self: auto;
+}
+
+.last\:self-start:last-child {
+  align-self: flex-start;
+}
+
+.last\:self-end:last-child {
+  align-self: flex-end;
+}
+
+.last\:self-center:last-child {
+  align-self: center;
+}
+
+.last\:self-stretch:last-child {
   align-self: stretch;
 }
 
@@ -15004,6 +15025,26 @@ video {
   }
 
   .sm\:self-stretch {
+    align-self: stretch;
+  }
+
+  .sm\:last\:self-auto:last-child {
+    align-self: auto;
+  }
+
+  .sm\:last\:self-start:last-child {
+    align-self: flex-start;
+  }
+
+  .sm\:last\:self-end:last-child {
+    align-self: flex-end;
+  }
+
+  .sm\:last\:self-center:last-child {
+    align-self: center;
+  }
+
+  .sm\:last\:self-stretch:last-child {
     align-self: stretch;
   }
 
@@ -26141,6 +26182,26 @@ video {
     align-self: stretch;
   }
 
+  .md\:last\:self-auto:last-child {
+    align-self: auto;
+  }
+
+  .md\:last\:self-start:last-child {
+    align-self: flex-start;
+  }
+
+  .md\:last\:self-end:last-child {
+    align-self: flex-end;
+  }
+
+  .md\:last\:self-center:last-child {
+    align-self: center;
+  }
+
+  .md\:last\:self-stretch:last-child {
+    align-self: stretch;
+  }
+
   .md\:justify-start {
     -webkit-box-pack: start;
             justify-content: flex-start;
@@ -37275,6 +37336,26 @@ video {
     align-self: stretch;
   }
 
+  .lg\:last\:self-auto:last-child {
+    align-self: auto;
+  }
+
+  .lg\:last\:self-start:last-child {
+    align-self: flex-start;
+  }
+
+  .lg\:last\:self-end:last-child {
+    align-self: flex-end;
+  }
+
+  .lg\:last\:self-center:last-child {
+    align-self: center;
+  }
+
+  .lg\:last\:self-stretch:last-child {
+    align-self: stretch;
+  }
+
   .lg\:justify-start {
     -webkit-box-pack: start;
             justify-content: flex-start;
@@ -48406,6 +48487,26 @@ video {
   }
 
   .xl\:self-stretch {
+    align-self: stretch;
+  }
+
+  .xl\:last\:self-auto:last-child {
+    align-self: auto;
+  }
+
+  .xl\:last\:self-start:last-child {
+    align-self: flex-start;
+  }
+
+  .xl\:last\:self-end:last-child {
+    align-self: flex-end;
+  }
+
+  .xl\:last\:self-center:last-child {
+    align-self: center;
+  }
+
+  .xl\:last\:self-stretch:last-child {
     align-self: stretch;
   }
 

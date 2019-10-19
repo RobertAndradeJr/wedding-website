@@ -67,8 +67,8 @@ export const HowWeMetStrings = {
 
 export const InstagramPicsStrings = {
   PICTURE_WORTH_THOUSAND_WORDS: 'A picture is worth a thousand words!',
-  HELP_US: 'Help us capture the moment, tag your photos with the hashtag:',
-  HASHTAG: '#LookAtMyBootyHole',
+  HELP_US: 'Help us capture the moment, tag your photos with the hashtag: #',
+  HASHTAG: 'wedding',
 }
 
 export const InvitationStrings = {

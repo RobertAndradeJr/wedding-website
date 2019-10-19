@@ -9,7 +9,7 @@ export default function NavButtons(props) {
   const { clickHandler } = props
   return (
     <Fade top>
-      <div className="text-sm md:flex-grow flex flex-col justify-center items-center content-center w-full md:w-auto md:flex-row md:justify-center">
+      <div className="text-sm md:flex-grow flex flex-col justify-center items-center content-center w-full md:w-auto md:flex-row md:justify-start">
         {
           buttonLabels.map((article) => {
             const HREF = `#${article.replace(/\s/g, '')}`
