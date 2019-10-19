@@ -15,21 +15,20 @@ function App() {
     return false
   }
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   if (input === correctPassword) {
-  //     setPassword(true)
-  //   } else {
-  //     setMessage('Sorry! Only COOL people can come to our wedding')
-  //     setInput('')
-  //   }
-  // }
-  // const onChange = (e) => setInput(e.target.value)
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (input === correctPassword) {
+      setPassword(true)
+    } else {
+      setMessage('Sorry! Only COOL people can come to our wedding')
+      setInput('')
+    }
+  }
+  const onChange = (e) => setInput(e.target.value)
 
   return (
     <div className="h-screen">
-      <Home />
-      {/* { (checkLocalHost() || password) ? <Home /> : (
+      { (checkLocalHost() || password) ? <Home /> : (
         <div>
           <h1>{message}</h1>
           <form>
@@ -38,7 +37,7 @@ function App() {
             <input className="text-black" type="submit" onClick={handleSubmit} />
           </form>
         </div>
-      )} */}
+      )}
     </div>
   )
 }
