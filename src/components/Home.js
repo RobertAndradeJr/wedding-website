@@ -24,8 +24,8 @@ export function Home() {
       <InvitationSection />
       <HowWeMetSection />
       <EventsList />
-      <InstagramPicsSection />
       <EngagementPicsSection />
+      <InstagramPicsSection />
       <CitySection />
       <MapSection />
       <RsvpSection />
