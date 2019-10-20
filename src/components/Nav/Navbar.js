@@ -4,6 +4,19 @@ import MobileNavButtons from './MobileNavButtons'
 import NavHeader from './NavHeader'
 import useWindowDimensions from '../../Utilities/UseWindowDimensions'
 
+const navStyles = [
+  'flex',
+  'items-center',
+  'justify-between',
+  'flex-wrap',
+  'bg-yellow-500',
+  'p-6',
+  'fixed',
+  'w-full',
+  'md:pr-32',
+  'z-50',
+]
+
 export default function Navbar() {
   const [NavOpen, setNavOpen] = useState(false)
   const { width } = useWindowDimensions()
@@ -13,7 +26,7 @@ export default function Navbar() {
     : null)
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-yellow-500 p-6 fixed w-full z-50">
+    <nav className={navStyles.join(' ')}>
       <NavHeader />
       <MobileNavButtons clickHandler={clickHandler} />
       {openNav()}

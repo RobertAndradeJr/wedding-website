@@ -5,11 +5,38 @@ import { NavStrings } from '../Strings/Strings'
 
 const { buttonLabels } = NavStrings
 
+const navButtonsStyles = [
+  'group',
+  'text-sm',
+  'text-white',
+  'flex flex-col',
+  'justify-center',
+  'items-center',
+  'content-center',
+  'w-full',
+  'md:w-auto',
+  'md:flex-row',
+  'md:flex-grow',
+  'md:justify-end',
+  'hover:text-gray-200',
+]
+
+const navButtonStyles = [
+  'block',
+  'mt-4',
+  'lg:inline-block',
+  'lg:mt-0',
+  'hover:text-gray-600',
+  'mr-4',
+  'focus:outline-none',
+  'focus:text-black',
+]
+
 export default function NavButtons(props) {
   const { clickHandler } = props
   return (
     <Fade top>
-      <div className="text-sm md:flex-grow flex flex-col justify-center items-center content-center w-full md:w-auto md:flex-row md:justify-start">
+      <div className={navButtonsStyles.join(' ')}>
         {
           buttonLabels.map((article) => {
             const HREF = `#${article.replace(/\s/g, '')}`
@@ -18,7 +45,7 @@ export default function NavButtons(props) {
                 <button
                   type="button"
                   onClick={() => clickHandler()}
-                  className="block mt-4 lg:inline-block lg:mt-0  text-white hover:text-black mr-4 focus:outline-none focus:text-black"
+                  className={navButtonStyles.join(' ')}
                 >
                   {article}
                 </button>
