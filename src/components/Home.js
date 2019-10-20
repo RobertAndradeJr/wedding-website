@@ -13,6 +13,7 @@ import RsvpSection from './PageSections/RsvpSection'
 import FooterSection from './PageSections/FooterSection'
 import HeroSection from './PageSections/HeroSection'
 import useWindowDimensions from '../Utilities/UseWindowDimensions'
+import DirectionsSection from './PageSections/DirectionsSection'
 
 export function Home() {
   const { height } = useWindowDimensions()
@@ -28,6 +29,7 @@ export function Home() {
       <SocialSection />
       <CitySection />
       <MapSection />
+      <DirectionsSection />
       <RsvpSection />
       <FooterSection />
     </div>

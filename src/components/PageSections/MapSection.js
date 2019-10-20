@@ -13,56 +13,18 @@ const {
   SHOW_MAP,
 } = MapStrings
 
-const MapSection = () => (
+const DirectionsSection = () => (
   <ScrollableAnchor id="Venue">
-    <section className="h-screen bg-blue-100">
-      <div className="text-center">
-      <h3>{HOW_DO_I_GET_THERE}</h3>
-      <p>{EASIER_THAN_YOU_THINK}</p>
-    </div>
-      <div id="map-canvas" />
-      <div id="map-content-wrapper" className="container pointer-events-none">
-      <div className="row">
-        <div className="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
-          <div className="text-center">
-            <div
-              id="btn-show-content"
-              className="toggle-map-content pointer-events-auto"
-            >
-              <i className="fa fa-info-circle" />
-              {SHOW_INFO}
-            </div>
-          </div>
-          <div id="map-content" className="pointer-events-auto">
-            <div className="row">
-              <div className="col-md-6">
-                <h5>{VENUE_NAME}</h5>
-                <p>{VENUE_ADDRESS}</p>
-              </div>
-            </div>
-            <div className="row text-center">
-              <div className="col-md-6" style={{ padding: '5px' }}>
-                <a
-                  className="btn btn-fill btn-small"
-                  href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"
-                >
-                  <i className="fa fa-taxi" />
-                  {BOOK_UBER}
-                </a>
-              </div>
-              <div className="col-md-6" style={{ padding: '5px' }}>
-                <a className="btn btn-accent btn-small" id="btn-show-map" href="#btn-show-map">
-                  <i className="fa fa-map-marker" />
-                  {SHOW_MAP}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section className="h-screen">
+      <div className="text-center text-white pb-24">
+        <h3 className="text-4xl">{HOW_DO_I_GET_THERE}</h3>
+        <p className="text-xl">{EASIER_THAN_YOU_THINK}</p>
       </div>
-    </div>
+      <div className="h-48 flex flex-row justify-around" id="map-container">
+        <iframe className="w-9/12" title="bell-museum-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.6627383459654!2d-93.19008618454988!3d44.991161972903036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32d172d3e3a05%3A0x63d7830833a56d3b!2sBell%20Museum!5e0!3m2!1sen!2sus!4v1571612382679!5m2!1sen!2sus" height="450" frameBorder="0" style={{ border: 0 }} allowFullScreen="" />
+      </div>
     </section>
   </ScrollableAnchor>
 )
 
-export default MapSection
+export default DirectionsSection

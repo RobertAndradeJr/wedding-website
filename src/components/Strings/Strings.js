@@ -84,12 +84,16 @@ export const InvitationStrings = {
 
 export const MapStrings = {
   HOW_DO_I_GET_THERE: 'How do I get there?',
-  EASIER_THAN_YOU_THINK: 'It&aposs way easier than you think!',
-  SHOW_INFO: '&nbsp&nbsp Show info',
+  EASIER_THAN_YOU_THINK: 'It\'s way easier than you think!',
+  SHOW_INFO: 'Show info',
   VENUE_NAME: 'Bell Museum',
-  VENUE_ADDRESS: '2088 Larpenteur Ave W, St Paul, MN 55113',
+  VENUE_ADDRESS: '2088 Larpenteur Ave W,',
+  VENUE_ADDRESS_2: 'St Paul, MN 55113',
   BOOK_UBER: 'Book an Uber',
   SHOW_MAP: 'Show Map',
+  CONTACT: 'Contact Info',
+  CONTACT_NAME: 'Bellford Museumington',
+  CONTACT_NUMBER: '(612) 626-9660',
 }
 
 export const NavStrings = {
