@@ -8,6 +8,7 @@ const { HASHTAG, HELP_US, PICTURE_WORTH_THOUSAND_WORDS } = InstagramPicsStrings
 
 const INSTAGRAM_LINK = `https://www.instagram.com/explore/tags/${HASHTAG}`
 const INSTAGRAM_QUERY = `${INSTAGRAM_LINK}/?__a=1`
+const HASHTAG_LINK = `#${HASHTAG}`
 const SocialSection = () => {
   const [Pictures, setPictures] = useState([])
 
@@ -21,13 +22,13 @@ const SocialSection = () => {
 
   return (
     <ScrollableAnchor id="Social">
-      <section className="bg-yellow-100 justify-center md:px-24 lg:px-48">
+      <section className="justify-center md:px-24 lg:px-48 text-white">
         <div className="text-center">
-          <h3>{PICTURE_WORTH_THOUSAND_WORDS}</h3>
-          <p>
+          <h3 className="text-4xl">{PICTURE_WORTH_THOUSAND_WORDS}</h3>
+          <p className="text-2xl">
             {HELP_US}
-            <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer">
-              {HASHTAG}
+            <a className="text-blue-500" href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer">
+              {HASHTAG_LINK}
             </a>
           </p>
         </div>
