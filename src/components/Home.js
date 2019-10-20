@@ -4,7 +4,7 @@ import '../styles/home.css'
 import Navbar from './Nav/Navbar'
 import HowWeMetSection from './PageSections/HowWeMetSection'
 import EventsList from './PageSections/EventsListSection'
-import InstagramPicsSection from './PageSections/InstagramPicsSection'
+import SocialSection from './PageSections/SocialSection'
 import InvitationSection from './PageSections/InvitationSection'
 import EngagementPicsSection from './PageSections/EngagementPicsSection'
 import CitySection from './PageSections/CitySection'
@@ -25,7 +25,7 @@ export function Home() {
       <HowWeMetSection />
       <EventsList />
       <EngagementPicsSection />
-      <InstagramPicsSection />
+      <SocialSection />
       <CitySection />
       <MapSection />
       <RsvpSection />

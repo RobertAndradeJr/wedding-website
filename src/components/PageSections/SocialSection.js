@@ -8,7 +8,7 @@ const { HASHTAG, HELP_US, PICTURE_WORTH_THOUSAND_WORDS } = InstagramPicsStrings
 
 const INSTAGRAM_LINK = `https://www.instagram.com/explore/tags/${HASHTAG}`
 const INSTAGRAM_QUERY = `${INSTAGRAM_LINK}/?__a=1`
-const InstagramPicsSection = () => {
+const SocialSection = () => {
   const [Pictures, setPictures] = useState([])
 
   useEffect(() => {
@@ -51,4 +51,4 @@ const InstagramPicsSection = () => {
   )
 }
 
-export default InstagramPicsSection
+export default SocialSection
