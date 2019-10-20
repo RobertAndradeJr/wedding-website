@@ -1,7 +1,6 @@
 import React from 'react'
 import { HomeStrings } from '../Strings/Strings'
 import Countdown from '../Countdown/Countdown'
-import ShareBar from '../ShareBar/ShareBar'
 
 const { detail, title } = HomeStrings
 const {
@@ -14,7 +13,6 @@ const Banner = () => (
       <h2 className="text-5xl ">{WEDDING_DATE}</h2>
       <Countdown />
     </div>
-    <ShareBar />
   </div>
 )
 

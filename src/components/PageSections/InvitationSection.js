@@ -1,11 +1,11 @@
 import React from 'react'
 import ScrollableAnchor from 'react-scrollable-anchor'
-import Banner from '../Hero/Banner'
+import ShareBar from '../ShareBar/ShareBar'
 
 const InvitationSection = () => (
   <ScrollableAnchor id="invitation">
     <section className="flex flex-col text-white items-center">
-      <Banner />
+      <ShareBar />
     </section>
   </ScrollableAnchor>
 
