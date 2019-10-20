@@ -18,26 +18,31 @@ export const EventsListStrings = {
   CEREMONY: {
     TITLE: 'Ceremony',
     TIME: '5-6pm',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
+    DESCRIPTION:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
   },
   COCKTAIL: {
     TITLE: 'Cocktail Hour',
     TIME: '6-7pm',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
+    DESCRIPTION:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
   },
   DINNER: {
     TITLE: 'Dinner from Chow Girls',
     TIME: '7-8pm',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
+    DESCRIPTION:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
   },
   DANCE: {
     TITLE: 'Dancing the night away',
     TIME: '8-midnight',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
+    DESCRIPTION:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
   },
   DRESS_CODE: {
     TITLE: 'Dress Code',
-    DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
+    DESCRIPTION:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
   },
 }
 
@@ -54,6 +59,7 @@ export const HomeStrings = {
     WEDDING_DATE: 'October 31st, 2020',
     WEDDING_LOCATION: 'Bell Museum',
     WEDDING_ADDRESS: '2088 Larpenteur Ave W, St Paul, MN 55113',
+    WEDDING_CITY: 'St. Paul, MN',
   },
   buttonText: 'RSVP',
   heroImage:
@@ -62,7 +68,8 @@ export const HomeStrings = {
 
 export const HowWeMetStrings = {
   TITLE: 'How we met',
-  DESCRIPTION: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
+  DESCRIPTION:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.',
 }
 
 export const InstagramPicsStrings = {
@@ -77,8 +84,8 @@ export const InvitationStrings = {
 
 export const MapStrings = {
   HOW_DO_I_GET_THERE: 'How do I get there?',
-  EASIER_THAN_YOU_THINK: 'It&apos;s way easier than you think!',
-  SHOW_INFO: '&nbsp;&nbsp; Show info',
+  EASIER_THAN_YOU_THINK: 'It&aposs way easier than you think!',
+  SHOW_INFO: '&nbsp&nbsp Show info',
   VENUE_NAME: 'Bell Museum',
   VENUE_ADDRESS: '2088 Larpenteur Ave W, St Paul, MN 55113',
   BOOK_UBER: 'Book an Uber',
@@ -91,15 +98,14 @@ export const NavStrings = {
   buttonLabels: [
     'How We Met',
     'Events',
-    'Instagram',
     'Engagement',
+    'Social',
     'Glimpse of the city',
     'Venue',
     'RSVP',
   ],
   test: 'yeet',
 }
-
 
 export const RsvpStrings = {
   RSVP: 'RSVP',
@@ -108,5 +114,5 @@ export const RsvpStrings = {
 export const ShareBarStrings = {
   TWITTER: 'Tweet #RobertMandiWedding',
   FACEBOOK: 'Like us on Facebook',
-  INSTAGRAM: 'Post on Instagram',
+  INSTAGRAM: 'Post on Social',
 }
