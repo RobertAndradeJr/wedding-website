@@ -5,7 +5,8 @@ import { InstagramPicsStrings } from '../Strings/Strings'
 
 const { HASHTAG, HELP_US, PICTURE_WORTH_THOUSAND_WORDS } = InstagramPicsStrings
 
-const INSTAGRAM_QUERY = `https://www.instagram.com/explore/tags/${HASHTAG}/?__a=1`
+const INSTAGRAM_LINK = `https://www.instagram.com/explore/tags/${HASHTAG}`
+const INSTAGRAM_QUERY = `${INSTAGRAM_LINK}/?__a=1`
 const InstagramPicsSection = () => {
   const [Pictures, setPictures] = useState([])
 
@@ -19,13 +20,13 @@ const InstagramPicsSection = () => {
 
   return (
     <ScrollableAnchor id="Instagram">
-      <section className="bg-yellow-100">
+      <section className="bg-yellow-100 justify-center md:px-24 lg:px-48">
         <div className="text-center">
           <h3>{PICTURE_WORTH_THOUSAND_WORDS}</h3>
           <p>
             {HELP_US}
             <a
-              href="https://instagram.com/explore/tags/ramandantara/"
+              href={INSTAGRAM_LINK}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -35,7 +36,7 @@ const InstagramPicsSection = () => {
         </div>
         <div className="flex flex-row flex-wrap justify-between">
           <>
-            {Pictures.map((pic) => <img key={pic.node.id} src={pic.node.display_url} alt="yeet" className="w-3/12 p-6" />)}
+            {Pictures.map((pic) => <img key={pic.node.id} src={pic.node.display_url} alt="yeet" className="w-4/12 p-6" />)}
           </>
         </div>
       </section>
