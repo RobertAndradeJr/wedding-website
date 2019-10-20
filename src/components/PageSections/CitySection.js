@@ -12,7 +12,7 @@ const CitySection = () => (
       <YouTubeBackground
         videoId="CWzZ-Y2D9tw"
         className="z-30 h-64 flex flex-col justify-center text-white"
-        overlay="rgba(0,0,0,0.5)"
+        overlay="rgba(0,0,0,0.33)"
       >
         <div id="video-content">
           <h5 className="text-4xl">{CITY_NAME}</h5>
