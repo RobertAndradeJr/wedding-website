@@ -8,8 +8,8 @@ const { TITLE, AUTHOR, NOTE } = FooterStrings
 const hashtag = `#${HASHTAG}`
 
 const FooterSection = () => (
-  <section id="footer" className="text-white pt-4">
-    <a href="#Home">
+  <section id="footer" className="pt-4" style={{ color: 'rgb(255,255,255,0.75' }}>
+    <a className="horizontal-rule" href="#Home">
       <button type="button" className="bg-yellow-500 p-4 rounded-full m-4 hover:bg-yellow-400 active:bg-yellow-600 focus:outline-none focus:shadow-outline">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
           <path
@@ -21,7 +21,13 @@ const FooterSection = () => (
       </button>
     </a>
     <h1 className="text-2xl">{hashtag}</h1>
-    <p className="text-sm py-6">{TITLE + AUTHOR + NOTE}</p>
+    <p className="text-sm py-6">
+      {TITLE}
+      <a className="underline" href="robertandradejr.dev">
+        {AUTHOR}
+      </a>
+      {NOTE}
+    </p>
   </section>
 )
 
