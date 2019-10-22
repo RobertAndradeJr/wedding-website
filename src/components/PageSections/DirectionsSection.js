@@ -21,7 +21,7 @@ const GOOGLE_MAPS_LINK = 'https://g.page/BellMuseum?share'
 const DirectionsSection = () => (
   <ScrollableAnchor id="Directions">
     <section
-      className="flex flex-row justify-around py-24 text-white"
+      className="flex flex-row justify-around py-24 text-white bg-cover"
       style={{
         backgroundImage: `linear-gradient(
         rgba(0, 0, 0, 0.5), 
@@ -29,8 +29,8 @@ const DirectionsSection = () => (
       ),url(https://www.bellmuseum.umn.edu/wp-content/uploads/2019/02/horizon-hall-hero.jpg)`,
       }}
     >
-      <div className="w-9/12 md:w-6/12 flex flex-row justify-around p-8">
-        <div className="flex flex-col">
+      <div className=" md:w-6/12 flex flex-col md:flex-row justify-between md:justify-around p-8">
+        <div className="flex flex-col py-4">
           <h3 className="text-xl">{VENUE_NAME}</h3>
           <p>{VENUE_ADDRESS}</p>
           <p>{VENUE_ADDRESS_2}</p>
@@ -40,7 +40,7 @@ const DirectionsSection = () => (
             </button>
           </a>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col py-4">
           <h3 className="text-xl">{CONTACT}</h3>
           <p>{CONTACT_NAME}</p>
           <a className="text-yellow-600" href={BELL_MUSEUM_TEL_LINK}>{CONTACT_NUMBER}</a>
