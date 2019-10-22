@@ -15,7 +15,7 @@ export default function Navbar() {
     'flex-wrap',
     'p-6',
     'fixed',
-    'w-full',
+    'w-screen',
     'md:pr-32',
     'z-50',
   ]
