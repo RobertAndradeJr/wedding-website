@@ -32,31 +32,28 @@ const navButtonStyles = [
   'focus:text-black',
 ]
 
-export default function NavButtons(props) {
-  const { clickHandler } = props
-  return (
-    <Fade top>
-      <div className={navButtonsStyles.join(' ')}>
-        {
-          buttonLabels.map((article) => {
-            const HREF = `#${article.replace(/\s/g, '')}`
-            return (
-              <a href={HREF} key={article} className="focus:outline-none">
-                <button
-                  type="button"
-                  onClick={() => clickHandler()}
-                  className={navButtonStyles.join(' ')}
-                >
-                  {article}
-                </button>
-              </a>
-            )
-          })
-        }
-      </div>
-    </Fade>
-  )
-}
+const NavButtons = ({ clickHandler }) => (
+  <Fade top>
+    <div className={navButtonsStyles.join(' ')}>
+      {
+        buttonLabels.map((article) => {
+          const HREF = `#${article.replace(/\s/g, '')}`
+          return (
+            <a href={HREF} key={article} className="focus:outline-none">
+              <button
+                type="button"
+                onClick={() => clickHandler()}
+                className={navButtonStyles.join(' ')}
+              >
+                {article}
+              </button>
+            </a>
+          )
+        })
+      }
+    </div>
+  </Fade>
+)
 
 NavButtons.defaultProps = {
   clickHandler: PropTypes.func,
@@ -65,3 +62,5 @@ NavButtons.defaultProps = {
 NavButtons.propTypes = {
   clickHandler: PropTypes.func,
 }
+
+export default NavButtons
