@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react'
 
-export const UseScrollSpy = ({ distance }) => {
-  const scrollDistance = distance || 10
+const UseScrollSpy = (scrollDistance = 10) => {
   const [scroll, setScroll] = useState(false)
 
   useEffect(() => {
-    const scrollCheck = window.scrollY >= scrollDistance
-    if (scrollCheck !== scroll) {
-      setScroll(scrollCheck)
+    const onScroll = () => {
+      const scrollCheck = window.scrollY >= scrollDistance
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck)
+      }
     }
-    document.addEventListener('scroll', onscroll)
+
+    document.addEventListener('scroll', onScroll)
+
     return () => {
-      document.removeEventListener('scroll', onscroll)
+      document.removeEventListener('scroll', onScroll)
     }
   }, [scroll, setScroll])
+  return scroll
 }
 
 export default UseScrollSpy

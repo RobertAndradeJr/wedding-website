@@ -2,22 +2,23 @@ import React, { useState } from 'react'
 import NavButtons from './NavButtons'
 import MobileNavButtons from './MobileNavButtons'
 import NavHeader from './NavHeader'
-import useWindowDimensions from '../../Utilities/UseWindowDimensions'
+import useWindowDimensions from '../../utils/UseWindowDimensions'
+import UseScrollSpy from '../../utils/UseScrollScpy'
 
-const navStyles = [
-  'flex',
-  'items-center',
-  'justify-between',
-  'flex-wrap',
-  'bg-yellow-500',
-  'p-6',
-  'fixed',
-  'w-full',
-  'md:pr-32',
-  'z-50',
-]
 
 export default function Navbar() {
+  const scroll = UseScrollSpy(250)
+  const navStyles = [
+    'flex',
+    'items-center',
+    'justify-between',
+    'flex-wrap',
+    'p-6',
+    'fixed',
+    'w-full',
+    'md:pr-32',
+    'z-50',
+  ]
   const [NavOpen, setNavOpen] = useState(false)
   const { width } = useWindowDimensions()
   const clickHandler = () => setNavOpen(!NavOpen)
@@ -26,7 +27,7 @@ export default function Navbar() {
     : null)
 
   return (
-    <nav className={navStyles.join(' ')}>
+    <nav className={navStyles.join(' ') + (scroll === true ? ' bg-yellow-500' : ' bg-transparent')}>
       <NavHeader />
       <MobileNavButtons clickHandler={clickHandler} />
       {openNav()}
