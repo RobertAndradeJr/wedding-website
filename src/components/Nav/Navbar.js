@@ -3,7 +3,7 @@ import NavButtons from './NavButtons'
 import MobileNavButtons from './MobileNavButtons'
 import NavHeader from './NavHeader'
 import useWindowDimensions from '../../utils/UseWindowDimensions'
-import UseScrollSpy from '../../utils/UseScrollScpy'
+import UseScrollSpy from '../../utils/UseScrollSpy'
 
 
 export default function Navbar() {

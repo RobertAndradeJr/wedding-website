@@ -1,6 +1,5 @@
 import React from 'react'
 import ScrollableAnchor from 'react-scrollable-anchor'
-import ShareBar from '../ShareBar/ShareBar'
 
 const PLACEHOLDER = 'Placeholder for invitation'
 const InvitationSection = () => (

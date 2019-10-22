@@ -16,7 +16,7 @@ const UseScrollSpy = (scrollDistance = 10) => {
     return () => {
       document.removeEventListener('scroll', onScroll)
     }
-  }, [scroll, setScroll])
+  }, [scroll, setScroll, scrollDistance])
   return scroll
 }
 
