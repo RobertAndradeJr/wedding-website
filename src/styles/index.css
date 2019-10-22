@@ -22,9 +22,5 @@
  .btn--yellow {
    @apply bg-yellow-500
  }
-
- .btn--sm {
-   @apply
- }
  
  @tailwind utilities;
