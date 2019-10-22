@@ -7,7 +7,7 @@ import UseScrollSpy from '../../utils/UseScrollScpy'
 
 
 export default function Navbar() {
-  const scroll = UseScrollSpy(250)
+  const scroll = UseScrollSpy(150)
   const navStyles = [
     'flex',
     'items-center',
@@ -27,7 +27,10 @@ export default function Navbar() {
     : null)
 
   return (
-    <nav className={navStyles.join(' ') + (scroll === true ? ' bg-yellow-500' : ' bg-transparent')}>
+    <nav
+      className={navStyles.join(' ') + (width < 1024 || scroll === true ? ' bg-yellow-500' : ' bg-transparent')}
+      style={{ transition: 'background 1.5s' }}
+    >
       <NavHeader />
       <MobileNavButtons clickHandler={clickHandler} />
       {openNav()}
