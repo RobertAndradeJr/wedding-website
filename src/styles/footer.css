@@ -1,0 +1,10 @@
+a {
+  display: flex;
+  flex-direction: row;
+}
+a:before, a:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #fff;
+  margin: auto;
+}

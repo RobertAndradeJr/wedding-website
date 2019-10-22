@@ -47,7 +47,9 @@ export const EventsListStrings = {
 }
 
 export const FooterStrings = {
-  TITLE: 'yeet',
+  TITLE: '©2019 By ',
+  AUTHOR: 'Robert Andrade. ',
+  NOTE: 'Crafted with lots of love for Mandi',
 }
 
 export const HomeStrings = {
