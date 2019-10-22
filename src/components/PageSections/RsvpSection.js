@@ -13,25 +13,23 @@ const {
   WEDDING_LOCATION,
 } = detail
 
-const detailStyles = 'flex items-center justify-between px-40'
+const detailStyles = 'items-center px-64'
 
 const RsvpSection = () => (
   <ScrollableAnchor id="RSVP">
-    <section className="section-padding h-screen bg-yellow-100">
-      <div className="container">
-        <h2>{RSVP}</h2>
-        <div className={detailStyles}>
-          <h2>{WHEN}</h2>
-          <p>{WEDDING_DATE}</p>
-        </div>
-        <div className={detailStyles}>
-          <h2>{WHERE}</h2>
-          <p>{WEDDING_LOCATION}</p>
-        </div>
-        <div className={detailStyles}>
-          <h2>{ADDRESS}</h2>
-          <p>{WEDDING_ADDRESS}</p>
-        </div>
+    <section className="h-screen text-white p-24">
+      <h2 className="text-4xl">{RSVP}</h2>
+      <div className={detailStyles}>
+        <h2>{WHEN}</h2>
+        <p>{WEDDING_DATE}</p>
+      </div>
+      <div className={detailStyles}>
+        <h2>{WHERE}</h2>
+        <p>{WEDDING_LOCATION}</p>
+      </div>
+      <div className={detailStyles}>
+        <h2>{ADDRESS}</h2>
+        <p>{WEDDING_ADDRESS}</p>
       </div>
     </section>
   </ScrollableAnchor>
