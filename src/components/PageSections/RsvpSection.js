@@ -13,7 +13,7 @@ const {
   WEDDING_LOCATION,
 } = detail
 
-const detailStyles = 'items-center px-64'
+const detailStyles = 'items-center'
 
 const RsvpSection = () => (
   <ScrollableAnchor id="RSVP">

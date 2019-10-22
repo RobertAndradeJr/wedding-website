@@ -35,14 +35,14 @@ const SocialSection = () => {
         <section className="flex flex-col text-white justify-around">
           <ShareBar />
         </section>
-        <div className="flex flex-row flex-wrap justify-between">
+        <div className="flex flex-col items-center md:items-stretch md:flex-row md:flex-wrap justify-between">
           <>
             {Pictures.map((pic) => (
               <img
                 key={pic.node.id}
                 src={pic.node.display_url}
                 alt="yeet"
-                className="w-4/12 p-6"
+                className="w-9/12 md:w-4/12 p-6"
               />
             ))}
           </>
