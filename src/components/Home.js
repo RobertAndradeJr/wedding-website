@@ -12,7 +12,7 @@ import MapSection from './PageSections/MapSection'
 import RsvpSection from './PageSections/RsvpSection'
 import FooterSection from './PageSections/FooterSection'
 import HeroSection from './PageSections/HeroSection'
-import useWindowDimensions from '../Utilities/UseWindowDimensions'
+import useWindowDimensions from '../utils/UseWindowDimensions'
 import DirectionsSection from './PageSections/DirectionsSection'
 
 export function Home() {
