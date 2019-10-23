@@ -5,6 +5,7 @@ import Navbar from './Nav/Navbar'
 import HeroSection from './PageSections/HeroSection'
 import FooterSection from './PageSections/FooterSection'
 import useWindowDimensions from '../utils/UseWindowDimensions'
+import SpaceBackground from '../assets/space-background.jpg'
 
 const InvitationSection = lazy(() => import('./PageSections/InvitationSection'))
 const HowWeMetSection = lazy(() => import('./PageSections/HowWeMetSection'))
@@ -21,7 +22,13 @@ export function Home() {
   const FALLBACK = 'loading...'
   configureAnchors({ offset: height / -10, scrollDuration: 500 })
   return (
-    <div className="App">
+    <div className="App"
+    style={{
+      backgroundImage: `linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),url(${SpaceBackground})`,
+    }}>
       <Navbar />
       <HeroSection />
       <Suspense fallback={<h1 className="text-white text-md">{FALLBACK}</h1>}>

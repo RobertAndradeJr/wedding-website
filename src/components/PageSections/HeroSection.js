@@ -4,7 +4,7 @@ import RSVPButton from '../Hero/RSVPButton'
 import EngagementPhoto from '../../assets/engagement_photo.jpg'
 import Banner from '../Hero/Banner'
 
-const heroStyles = 'bg-center bg-fixed bg-no-repeat bg-cover h-screen flex flex-col items-center justify-between p-20 pb-4'
+const heroStyles = 'bg-center bg-fixed bg-no-repeat bg-contain h-screen flex flex-col items-center justify-between p-20 pb-4'
 
 const HeroSection = () => (
   <ScrollableAnchor
