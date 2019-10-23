@@ -10,6 +10,7 @@ export const CityStrings = {
 
 export const EngagementPicsStrings = {
   TITLE: 'Engagement Pics',
+  SUBTITLE: 'Around the world and back again, with you',
 }
 
 export const EventsListStrings = {

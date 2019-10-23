@@ -1,116 +1,24 @@
 import React from 'react'
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { EngagementPicsStrings } from '../Strings/Strings'
+import TravelingIllustration from '../../assets/undraw_travelers.svg'
 
-const { TITLE } = EngagementPicsStrings
+const { SUBTITLE, TITLE } = EngagementPicsStrings
+const importAll = (r) => r.keys().map(r)
+const images = importAll(require.context('../../assets/engagement-photos', false, /\.(png|jpe?g|svg)$/))
+
 
 const EngagementPicsSection = () => (
   <ScrollableAnchor id="Engagement">
-    <section className="h-screen bg-orange-800">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <h3 className="header">{TITLE}</h3>
-          </div>
+    <section className="h-auto flex flex-col items-center pb-8">
+      <h2 className="text-4xl text-white py-8">{TITLE}</h2>
+      <h2 className="text-lg text-white py-8">{SUBTITLE}</h2>
+      <div className=" flex flex-row items-center justify-between w-screen">
+        <div className="float-left w-4/12 flex flex-col justify-around">
+          <img src={TravelingIllustration} alt="two travelers" />
         </div>
-        <div className="row">
-          <div className="col-md-2">
-            <a
-              className="fancybox"
-              rel="group"
-              href="img/eng_pics/_RFX2942-lg.jpg"
-            >
-              <div className="img-wrap">
-                <div className="overlay">
-                  <i className="fa fa-search" />
-                </div>
-                <img src="img/eng_pics/_RFX2942-sm.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div className="col-md-2">
-            <a
-              className="fancybox"
-              rel="group"
-              href="img/eng_pics/IMG_3483-lg.jpg"
-            >
-              <div className="img-wrap">
-                <div className="overlay">
-                  <i className="fa fa-search" />
-                </div>
-                <img src="img/eng_pics/IMG_3483-sm.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div className="col-md-2">
-            <a
-              className="fancybox"
-              rel="group"
-              href="img/eng_pics/_RFX2992-lg.jpg"
-            >
-              <div className="img-wrap">
-                <div className="overlay">
-                  <i className="fa fa-search" />
-                </div>
-                <img src="img/eng_pics/_RFX2992-sm.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div className="col-md-2">
-            <a
-              className="fancybox"
-              rel="group"
-              href="img/eng_pics/_RFX3064-lg.jpg"
-            >
-              <div className="img-wrap">
-                <div className="overlay">
-                  <i className="fa fa-search" />
-                </div>
-                <img src="img/eng_pics/_RFX3064-sm.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div className="col-md-2">
-            <a
-              className="fancybox"
-              rel="group"
-              href="img/eng_pics/NGP_4089-lg.jpg"
-            >
-              <div className="img-wrap">
-                <div className="overlay">
-                  <i className="fa fa-search" />
-                </div>
-                <img src="img/eng_pics/NGP_4089-sm.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-          <div className="col-md-2">
-            <a
-              className="fancybox"
-              rel="group"
-              href="img/eng_pics/NGP_4119-lg.jpg"
-            >
-              <div className="img-wrap">
-                <div className="overlay">
-                  <i className="fa fa-search" />
-                </div>
-                <img src="img/eng_pics/NGP_4119-sm.jpg" alt="" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="row hidden-lg hidden-md hidden-xs">
-          <div className="col-xs-12 section-border section-padding" />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-12">
-          <div className="diamond floating-logo">
-            <img src="img/sketch-logo.png" alt="Sketch Logo" />
-            <div className="ring" />
-          </div>
+        <div className="float-right w-6/12 flex flex-row flex-wrap clearfix">
+          {images.map((image) => <img key={image} src={image} alt="engagement" className="w-2/12" />) }
         </div>
       </div>
     </section>
