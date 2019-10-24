@@ -8708,6 +8708,11 @@ react-app-polyfill@^1.0.4:
     regenerator-runtime "0.13.3"
     whatwg-fetch "3.0.0"
 
+react-arrow-navigation@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-arrow-navigation/-/react-arrow-navigation-1.0.1.tgz#c6bf91c35b146d1b07c60fa733bc1440898af449"
+  integrity sha512-UiGPpRRKceyZbYgyX7p7gtlya+MjvV3l+HrF17oy5aupAEouks96Tpq82+AIeGjYv3+PpAflbOT5Z8DyPgupVA==
+
 react-dev-utils@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-9.1.0.tgz#3ad2bb8848a32319d760d0a84c56c14bdaae5e81"
