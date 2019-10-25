@@ -10,7 +10,7 @@ const PhotoGridChild = ({
 }) => {
   const {
     focusProps: { ref, tabIndex, onClick },
-  } = useArrowNavigationWithFocusState(0, index)
+  } = useArrowNavigationWithFocusState(index, 0)
   return (
     <button
       type="button"
