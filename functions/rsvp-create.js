@@ -1,7 +1,9 @@
 const faunadb = require('faunadb')
-const secret = require('./utils/getSecret')
+
 
 const q = faunadb.query
+const secret = process.env.FAUNADB_ADMIN_SECRET
+
 const client = new faunadb.Client({
   secret,
 })
@@ -30,24 +32,3 @@ exports.handler = async (event, context) => {
       }
     })
 }
-
-function createRsvp(data) {
-  return fetch('/.netlify/functions/rsvps-create', {
-    body: JSON.stringify(data),
-    method: 'POST',
-  }).then((response) => response.json())
-}
-
-// Rsvp data
-const myRsvp = {
-  title: 'My rsvp title',
-  completed: false,
-}
-
-// create it!
-createRsvp(myRsvp).then((response) => {
-  console.log('API response', response)
-  // set app state
-}).catch((error) => {
-  console.log('API error', error)
-})
