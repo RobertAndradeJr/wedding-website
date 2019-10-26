@@ -3,7 +3,7 @@ const create = (data) => fetch('/.netlify/functions/rsvps-create', {
   method: 'POST',
 }).then((response) => response.json())
 
-const readAll = () => fetch('/.netlify/functions/rsvp-read-all.js').then((response) => console.log(response))
+const readAll = () => fetch('/.netlify/functions/rsvp-read-all').then((response) => response.json())
 
 const update = (rsvpId, data) => fetch(`/.netlify/functions/rsvps-update/${rsvpId}`, {
   body: JSON.stringify(data),
