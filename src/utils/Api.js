@@ -1,7 +1,7 @@
 const create = (data) => fetch('/.netlify/functions/rsvp-create', {
   body: JSON.stringify(data),
   method: 'POST',
-}).then((response) => console.log(response.json()))
+}).then((response) => response.json())
 
 const readAll = () => fetch('/.netlify/functions/rsvp-read-all').then((response) => response.json())
 

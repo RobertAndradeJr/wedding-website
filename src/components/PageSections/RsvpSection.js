@@ -23,24 +23,6 @@ const {
 
 const detailStyles = 'items-center'
 
-const DisplayFormikState = (props) => (
-  <div className="text-black" style={{ margin: '1rem 0' }}>
-    <h3 style={{ fontFamily: 'monospace' }} />
-    <pre
-      style={{
-        background: '#f6f8fa',
-        fontSize: '.65rem',
-        padding: '.5rem',
-      }}
-    >
-      <strong>props</strong>
-      = 
-      {' '}
-      {JSON.stringify(props, null, 2)}
-    </pre>
-  </div>
-)
-
 const RsvpSection = () => {
   const [RsvpData, setRsvpData] = useState(undefined)
 
@@ -74,9 +56,8 @@ const RsvpSection = () => {
             pronouns: '',
           }}
           onSubmit={(values, { setSubmitting }) => {
-            Api.create(values)
-            console.log(values)
             setTimeout(() => {
+              Api.create(values)
               // alert(JSON.stringify(values, null, 2))
               setSubmitting(false)
             }, 500)
@@ -87,109 +68,49 @@ const RsvpSection = () => {
               .required('Required'),
           })}
         >
-          {(props) => {
-            const {
-              values,
-              touched,
-              errors,
-              dirty,
-              isSubmitting,
-              handleChange,
-              handleBlur,
-              handleSubmit,
-              handleReset,
-            } = props
-            return (
-              <form onSubmit={handleSubmit} className="text-black">
-                <label htmlFor="email" style={{ display: 'block' }}>
-                  Email
-                </label>
-                <input
-                  id="email"
-                  placeholder="Enter your email"
-                  type="text"
-                  value={values.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className={
-                    errors.email && touched.email ? 'text-input error' : 'text-input'
-                  }
-                />
-                <input
-                  id="firstName"
-                  placeholder="Enter your First Name"
-                  type="text"
-                  value={values.firstName}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className={
-                    errors.firstName && touched.firstName ? 'text-input error' : 'text-input'
-                  }
-                />
-                <input
-                  id="lastName"
-                  placeholder="Enter your Last Name"
-                  type="text"
-                  value={values.lastName}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className={
-                    errors.lastName && touched.lastName ? 'text-input error' : 'text-input'
-                  }
-                />
-                <input
-                  id="guestNumber"
-                  placeholder="How many guests are coming with you?"
-                  type="number"
-                  value={values.guestNumber}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className={
-                    errors.guestNumber && touched.guestNumber ? 'text-input error' : 'text-input'
-                  }
-                />
-                <input
-                  id="foodChoice"
-                  placeholder="What would you like to eat?"
-                  type="text"
-                  value={values.foodChoice}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className={
-                    errors.foodChoice && touched.foodChoice ? 'text-input error' : 'text-input'
-                  }
-                />
-                <input
-                  id="pronouns"
-                  placeholder="What are your pronouns?"
-                  type="text"
-                  value={values.pronouns}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className={
-                    errors.pronouns && touched.pronouns ? 'text-input error' : 'text-input'
-                  }
-                />
-                {errors.pronouns && touched.pronouns && (
-                  <div className="input-feedback">{errors.pronouns}</div>
-                )}
-
-                <button
-                  type="button"
-                  className="outline text-white"
-                  onClick={handleReset}
-                  disabled={!dirty || isSubmitting}
-                >
-                  Reset
-                </button>
-                <button type="submit" disabled={isSubmitting} className="text-white">
-                  Submit
-                </button>
-
-                <DisplayFormikState {...props} />
-              </form>
-            )
-          }}
+          {({ isSubmitting }) => (
+            <Form className="text-black">
+              <Field
+                id="email"
+                name="email"
+                placeholder="email"
+                type="email"
+              />
+              <Field
+                id="firstName"
+                name="firstName"
+                placeholder="Enter your First Name"
+                type="text"
+              />
+              <Field
+                id="lastName"
+                name="lastName"
+                placeholder="Enter your Last Name"
+                type="text"
+              />
+              <Field
+                id="guestNumber"
+                name="guestNumber"
+                placeholder="How many guests are coming with you?"
+                type="number"
+              />
+              <Field
+                id="foodChoice"
+                name="foodChoice"
+                placeholder="What would you like to eat?"
+                type="text"
+              />
+              <Field
+                id="pronouns"
+                name="pronouns"
+                placeholder="What are your pronouns?"
+                type="text"
+              />
+              <button type="submit" disabled={isSubmitting} className="text-white">
+                Submit
+              </button>
+            </Form>
+          )}
         </Formik>
       </section>
     </ScrollableAnchor>

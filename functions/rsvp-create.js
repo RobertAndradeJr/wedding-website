@@ -8,27 +8,21 @@ const client = new faunadb.Client({
   secret,
 })
 
+// eslint-disable-next-line no-unused-vars
 exports.handler = async (event, context) => {
   const data = JSON.parse(event.body)
-  console.log(`Function: 'rsvp-create' invoked with data ${data}`)
   const RsvpItem = {
     data,
   }
 
   return client.query(q.Create(q.Ref('classes/rsvps'), RsvpItem))
-    .then((response) => {
-      console.log('success', response)
-      /* Success! return the response with statusCode 200 */
-      return {
-        statusCode: 200,
-        body: JSON.stringify(response),
-      }
-    }).catch((error) => {
-      console.log('error', error)
+  /* Success! return the response with statusCode 200 */
+    .then((response) => ({
+      statusCode: 200,
+      body: JSON.stringify(response),
       /* Error! return the error with statusCode 400 */
-      return {
-        statusCode: 400,
-        body: JSON.stringify(error),
-      }
-    })
+    })).catch((error) => ({
+      statusCode: 400,
+      body: JSON.stringify(error),
+    }))
 }
