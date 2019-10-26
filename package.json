@@ -7,6 +7,7 @@
     "axios": "^0.19.0",
     "eslint": "^6.5.1",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "faunadb": "^2.9.3",
     "postcss-cli": "^6.1.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -23,6 +24,7 @@
   "scripts": {
     "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
     "start": "npm run build:style && react-scripts start",
+    "dev": "netlify dev",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
