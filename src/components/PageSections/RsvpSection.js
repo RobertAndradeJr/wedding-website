@@ -1,6 +1,7 @@
 import React from 'react'
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { RsvpStrings, HomeStrings } from '../Strings/Strings'
+import Api from '../../utils/Api'
 
 const { RSVP } = RsvpStrings
 const { detail } = HomeStrings
@@ -31,6 +32,9 @@ const RsvpSection = () => (
         <h2>{ADDRESS}</h2>
         <p>{WEDDING_ADDRESS}</p>
       </div>
+      <button type="button" onClick={() => Api.readAll()}>
+        YEET
+      </button>
     </section>
   </ScrollableAnchor>
 )
