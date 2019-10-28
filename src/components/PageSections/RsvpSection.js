@@ -73,8 +73,8 @@ const RsvpSection = () => {
   const handleClick = async () => setRsvpData(await Api.readAll())
   return (
     <ScrollableAnchor id="RSVP">
-      <section className="h-screen text-white pb-24 items-center flex flex-col justify-around">
-        <div className="w-full max-w-6xl bg-gray-900 flex flex-col items-center justify-around p-12">
+      <section className="text-white items-center flex flex-col justify-around py-24">
+        <div className="w-full max-w-4xl bg-gray-900 flex flex-col items-center justify-around py-12 px-6">
           <button type="button" onClick={() => handleClick()}>
             {JSON.stringify(RsvpData) || 69}
           </button>

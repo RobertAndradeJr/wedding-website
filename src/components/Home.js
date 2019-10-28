@@ -29,20 +29,20 @@ export function Home() {
       rgba(0, 0, 0, 0.5)
     ),url(${SpaceBackground})`,
     }}>
-      {/* <Navbar />
-      <HeroSection /> */}
+      <Navbar />
+      <HeroSection />
       <Suspense fallback={<h1 className="text-white text-md">{FALLBACK}</h1>}>
         <InvitationSection />
-        {/* <HowWeMetSection />
+        <HowWeMetSection />
         <EventsList />
         <EngagementPicsSection />
         <SocialSection />
         <CitySection />
         <MapSection />
-        <DirectionsSection /> */}
+        <DirectionsSection />
         <RsvpSection />
       </Suspense>
-      {/* <FooterSection /> */}
+      <FooterSection />
     </div>
   )
 }
