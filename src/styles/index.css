@@ -22,5 +22,21 @@
  .btn--yellow {
    @apply bg-yellow-500
  }
+
+ .form {
+   @apply w-full px-3 mb-6 
+ }
+
+ .form--label {
+   @apply block uppercase tracking-wide text-gray-200 text-xs font-bold mb-2
+ }
+
+ .form--input {
+   @apply block appearance-none w-full bg-gray-200 text-gray-700 py-3 px-4 leading-tight border rounded
+ }
+
+ .form--error {
+   @apply text-red-500 text-xs italic
+ }
  
  @tailwind utilities;
