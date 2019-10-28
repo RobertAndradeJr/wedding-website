@@ -2,116 +2,141 @@ import React, { useState } from 'react'
 import {
   Formik,
   Form,
-  Field,
-  ErrorMessage,
+  useField,
 } from 'formik'
 import * as Yup from 'yup'
 import ScrollableAnchor from 'react-scrollable-anchor'
-import { RsvpStrings, HomeStrings } from '../Strings/Strings'
+
 import Api from '../../utils/Api'
 
-const { RSVP } = RsvpStrings
-const { detail } = HomeStrings
-const {
-  WHEN,
-  WHERE,
-  ADDRESS,
-  WEDDING_ADDRESS,
-  WEDDING_DATE,
-  WEDDING_LOCATION,
-} = detail
+const MyTextInput = ({ label, ...props }) => {
+  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+  // which we can spread on <input> and alse replace ErrorMessage entirely.
+  const [field, meta] = useField(props);
+  return (
+    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label className="block uppercase tracking-wide text-gray-200 text-xs font-bold mb-2" htmlFor={props.id || props.name}>{label}</label>
+      <input className="text-input appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" {...field} {...props} />
+      {meta.touched && meta.error ? (
+        <div className="error text-red-500 text-xs italic">{meta.error}</div>
+      ) : null}
+    </div>
+  );
+};
 
-const detailStyles = 'items-center'
+const MySelect = ({ label, ...props }) => {
+  const [field, meta] = useField(props);
+  return (
+    <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <label className="block uppercase tracking-wide text-gray-200 text-xs font-bold mb-2" htmlFor={props.id || props.name}>{label}</label>
+      <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" {...field} {...props} />
+      {meta.touched && meta.error ? (
+        <div className="error text-red-500 text-xs italic">{meta.error}</div>
+      ) : null}
+    </div>
+  );
+};
+
 
 const RsvpSection = () => {
   const [RsvpData, setRsvpData] = useState(undefined)
+  const initialValues = {
+    email: '',
+    guestName: '',
+    guestNumber: '',
+    foodChoice: '',
+    pronouns: '',
+  }
+  const validate = Yup.object({
+    email: Yup.string()
+      .email('Invalid email address')
+      .required('Required'),
+    guestName: Yup.string()
+      .max('50', 'Name is too long')
+      .required('Required'),
+    guestNumber: Yup.number(),
+    foodChoice: Yup.string()
+      .oneOf(
+        ['fish', 'chicken', 'beef', 'booty'], 'We are not serving that'
+      ),
+    pronouns: Yup.string(),
+    })
 
+    const onSubmit = (values, { setSubmitting }) => {
+      setTimeout(() => {
+        Api.create(values)
+        // alert(JSON.stringify(values, null, 2))
+        setSubmitting(false)
+      }, 500)
+    }
+  
   const handleClick = async () => setRsvpData(await Api.readAll())
   return (
     <ScrollableAnchor id="RSVP">
-      <section className="h-screen text-white p-24">
-        <h2 className="text-4xl">{RSVP}</h2>
-        <div className={detailStyles}>
-          <h2>{WHEN}</h2>
-          <p>{WEDDING_DATE}</p>
+      <section className="h-screen text-white pb-24 items-center flex flex-col justify-around">
+        <div className="w-full max-w-6xl bg-gray-900 flex flex-col items-center justify-around p-12">
+          <button type="button" onClick={() => handleClick()}>
+            {JSON.stringify(RsvpData) || 69}
+          </button>
+          <Formik
+            initialValues={initialValues}
+            onSubmit={onSubmit}
+            validationSchema={validate}
+          >
+            {({ isSubmitting }) => (
+              <Form className=" w-full max-w-2xl">
+                <div className="flex flex-wrap -mx-3 mb-6">
+                  <MyTextInput
+                    id="email"
+                    name="email"
+                    placeholder="email"
+                    type="email"
+                    label="email"
+                  />
+                  <MyTextInput
+                    id="guestName"
+                    name="guestName"
+                    placeholder="Enter your name"
+                    type="text"
+                    label="Name"
+                  />
+                </div>
+                <div class="flex flex-wrap md:flex-no-wrap -mx-3 mb-2">
+                  <MyTextInput
+                    id="guestNumber"
+                    name="guestNumber"
+                    placeholder="How many guests?"
+                    type="number"
+                    label="Guests"
+                  />
+                  <MySelect
+                    id="foodChoice"
+                    name="foodChoice"
+                    placeholder="What would you like to eat?"
+                    type="text"
+                    label="Dish"
+                  >
+                    <option value="">Dish?</option>
+                    <option value="fish">Fish</option>
+                    <option value="chicken">Chicken</option>
+                    <option value="beef">Beef</option>
+                    <option value="booty">Booty</option>
+                  </MySelect>
+                  <MyTextInput
+                    id="pronouns"
+                    name="pronouns"
+                    placeholder="What are your pronouns?"
+                    type="text"
+                    label="pronouns"
+                  />
+                </div>
+                <button type="submit" disabled={isSubmitting} className="text-white">
+                  Submit
+                </button>
+              </Form>
+            )}
+          </Formik>
         </div>
-        <div className={detailStyles}>
-          <h2>{WHERE}</h2>
-          <p>{WEDDING_LOCATION}</p>
-        </div>
-        <div className={detailStyles}>
-          <h2>{ADDRESS}</h2>
-          <p>{WEDDING_ADDRESS}</p>
-        </div>
-        <button type="button" onClick={() => handleClick()}>
-          {JSON.stringify(RsvpData) || 69}
-        </button>
-        <Formik
-          initialValues={{
-            email: '',
-            firstName: '',
-            lastName: '',
-            guestNumber: '',
-            foodChoice: '',
-            pronouns: '',
-          }}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              Api.create(values)
-              // alert(JSON.stringify(values, null, 2))
-              setSubmitting(false)
-            }, 500)
-          }}
-          validationSchema={Yup.object().shape({
-            email: Yup.string()
-              .email()
-              .required('Required'),
-          })}
-        >
-          {({ isSubmitting }) => (
-            <Form className="text-black">
-              <Field
-                id="email"
-                name="email"
-                placeholder="email"
-                type="email"
-              />
-              <Field
-                id="firstName"
-                name="firstName"
-                placeholder="Enter your First Name"
-                type="text"
-              />
-              <Field
-                id="lastName"
-                name="lastName"
-                placeholder="Enter your Last Name"
-                type="text"
-              />
-              <Field
-                id="guestNumber"
-                name="guestNumber"
-                placeholder="How many guests are coming with you?"
-                type="number"
-              />
-              <Field
-                id="foodChoice"
-                name="foodChoice"
-                placeholder="What would you like to eat?"
-                type="text"
-              />
-              <Field
-                id="pronouns"
-                name="pronouns"
-                placeholder="What are your pronouns?"
-                type="text"
-              />
-              <button type="submit" disabled={isSubmitting} className="text-white">
-                Submit
-              </button>
-            </Form>
-          )}
-        </Formik>
       </section>
     </ScrollableAnchor>
   )
