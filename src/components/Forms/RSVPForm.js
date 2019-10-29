@@ -41,7 +41,7 @@ const RSVPForm = () => {
       validationSchema={Validate}
     >
       {({ isSubmitting }) => (
-        <Form className=" w-full max-w-2xl" netlify id="rsvpForm" name="rsvpForm" data-netlify="true">
+        <Form className=" w-full max-w-2xl" netlify id="rsvpForm" name="rsvpForm" data-netlify="true" data-netlify-honeypot="bot-field">
           <Field type="hidden" name="form-name" value="rsvpForm" />
           <Field type="hidden" name="bot-field" />
           <div className="flex flex-wrap -mx-3 mb-6">
