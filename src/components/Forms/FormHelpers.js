@@ -5,8 +5,6 @@ import * as Yup from 'yup'
 import { useField } from 'formik'
 import PropTypes from 'prop-types'
 
-
-
 export const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props)
   const styles = `form--input mb-3 focus:outline-none focus:bg-white ${meta.touched && meta.error ? 'border-red-500' : ''}`
