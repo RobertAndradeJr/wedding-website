@@ -7,6 +7,10 @@ import PropTypes from 'prop-types'
 
 const scriptURL = process.env.REACT_APP_DOCS_URL
 
+export const encode = (data) => Object.keys(data)
+  .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+  .join('&')
+
 export const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props)
   const styles = `form--input mb-3 focus:outline-none focus:bg-white ${meta.touched && meta.error ? 'border-red-500' : ''}`

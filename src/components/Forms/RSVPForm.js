@@ -10,6 +10,7 @@ import {
   MyTextInput,
   Validate,
   postToGoogleDocs,
+  encode,
 } from './FormHelpers'
 
 const getFormData = () => {
@@ -29,6 +30,13 @@ const RSVPForm = () => {
   const [Submitted, setSubmitted] = useState(undefined)
 
   const onSubmit = (values, { setSubmitting }) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', values }),
+    })
+      .then(() => alert('Success!'))
+      .catch((error) => alert(error))
     setTimeout(async () => {
       // console.log(values)
       getFormData()
