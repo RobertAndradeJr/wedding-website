@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Formik,
   Form,
@@ -12,11 +12,7 @@ import {
   postToGoogleDocs,
 } from './FormHelpers'
 
-const getFormData = () => {
-  const rsvpForm = document.getElementById('rsvpForm')
-  const formData = new FormData(rsvpForm)
-  return postToGoogleDocs(formData)
-}
+
 
 const RSVPForm = () => {
   // const testingValues = {
@@ -27,10 +23,17 @@ const RSVPForm = () => {
   //   "pronouns":"fd"
   // }
   const [Submitted, setSubmitted] = useState(undefined)
+  useEffect(() => {
+    const sendFormData = async () => {
+      const rsvpForm = new FormData()
+      Object.keys(Submitted).map((key) => rsvpForm.append(key, Submitted[key]))
+      return postToGoogleDocs(rsvpForm)
+    }
+    if (Submitted !== undefined) sendFormData()
+  }, [Submitted])
 
   const onSubmit = (values, { setSubmitting }) => {
     setTimeout(async () => {
-      getFormData()
       await Api.create(values)
         .then((res) => {
           if (res.data) {
@@ -40,6 +43,7 @@ const RSVPForm = () => {
       setSubmitting(false)
     }, 500)
   }
+
   const selectOptions = [
     'Dish?',
     'Fish',
