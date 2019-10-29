@@ -8,6 +8,7 @@ const client = new faunadb.Client({
   secret,
 })
 
+// eslint-disable-next-line no-unused-vars
 exports.handler = async (event, context) => {
   const data = JSON.parse(event.body)
   // console.log('data', data)

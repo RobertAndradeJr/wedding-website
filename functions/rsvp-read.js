@@ -9,6 +9,7 @@ const client = new faunadb.Client({
   secret,
 })
 
+// eslint-disable-next-line no-unused-vars
 exports.handler = (event, context) => {
   const id = getId(event.path)
   // console.log(`Function 'rsvp-read' invoked. Read id: ${id}`)
