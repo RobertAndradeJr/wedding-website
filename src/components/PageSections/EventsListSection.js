@@ -77,7 +77,6 @@ const EventsListSection = () => {
         <button onClick={() => setOpenModal(!OpenModal)} className="btn btn--yellow hover:bg-yellow-400 focus:outline-none focus:shadow-outline active:bg-yellow-600 m-8" type="button">{DRESS_CODE.TITLE}</button>
         <Modal
           isOpen={OpenModal === true}
-          // onAfterOpen={this.afterOpenModal}
           onRequestClose={() => setOpenModal(false)}
           style={ModalStyles}
           contentLabel={DRESS_CODE.TITLE}
@@ -91,7 +90,7 @@ const EventsListSection = () => {
         </Modal>
       </section>
     </ScrollableAnchor>
-)
+  )
 }
 
 export default EventsListSection
