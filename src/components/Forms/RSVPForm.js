@@ -9,14 +9,14 @@ import {
   MySelect,
   MyTextInput,
   Validate,
-  // postToGoogleDocs,
+  postToGoogleDocs,
 } from './FormHelpers'
 
-// const getFormData = () => {
-//   const rsvpForm = document.getElementById('rsvpForm')
-//   const formData = new FormData(rsvpForm)
-//   return postToGoogleDocs(formData)
-// }
+const getFormData = () => {
+  const rsvpForm = document.getElementById('rsvpForm')
+  const formData = new FormData(rsvpForm)
+  return postToGoogleDocs(formData)
+}
 
 const RSVPForm = () => {
   // const testingValues = {
@@ -30,12 +30,12 @@ const RSVPForm = () => {
 
   const onSubmit = (values, { setSubmitting }) => {
     setTimeout(async () => {
+      getFormData()
       await Api.create(values)
         .then((res) => {
           if (res.data) {
             setSubmitted(res.data)
           }
-          // getFormData()
         })
       setSubmitting(false)
     }, 500)
