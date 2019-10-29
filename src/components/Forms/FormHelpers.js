@@ -2,6 +2,8 @@ import React from 'react'
 import * as Yup from 'yup'
 import { useField } from 'formik';
 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxLxnreJyMH9jhy2x0LFwe38Pt91OkjKW836XMjtZeIISNPsPU/exec'
+
 export const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
@@ -36,6 +38,10 @@ export const MySelect = ({ label, ...props }) => {
   )
 }
 
+export const postToGoogleDocs = (formData) => fetch(scriptURL, { method: 'POST', body: formData })
+  .then(response => console.log('Success!', response))
+  .catch(error => console.error('Error!', error.message))
+
 export const Validate = Yup.object({
   email: Yup.string()
     .email('Invalid email address')
@@ -43,7 +49,8 @@ export const Validate = Yup.object({
   guestName: Yup.string()
     .max('50', 'Name is too long')
     .required('Required'),
-  guestNumber: Yup.number(),
+  guestNumber: Yup.number()
+    .max('4', 'This is a wedding not a daycare!'),
   foodChoice: Yup.string()
     .oneOf(
       ['fish', 'chicken', 'beef', 'booty'], 'We are not serving that'
