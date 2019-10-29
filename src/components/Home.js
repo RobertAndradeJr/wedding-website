@@ -22,13 +22,15 @@ export function Home() {
   const FALLBACK = 'loading...'
   configureAnchors({ offset: height / -10, scrollDuration: 500 })
   return (
-    <div className="App"
-    style={{
-      backgroundImage: `linear-gradient(
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.5)
-    ),url(${SpaceBackground})`,
-    }}>
+    <div
+      className="App"
+      style={{
+        backgroundImage: `linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ),url(${SpaceBackground})`,
+      }}
+    >
       <Navbar />
       <HeroSection />
       <Suspense fallback={<h1 className="text-white text-md">{FALLBACK}</h1>}>
