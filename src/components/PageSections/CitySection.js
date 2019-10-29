@@ -14,6 +14,7 @@ const CitySection = () => (
         className="z-30 flex flex-col justify-center text-white"
         style={{ height: 420 }}
         overlay="rgba(0,0,0,0.33)"
+        nocookie
       >
         <div id="video-content">
           <h5 className="text-4xl">{CITY_NAME}</h5>

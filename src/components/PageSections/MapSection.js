@@ -8,7 +8,8 @@ const {
   EASIER_THAN_YOU_THINK,
 } = MapStrings
 
-const MAP_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.6627383459654!2d-93.19008618454988!3d44.991161972903036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32d172d3e3a05%3A0x63d7830833a56d3b!2sBell%20Museum!5e0!3m2!1sen!2sus!4v1571612382679!5m2!1sen!2sus'
+const MAP_QUERY = 'bell+museum+near+55113'
+const MAP_URL = `https://www.google.com/maps/embed/v1/search?key=${process.env.REACT_APP_MAPS_API_KEY}&q=${MAP_QUERY}`
 
 const DirectionsSection = () => (
   <ScrollableAnchor id="Venue">
