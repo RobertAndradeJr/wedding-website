@@ -56,7 +56,7 @@ const RSVPForm = () => {
       validationSchema={Validate}
     >
       {({ isSubmitting }) => (
-        <Form className=" w-full max-w-2xl" data-netlify="true" id="rsvpForm" name="rsvpForm">
+        <Form className=" w-full max-w-2xl" netlify id="rsvpForm" name="rsvpForm">
           <div className="flex flex-wrap -mx-3 mb-6">
             <MyTextInput
               id="email"
