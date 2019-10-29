@@ -20,6 +20,8 @@ export const MyTextInput = ({ label, ...props }) => {
 }
 
 export const InitialValues = {
+  'bot=field': '',
+  'form-name': 'rsvpForm',
   email: '',
   guestName: '',
   guestNumber: '',
