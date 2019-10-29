@@ -9,29 +9,13 @@ import {
   MySelect,
   MyTextInput,
   Validate,
-  postToGoogleDocs,
 } from './FormHelpers'
 
-const getFormData = () => {
-  const rsvpForm = document.getElementById('rsvpForm')
-  const formData = new FormData(rsvpForm)
-  return postToGoogleDocs(formData)
-}
-
 const RSVPForm = () => {
-  // const testingValues = {
-  //   "email":"robert.andrade.developer@gmail.com",
-  //   "guestName":"Sergio R Andrade",
-  //   "guestNumber":230948,
-  //   "foodChoice":"beef",
-  //   "pronouns":"fd"
-  // }
   const [Submitted, setSubmitted] = useState(undefined)
 
   const onSubmit = (values, { setSubmitting }) => {
     setTimeout(async () => {
-      // console.log(values)
-      getFormData()
       await Api.create(values)
         .then((res) => (res.data ? setSubmitted(res.data) : null))
       setSubmitting(false)
