@@ -11,10 +11,12 @@ const HASHTAG_LINK = `#${HASHTAG}`
 const SocialSection = () => {
   const [Pictures, setPictures] = useState([])
 
-  useEffect(() => fetch(INSTAGRAM_QUERY)
-    .then((response) => response.json())
-    .then((data) => setPictures(data.graphql.hashtag.edge_hashtag_to_media.edges))
-    .catch((error) => error.json()), [Pictures])
+  useEffect(() => {
+    fetch(INSTAGRAM_QUERY)
+      .then((response) => response.json())
+      .then((data) => setPictures(data.graphql.hashtag.edge_hashtag_to_media.edges))
+      .catch((error) => error.json())
+  }, [])
 
   return (
     <ScrollableAnchor id="Social">
