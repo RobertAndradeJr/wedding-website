@@ -9,14 +9,14 @@ import {
   MySelect,
   MyTextInput,
   Validate,
-  postToGoogleDocs,
+  // postToGoogleDocs,
 } from './FormHelpers'
 
-const getFormData = () => {
-  const rsvpForm = document.getElementById('rsvpForm')
-  const formData = new FormData(rsvpForm)
-  return postToGoogleDocs(formData)
-}
+// const getFormData = () => {
+//   const rsvpForm = document.getElementById('rsvpForm')
+//   const formData = new FormData(rsvpForm)
+//   return postToGoogleDocs(formData)
+// }
 
 const RSVPForm = () => {
   // const testingValues = {
@@ -35,7 +35,7 @@ const RSVPForm = () => {
           if (res.data) {
             setSubmitted(res.data)
           }
-          getFormData()
+          // getFormData()
         })
       setSubmitting(false)
     }, 500)
@@ -59,7 +59,7 @@ const RSVPForm = () => {
       validationSchema={Validate}
     >
       {({ isSubmitting }) => (
-        <Form className=" w-full max-w-2xl" netlify id="rsvpForm" name="rsvpForm" data-netlify="true">
+        <Form className=" w-full max-w-2xl" name="rsvpForm" data-netlify="true">
           <input type="hidden" name="form-name" value="rsvpForm" />
           <div className="flex flex-wrap -mx-3 mb-6">
             <MyTextInput
