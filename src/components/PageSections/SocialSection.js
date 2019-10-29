@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Axios from 'axios'
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { InstagramPicsStrings } from '../Strings/Strings'
 import ShareBar from '../ShareBar/ShareBar'
@@ -12,13 +11,10 @@ const HASHTAG_LINK = `#${HASHTAG}`
 const SocialSection = () => {
   const [Pictures, setPictures] = useState([])
 
-  useEffect(() => {
-    async function fetchPictures() {
-      const response = await Axios.get(INSTAGRAM_QUERY)
-      setPictures(response.data.graphql.hashtag.edge_hashtag_to_media.edges)
-    }
-    fetchPictures()
-  }, [])
+  useEffect(() => fetch(INSTAGRAM_QUERY)
+    .then((response) => response.json())
+    .then((data) => setPictures(data.graphql.hashtag.edge_hashtag_to_media.edges))
+    .catch((error) => error.json()), [Pictures])
 
   return (
     <ScrollableAnchor id="Social">
