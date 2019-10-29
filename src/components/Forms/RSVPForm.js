@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {
   Formik,
   Form,
+  Field,
 } from 'formik'
 import Api from '../../utils/Api'
 import {
@@ -41,8 +42,8 @@ const RSVPForm = () => {
     >
       {({ isSubmitting }) => (
         <Form className=" w-full max-w-2xl" netlify id="rsvpForm" name="rsvpForm" data-netlify="true">
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="rsvpForm" />
+          <Field type="hidden" name="form-name" value="rsvpForm" />
+          <Field type="hidden" name="bot-field" />
           <div className="flex flex-wrap -mx-3 mb-6">
             <MyTextInput
               id="email"
