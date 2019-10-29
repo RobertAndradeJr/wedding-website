@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import { useField } from 'formik'
 import PropTypes from 'prop-types'
 
-const scriptURL = process.env.REACT_APP_DOCS_URL
+
 
 export const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props)
@@ -41,10 +41,6 @@ export const MySelect = ({ label, ...props }) => {
     </div>
   )
 }
-
-export const postToGoogleDocs = (formData) => fetch(scriptURL, { method: 'POST', body: formData })
-  .then((response) => response.json())
-  .catch((error) => console.log(error))
 
 export const Validate = Yup.object({
   email: Yup.string()
