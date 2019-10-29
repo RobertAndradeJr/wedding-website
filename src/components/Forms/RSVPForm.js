@@ -9,7 +9,14 @@ import {
   MySelect,
   MyTextInput,
   Validate,
+  postToGoogleDocs,
 } from './FormHelpers'
+
+const getFormData = () => {
+  const rsvpForm = document.getElementById('rsvpForm')
+  const formData = new FormData(rsvpForm)
+  return postToGoogleDocs(formData)
+}
 
 const RSVPForm = () => {
   // const testingValues = {
@@ -23,12 +30,13 @@ const RSVPForm = () => {
 
   const onSubmit = (values, { setSubmitting }) => {
     setTimeout(async () => {
+      // console.log(values)
+      getFormData()
       await Api.create(values)
-        .then((res) => (res.data ? setSubmitted(res.data) : undefined))
+        .then((res) => (res.data ? setSubmitted(res.data) : null))
       setSubmitting(false)
     }, 500)
   }
-
   const selectOptions = [
     'Dish?',
     'Fish',
@@ -48,7 +56,7 @@ const RSVPForm = () => {
       validationSchema={Validate}
     >
       {({ isSubmitting }) => (
-        <Form className=" w-full max-w-2xl" name="rsvpForm" id="rsvpForm">
+        <Form className=" w-full max-w-2xl" netlify id="rsvpForm" name="rsvpForm" data-netlify="true">
           <input type="hidden" name="form-name" value="rsvpForm" />
           <div className="flex flex-wrap -mx-3 mb-6">
             <MyTextInput
