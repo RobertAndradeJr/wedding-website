@@ -44,7 +44,7 @@ export const MySelect = ({ label, ...props }) => {
 
 export const postToGoogleDocs = (formData) => fetch(scriptURL, { method: 'POST', body: formData })
   .then((response) => response.json())
-  .catch((error) => error.json())
+  .catch((error) => console.log(error))
 
 export const Validate = Yup.object({
   email: Yup.string()
