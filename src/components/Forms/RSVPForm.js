@@ -57,7 +57,7 @@ const RSVPForm = () => {
     >
       {({ isSubmitting }) => (
         <Form className=" w-full max-w-2xl" netlify id="rsvpForm" name="rsvpForm" data-netlify="true">
-          <input type="hidden" name="rsvpNetlify" value="rsvpForm" />
+          <input type="hidden" name="form-name" value="rsvpForm" />
           <div className="flex flex-wrap -mx-3 mb-6">
             <MyTextInput
               id="email"
