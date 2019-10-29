@@ -30,10 +30,13 @@ const RSVPForm = () => {
 
   const onSubmit = (values, { setSubmitting }) => {
     setTimeout(async () => {
-      // console.log(values)
-      getFormData()
       await Api.create(values)
-        .then((res) => (res.data ? setSubmitted(res.data) : null))
+        .then((res) => {
+          if (res.data) {
+            setSubmitted(res.data)
+          }
+          getFormData()
+        })
       setSubmitting(false)
     }, 500)
   }
