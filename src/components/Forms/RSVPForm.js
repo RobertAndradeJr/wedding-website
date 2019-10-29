@@ -10,13 +10,13 @@ import {
   MySelect,
   MyTextInput,
   Validate,
-  postToGoogleDocs,
+  getNetlifyFormData,
 } from './FormHelpers'
 
 const getFormData = () => {
   const rsvpForm = document.getElementById('rsvpForm')
   const formData = new FormData(rsvpForm)
-  return postToGoogleDocs(formData)
+  return getNetlifyFormData(formData)
 }
 
 const RSVPForm = () => {
@@ -27,6 +27,7 @@ const RSVPForm = () => {
       getFormData()
       await Api.create(values)
         .then((res) => (res.data ? setSubmitted(res.data) : null))
+        .then(() => getFormData())
       setSubmitting(false)
     }, 500)
   }

@@ -42,7 +42,7 @@ export const MySelect = ({ label, ...props }) => {
   )
 }
 
-export const postToGoogleDocs = (formData) => fetch('/', { method: 'POST', body: formData })
+export const getNetlifyFormData = (formData) => fetch('/', { method: 'POST', body: formData })
   .then((response) => response.json())
   .catch((error) => error.json())
 
