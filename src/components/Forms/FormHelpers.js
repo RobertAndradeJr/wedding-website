@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import { useField } from 'formik'
 import PropTypes from 'prop-types'
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxLxnreJyMH9jhy2x0LFwe38Pt91OkjKW836XMjtZeIISNPsPU/exec'
+const scriptURL = process.env.REACT_APP_DOCS_URL
 
 export const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props)
@@ -43,8 +43,8 @@ export const MySelect = ({ label, ...props }) => {
 }
 
 export const postToGoogleDocs = (formData) => fetch(scriptURL, { method: 'POST', body: formData })
-  .then((response) => console.log('Success!', response))
-  .catch((error) => console.error('Error!', error.message))
+  .then((response) => response.json())
+  .catch((error) => error.json())
 
 export const Validate = Yup.object({
   email: Yup.string()

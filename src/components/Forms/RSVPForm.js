@@ -91,7 +91,7 @@ const RSVPForm = () => {
               {selectOptions.map((val, i) => (
                 <option
                   key={val}
-                  value={(i === 0 ? '' : val)}
+                  value={(i === 0 ? '' : val.toLowerCase())}
                 >
                   {val}
                 </option>

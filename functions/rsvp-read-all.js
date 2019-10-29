@@ -1,6 +1,7 @@
 const faunadb = require('faunadb')
+const getSecret = require('./utils/getSecret')
 
-const secret = process.env.FAUNADB_ADMIN_SECRET
+const secret = getSecret()
 
 const q = faunadb.query
 const client = new faunadb.Client({

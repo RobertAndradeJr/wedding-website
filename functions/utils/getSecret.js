@@ -1,5 +1,4 @@
-const secret = process.env.NODE_ENV === 'production' ? process.env.FAUNA_DB_SERVERSECRET_CLIENT : process.env.FAUNA_DB_SERVERSECRET_ADMIN
-
-export default {
-  secret,
+module.exports = function getSecret() {
+  const secret = process.env.NODE_ENV === 'production' ? process.env.FAUNADB_CLIENT_SECRET : process.env.FAUNADB_ADMIN_SECRET
+  return secret
 }
