@@ -10,7 +10,6 @@ import {
   MyTextInput,
   Validate,
   postToGoogleDocs,
-  encode,
 } from './FormHelpers'
 
 const getFormData = () => {
@@ -30,13 +29,6 @@ const RSVPForm = () => {
   const [Submitted, setSubmitted] = useState(undefined)
 
   const onSubmit = (values, { setSubmitting }) => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', values }),
-    })
-      .then(() => alert('Success!'))
-      .catch((error) => alert(error))
     setTimeout(async () => {
       // console.log(values)
       getFormData()
@@ -64,7 +56,8 @@ const RSVPForm = () => {
       validationSchema={Validate}
     >
       {({ isSubmitting }) => (
-        <Form className=" w-full max-w-2xl" netlify id="rsvpForm" name="rsvpForm">
+        <Form className=" w-full max-w-2xl" netlify id="rsvpForm" name="rsvpForm" data-netlify="true">
+          <input type="hidden" name="form-name" value="rsvpForm" />
           <div className="flex flex-wrap -mx-3 mb-6">
             <MyTextInput
               id="email"
