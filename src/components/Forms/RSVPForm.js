@@ -12,8 +12,6 @@ import {
   postToGoogleDocs,
 } from './FormHelpers'
 
-
-
 const RSVPForm = () => {
   // const testingValues = {
   //   "email":"robert.andrade.developer@gmail.com",
@@ -23,14 +21,14 @@ const RSVPForm = () => {
   //   "pronouns":"fd"
   // }
   const [Submitted, setSubmitted] = useState(undefined)
-  useEffect(() => {
-    const sendFormData = async () => {
-      const rsvpForm = new FormData()
-      Object.keys(Submitted).map((key) => rsvpForm.append(key, Submitted[key]))
-      return postToGoogleDocs(rsvpForm)
-    }
-    if (Submitted !== undefined) sendFormData()
-  }, [Submitted])
+  // useEffect(() => {
+  //   const sendFormData = async () => {
+  //     const rsvpForm = new FormData()
+  //     Object.keys(Submitted).map((key) => rsvpForm.append(key, Submitted[key]))
+  //     return postToGoogleDocs(rsvpForm)
+  //   }
+  //   if (Submitted !== undefined) sendFormData()
+  // }, [Submitted])
 
   const onSubmit = (values, { setSubmitting }) => {
     setTimeout(async () => {
