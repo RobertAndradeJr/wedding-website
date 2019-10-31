@@ -9,6 +9,7 @@ const {
 } = detail
 
 const SUBTITLE = `${WEDDING_DATE} · ${WEDDING_LOCATION}`
+
 const Banner = () => (
   <div className="text-white w-screen m-24">
     <div className="opacity-1">
