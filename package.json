@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "^9.6.1",
+    "cloudinary-react": "^1.2.1",
     "eslint": "^6.5.1",
     "eslint-plugin-react-hooks": "^1.7.0",
     "faunadb": "^2.9.3",
