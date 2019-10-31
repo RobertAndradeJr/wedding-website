@@ -5,19 +5,9 @@ import * as Yup from 'yup'
 import { useField } from 'formik'
 import PropTypes from 'prop-types'
 
-export const MyTextInput = ({ label, ...props }) => {
-  const [field, meta] = useField(props)
-  const styles = `form--input mb-3 focus:outline-none focus:bg-white ${meta.touched && meta.error ? 'border-red-500' : ''}`
-  return (
-    <div className="form md:w-1/2 md:mb-0">
-      <label className="form--label" htmlFor={props.id || props.name}>{label}</label>
-      <input className={styles} {...field} {...props} />
-      {meta.touched && meta.error ? (
-        <div className="form--error">{meta.error}</div>
-      ) : null}
-    </div>
-  )
-}
+export const getNetlifyFormData = (formData) => fetch('/', { method: 'POST', body: formData })
+  .then((response) => response.json())
+  .catch((error) => error)
 
 export const InitialValues = {
   'bot=field': '',
@@ -42,9 +32,19 @@ export const MySelect = ({ label, ...props }) => {
   )
 }
 
-export const getNetlifyFormData = (formData) => fetch('/', { method: 'POST', body: formData })
-  .then((response) => response.json())
-  .catch((error) => error.json())
+export const MyTextInput = ({ label, ...props }) => {
+  const [field, meta] = useField(props)
+  const styles = `form--input mb-3 focus:outline-none focus:bg-white ${meta.touched && meta.error ? 'border-red-500' : ''}`
+  return (
+    <div className="form md:w-1/2 md:mb-0">
+      <label className="form--label" htmlFor={props.id || props.name}>{label}</label>
+      <input className={styles} {...field} {...props} />
+      {meta.touched && meta.error ? (
+        <div className="form--error">{meta.error}</div>
+      ) : null}
+    </div>
+  )
+}
 
 export const Validate = Yup.object({
   email: Yup.string()
