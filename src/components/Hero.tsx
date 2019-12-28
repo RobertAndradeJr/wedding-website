@@ -7,11 +7,10 @@ import EngagementPhoto from "../assets/engagement_photo.jpg";
 import { HomeStrings, CountdownStrings } from "./Strings/Strings";
 import UseCountdown from "../utils/UseCountdown";
 
-
 const { detail, title } = HomeStrings;
 const { WEDDING_DATE, WEDDING_LOCATION } = detail;
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const SUBTITLE = `${WEDDING_DATE} · ${WEDDING_LOCATION}`;
   const { Days, Hours, Minutes, Seconds } = UseCountdown(
     CountdownStrings.WEDDING_DATE,
