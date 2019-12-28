@@ -19,16 +19,19 @@ const Hero: React.FC = () => {
   const countdownOutput = `${Days}d ${Hours}h ${Minutes}m ${Seconds}s`;
   return (
     <Jumbotron
+      className="vh-100"
       style={{
+        backgroundColor: "black",
         backgroundImage: `linear-gradient(
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
       ),url(${EngagementPhoto})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "contain"
+        backgroundSize: "contain",
+        backgroundPosition: "center"
       }}
     >
-      <Container>
+      <Container className="text-white">
         <Row>
           <Col>
             <h1 className="display-4">{title}</h1>{" "}
