@@ -24,6 +24,7 @@ export const NavBar = () => {
       bg="warning"
       variant="light"
       sticky="top"
+      id="navbar"
     >
       <Navbar.Brand href="#home">
         R<HeartLogo />M

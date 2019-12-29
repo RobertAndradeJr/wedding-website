@@ -21,7 +21,7 @@ const SocialSection = () => {
   }, [])
 
   return (
-    <Container as="section" id="Social" className="text-center">
+    <Container as="section" id="social" className="text-center">
       <Row>
         <Col>
           <h3>{PICTURE_WORTH_THOUSAND_WORDS}</h3>
