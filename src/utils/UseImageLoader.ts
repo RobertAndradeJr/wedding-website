@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const importAll = (r) => r.keys().map(r);
+const importAll = (r: any) => r.keys().map(r);
 
 const UseImageLoader = () => {
   const [items, setItems] = useState([]);
