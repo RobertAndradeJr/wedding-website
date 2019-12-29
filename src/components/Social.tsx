@@ -1,27 +1,28 @@
-import React, { useState, useEffect } from 'react'
-import { InstagramPicsStrings } from './Strings'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import React, { useState, useEffect } from 'react';
+import { InstagramPicsStrings } from './Strings';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const { HASHTAG, HELP_US, PICTURE_WORTH_THOUSAND_WORDS } = InstagramPicsStrings;
 
 const INSTAGRAM_LINK = `https://www.instagram.com/explore/tags/${HASHTAG}`;
 const INSTAGRAM_QUERY = `${INSTAGRAM_LINK}/?__a=1`;
 const HASHTAG_LINK = `#${HASHTAG}`;
-const Social = () => {
+const Social: React.FC = () => {
   const [Pictures, setPictures] = useState([]);
 
   useEffect(() => {
     fetch(INSTAGRAM_QUERY)
-      .then((response) => response.json())
-      .then((data) => setPictures(data.graphql.hashtag.edge_hashtag_to_media.edges))
-      .catch((error) => error.json())
+      .then(response => response.json())
+      .then(data =>
+        setPictures(data.graphql.hashtag.edge_hashtag_to_media.edges)
+      )
+      .catch(error => error.json());
   }, []);
 
   return (
     <Container as="section" id="social" className="text-center">
-
       <Row>
         <Col>
           <h3 className="display-4">{PICTURE_WORTH_THOUSAND_WORDS}</h3>
@@ -31,7 +32,12 @@ const Social = () => {
         <Col>
           <p className="display-5">
             {HELP_US}
-            <a className="text-blue-500" href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer">
+            <a
+              className="text-blue-500"
+              href={INSTAGRAM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {HASHTAG_LINK}
             </a>
           </p>
@@ -49,7 +55,7 @@ const Social = () => {
         ))}
       </Row>
     </Container>
-  )
+  );
 };
 
-export default Social
+export default Social;

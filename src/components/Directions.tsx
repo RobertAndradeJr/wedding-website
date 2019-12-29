@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { MapStrings } from "./Strings";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Jumbotron from "react-bootstrap/Jumbotron";
+import { MapStrings } from './Strings';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 const {
   BOOK_UBER,
@@ -21,10 +21,10 @@ const {
 
 const BELL_MUSEUM_TEL_LINK = `tel:${CONTACT_NUMBER}`;
 const UBER_LINK =
-  "https://m.uber.com/ul/?action=setPickup&client_id=WQvddpr5mKEbJ_eFl1uvVOQvi_LCEPWe&pickup=my_location&dropoff[formatted_address]=Bell%20Museum%2C%20Larpenteur%20Avenue%20West%2C%20Saint%20Paul%2C%20MN%2C%20USA&dropoff[latitude]=44.991158&dropoff[longitude]=-93.187898";
-const GOOGLE_MAPS_LINK = "https://g.page/BellMuseum?share";
+  'https://m.uber.com/ul/?action=setPickup&client_id=WQvddpr5mKEbJ_eFl1uvVOQvi_LCEPWe&pickup=my_location&dropoff[formatted_address]=Bell%20Museum%2C%20Larpenteur%20Avenue%20West%2C%20Saint%20Paul%2C%20MN%2C%20USA&dropoff[latitude]=44.991158&dropoff[longitude]=-93.187898';
+const GOOGLE_MAPS_LINK = 'https://g.page/BellMuseum?share';
 
-const Directions = () => (
+const Directions: React.SFC = () => (
   <>
     <Container as="section" id="venue" className="text-center">
       <Row>
@@ -41,9 +41,9 @@ const Directions = () => (
         rgba(0, 0, 0, 0.5), 
         rgba(0, 0, 0, 0.5)
       ),url(https://www.bellmuseum.umn.edu/wp-content/uploads/2019/02/horizon-hall-hero.jpg)`,
-        backgroundAttachment: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
+        backgroundAttachment: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
       }}
     >
       <Container>
@@ -102,7 +102,7 @@ const Directions = () => (
                       height="18"
                     >
                       <path
-                        style={{ fill: "#fff" }}
+                        style={{ fill: '#fff' }}
                         className="heroicon-ui"
                         d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
                       />

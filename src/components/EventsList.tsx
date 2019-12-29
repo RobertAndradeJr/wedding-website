@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal"
-import { EventsListStrings } from "./Strings";
+import React, { useState } from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { EventsListStrings } from './Strings';
 
 const {
   TITLE,
@@ -20,10 +20,10 @@ const columns = [
   [DINNER, DANCE]
 ];
 
-const EventsList = () => {
+const EventsList: React.FC = () => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = (): void => setShow(false);
+  const handleShow = (): void => setShow(true);
   return (
     <Container id="events" as="section" className="text-center">
       <Row>
@@ -33,7 +33,7 @@ const EventsList = () => {
       </Row>
       <Row>
         {columns.map((column, i) => (
-          <Col className={i === 0 ? "border-right border-white" : ""} key={i}>
+          <Col className={i === 0 ? 'border-right border-white' : ''} key={i}>
             {column.map(({ TITLE, TIME, DESCRIPTION }) => (
               <Container key={TITLE}>
                 <Row>
@@ -61,15 +61,17 @@ const EventsList = () => {
           <Button onClick={handleShow}>{DRESS_CODE.TITLE}</Button>
         </Col>
       </Row>
-      <Modal className="text-dark" show={show} onHide={handleClose} size="lg" centered>
+      <Modal
+        className="text-dark"
+        show={show}
+        onHide={handleClose}
+        size="lg"
+        centered
+      >
         <Modal.Header>
-          <Modal.Title>
-            {DRESS_CODE.TITLE}
-          </Modal.Title>
+          <Modal.Title>{DRESS_CODE.TITLE}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          {DRESS_CODE.DESCRIPTION}
-        </Modal.Body>
+        <Modal.Body>{DRESS_CODE.DESCRIPTION}</Modal.Body>
         <Modal.Footer>
           <Button onClick={handleClose}>Close</Button>
         </Modal.Footer>

@@ -1,14 +1,14 @@
-import React from "react";
-import { EngagementPicsStrings } from "./Strings";
-import UseImageLoader from "../utils/UseImageLoader";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Carousel from "react-bootstrap/Carousel";
+import React from 'react';
+import { EngagementPicsStrings } from './Strings';
+import UseImageLoader from '../utils/UseImageLoader';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Carousel from 'react-bootstrap/Carousel';
 
 const { SUBTITLE, TITLE } = EngagementPicsStrings;
 
-const EngagementPics = () => (
+const EngagementPics: React.SFC = () => (
   <Container as="section" id="engagement" className="text-center">
     <Row>
       <Col>

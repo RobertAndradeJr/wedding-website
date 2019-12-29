@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { CityStrings } from "./Strings";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import YouTubeBackground from "react-youtube-background";
+import { CityStrings } from './Strings';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import YouTubeBackground from 'react-youtube-background';
 
 const { CITY_NAME, CITY_MOTTO } = CityStrings;
 
-const City = () => (
+const City: React.SFC = () => (
   <Container as="section" className="text-center" id="glimpseofthecity" fluid>
     <YouTubeBackground
       videoId="CWzZ-Y2D9tw"

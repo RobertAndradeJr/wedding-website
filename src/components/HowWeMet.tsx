@@ -1,19 +1,19 @@
-import React from "react";
-import { HowWeMetStrings } from "./Strings";
-import HowWeMetRobert from "../assets/howwemet-robert.jpg";
-import HowWeMetMandi from "../assets/howwemet-mandi.jpg";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Figure from "react-bootstrap/Figure";
+import React from 'react';
+import { HowWeMetStrings } from './Strings';
+import HowWeMetRobert from '../assets/howwemet-robert.jpg';
+import HowWeMetMandi from '../assets/howwemet-mandi.jpg';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Figure from 'react-bootstrap/Figure';
 
 const { DESCRIPTION, TITLE } = HowWeMetStrings;
 const altTitles = {
-  Robert: "Robert (he/him)",
-  Mandi: "Mandi (they/them)"
+  Robert: 'Robert (he/him)',
+  Mandi: 'Mandi (they/them)'
 };
 
-const HowWeMet = () => (
+const HowWeMet: React.SFC = () => (
   <Container as="section" id="howwemet" className="text-center">
     <Row>
       <Col>

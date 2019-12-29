@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 const importAll = (r: any) => r.keys().map(r);
 
@@ -6,11 +6,14 @@ const UseImageLoader = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const importItems = () => importAll(require.context('../assets/engagement', false, /\.(png|jpe?g|svg)$/));
-    setItems(importItems)
+    const importItems = () =>
+      importAll(
+        require.context('../assets/engagement', false, /\.(png|jpe?g|svg)$/)
+      );
+    setItems(importItems);
   }, []);
 
-  return items
+  return items;
 };
 
-export default UseImageLoader
+export default UseImageLoader;

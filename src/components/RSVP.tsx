@@ -1,10 +1,10 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
-import { RSVPForm } from "./RSVPForm";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import { RSVPForm } from './RSVPForm';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-const RSVP = () => (
+const RSVP: React.SFC = () => (
   <Container as="section" id="rsvp">
     <Row className="text-center">
       <Col>

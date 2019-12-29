@@ -1,11 +1,11 @@
-import React from "react";
-import InvitationIllustration from "../assets/undraw_invite.svg";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import React from 'react';
+import InvitationIllustration from '../assets/undraw_invite.svg';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-const PLACEHOLDER = "Please join us for a night of fun festivities";
-const Invitation = () => (
+const PLACEHOLDER = 'Please join us for a night of fun festivities';
+const Invitation: React.SFC = () => (
   <Container as="section" className="text-center" id="invitation">
     <Row>
       <Col>

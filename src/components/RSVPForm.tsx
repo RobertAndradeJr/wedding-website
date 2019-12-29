@@ -1,9 +1,9 @@
-import React from "react";
-import * as formik from "formik";
-import Form from "react-bootstrap/Form";
-import Col from "react-bootstrap/Col";
-import * as yup from "yup";
-import Button from "react-bootstrap/Button";
+import React from 'react';
+import * as formik from 'formik';
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import * as yup from 'yup';
+import Button from 'react-bootstrap/Button';
 
 const { Formik } = formik;
 
@@ -20,28 +20,22 @@ const schema = yup.object({
   terms: yup.bool().required()
 });
 
-export const RSVPForm = () => {
+export const RSVPForm: React.SFC = () => {
   return (
     <Formik
       validationSchema={schema}
       onSubmit={console.log}
       initialValues={{
-        firstName: "",
-        lastName: "",
-        email: "",
-        city: "",
-        terms: "",
-        state: "",
-        zip: ""
+        firstName: '',
+        lastName: '',
+        email: '',
+        city: '',
+        terms: '',
+        state: '',
+        zip: ''
       }}
     >
-      {({
-        handleSubmit,
-        handleChange,
-        values,
-        touched,
-        errors
-      }) => (
+      {({ handleSubmit, handleChange, values, touched, errors }) => (
         <Form noValidate onSubmit={handleSubmit}>
           <Form.Row>
             <Form.Group as={Col} md="4" controlId="validationFormik01">
@@ -127,7 +121,9 @@ export const RSVPForm = () => {
               </Form.Control.Feedback>
             </Form.Group>
           </Form.Row>
-          <Button className="float-right" type="submit">Submit form</Button>
+          <Button className="float-right" type="submit">
+            Submit form
+          </Button>
         </Form>
       )}
     </Formik>
