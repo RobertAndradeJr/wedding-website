@@ -1,4 +1,8 @@
 // Override default variables before the import
-$body-bg: #BADA55;
+$body-bg: #000;
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+
+section {
+  padding-top: 60px;
+}
