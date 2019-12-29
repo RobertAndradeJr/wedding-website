@@ -92,7 +92,7 @@ export const MapStrings = {
   BOOK_UBER: "Book an Uber",
   SHOW_MAP: "Show Map",
   CONTACT: "Contact Info",
-  CONTACT_NAME: "Bellford Museumington",
+  CONTACT_NAME: "Bell Museum",
   CONTACT_NUMBER: "(612) 626-9660"
 };
 

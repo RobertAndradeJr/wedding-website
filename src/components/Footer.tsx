@@ -45,7 +45,7 @@ const Footer = () => (
       <Col>
         <p className="text-muted">
           {TITLE}
-          <a className="underline" href="robertandradejr.dev">
+          <a className="underline" href="http://robertandradejr.dev">
             {AUTHOR}
           </a>
           {NOTE}

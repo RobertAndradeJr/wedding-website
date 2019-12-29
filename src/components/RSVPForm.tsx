@@ -38,10 +38,8 @@ export const RSVPForm = () => {
       {({
         handleSubmit,
         handleChange,
-        handleBlur,
         values,
         touched,
-        isValid,
         errors
       }) => (
         <Form noValidate onSubmit={handleSubmit}>
