@@ -15,3 +15,16 @@ section {
   height: 500px;
   padding-bottom: 50px;
 }
+
+.instagram--image {
+  padding: 1em;
+  &:hover {
+    padding: 0;
+    transition: all ease-in-out 250ms;
+  }
+  & img {
+    max-width: 100%;
+    min-height: 100%;
+
+   }
+}
