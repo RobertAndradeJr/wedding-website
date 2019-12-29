@@ -105,8 +105,6 @@ export const NavStrings = {
     "Engagement",
     "Social",
     "Glimpse of the city",
-    "Venue",
-    "RSVP"
   ],
   test: "yeet"
 };

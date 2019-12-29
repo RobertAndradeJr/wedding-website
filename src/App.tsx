@@ -9,6 +9,7 @@ import SocialSection from './components/SocialSection';
 import City from './components/City';
 import Directions from './components/Directions';
 import Map from './components/Map';
+import RSVP from './components/RSVP';
 
 const App: React.FC = () => {
   return (
@@ -22,8 +23,9 @@ const App: React.FC = () => {
         <EngagementPics />
         <SocialSection />
         <City />
-        <Directions /> */}
-        <Map />
+        <Directions />
+        <Map /> */}
+        <RSVP />
       </div>
     </div>
   );
