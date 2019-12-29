@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
   return (
     <Jumbotron
       fluid
-      className="vh-100 text-white d-flex flex-column justify-content-end text-center"
+      className="vh-100 d-flex flex-column justify-content-end text-center"
       style={{
         backgroundColor: "black",
         backgroundImage: `linear-gradient(

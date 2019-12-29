@@ -25,7 +25,7 @@ const EventsList = () => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
   return (
-    <Container id="events" as="section" className="text-white text-center">
+    <Container id="events" as="section" className="text-center">
       <Row>
         <Col>
           <h3 className="my-5">{TITLE}</h3>
@@ -61,7 +61,7 @@ const EventsList = () => {
           <Button onClick={handleShow}>{DRESS_CODE.TITLE}</Button>
         </Col>
       </Row>
-      <Modal show={show} onHide={handleClose} size="lg" centered>
+      <Modal className="text-dark" show={show} onHide={handleClose} size="lg" centered>
         <Modal.Header>
           <Modal.Title>
             {DRESS_CODE.TITLE}
