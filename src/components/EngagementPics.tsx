@@ -8,32 +8,28 @@ import Carousel from "react-bootstrap/Carousel";
 
 const { SUBTITLE, TITLE } = EngagementPicsStrings;
 
-const EngagementPics = () => {
-  const items = UseImageLoader();
-  console.log(items);
-  return (
-    <Container as="section" id="engagement" className="text-center">
-      <Row>
-        <Col>
-          <h2>{TITLE}</h2>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <p>{SUBTITLE}</p>
-        </Col>
-      </Row>
-      <Row>
-        <Carousel className="w-100">
-          {items.map(item => (
-            <Carousel.Item key={item}>
-              <img src={item} alt={item} />
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </Row>
-    </Container>
-  );
-};
+const EngagementPics = () => (
+  <Container as="section" id="engagement" className="text-center">
+    <Row>
+      <Col>
+        <h2 className="display-4">{TITLE}</h2>
+      </Col>
+    </Row>
+    <Row>
+      <Col>
+        <p className="display-5">{SUBTITLE}</p>
+      </Col>
+    </Row>
+    <Row>
+      <Carousel className="w-100">
+        {UseImageLoader().map(item => (
+          <Carousel.Item key={item}>
+            <img src={item} alt={item} />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </Row>
+  </Container>
+);
 
 export default EngagementPics;

@@ -20,7 +20,7 @@ const City = () => (
       <Jumbotron id="video-content">
         <Row>
           <Col>
-            <h5 className="display-3">{CITY_NAME}</h5>
+            <h5 className="display-4">{CITY_NAME}</h5>
           </Col>
         </Row>
         <Row>

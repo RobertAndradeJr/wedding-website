@@ -129,7 +129,7 @@ export const RSVPForm = () => {
               </Form.Control.Feedback>
             </Form.Group>
           </Form.Row>
-          <Button type="submit">Submit form</Button>
+          <Button className="float-right" type="submit">Submit form</Button>
         </Form>
       )}
     </Formik>

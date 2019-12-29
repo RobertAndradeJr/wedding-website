@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { InstagramPicsStrings } from './Strings'
-import ShareBar from './ShareBar'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -10,7 +9,7 @@ const { HASHTAG, HELP_US, PICTURE_WORTH_THOUSAND_WORDS } = InstagramPicsStrings
 const INSTAGRAM_LINK = `https://www.instagram.com/explore/tags/${HASHTAG}`
 const INSTAGRAM_QUERY = `${INSTAGRAM_LINK}/?__a=1`
 const HASHTAG_LINK = `#${HASHTAG}`
-const SocialSection = () => {
+const Social = () => {
   const [Pictures, setPictures] = useState([])
 
   useEffect(() => {
@@ -22,14 +21,15 @@ const SocialSection = () => {
 
   return (
     <Container as="section" id="social" className="text-center">
+      
       <Row>
         <Col>
-          <h3>{PICTURE_WORTH_THOUSAND_WORDS}</h3>
+          <h3 className="display-4">{PICTURE_WORTH_THOUSAND_WORDS}</h3>
         </Col>
       </Row>
       <Row>
         <Col>
-          <p className="text-2xl">
+          <p className="display-5">
             {HELP_US}
             <a className="text-blue-500" href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer">
               {HASHTAG_LINK}
@@ -48,15 +48,8 @@ const SocialSection = () => {
           </Col>
         ))}
       </Row>
-        <div className="text-center">
-        </div>
-        <section className="flex flex-col text-white justify-around">
-          {/* <ShareBar /> */}
-        </section>
-        <div className="flex flex-col items-center md:items-stretch md:flex-row md:flex-wrap justify-between">
-        </div>
     </Container>
   )
 }
 
-export default SocialSection
+export default Social

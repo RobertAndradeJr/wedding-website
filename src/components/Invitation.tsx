@@ -9,7 +9,7 @@ const Invitation = () => (
   <Container as="section" className="text-center" id="invitation">
     <Row>
       <Col>
-        <h1>{PLACEHOLDER}</h1>
+        <h2 className="display-4">{PLACEHOLDER}</h2>
       </Col>
     </Row>
     <Row>

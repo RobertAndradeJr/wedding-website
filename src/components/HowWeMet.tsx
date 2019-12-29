@@ -17,7 +17,7 @@ const HowWeMet = () => (
   <Container as="section" id="howwemet" className="text-center">
     <Row>
       <Col>
-        <h3>{TITLE}</h3>
+        <h3 className="display-4">{TITLE}</h3>
       </Col>
     </Row>
     <Row>

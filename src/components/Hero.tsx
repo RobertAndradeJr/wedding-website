@@ -19,6 +19,7 @@ const Hero: React.FC = () => {
   return (
     <Jumbotron
       fluid
+      id="home"
       className="vh-100 d-flex flex-column justify-content-end text-center"
       style={{
         backgroundColor: "black",
@@ -31,7 +32,6 @@ const Hero: React.FC = () => {
         backgroundPosition: "center"
       }}
     >
-
         <Row>
           <Col>
             <h1 className="display-4">{title}</h1>{" "}

@@ -28,7 +28,7 @@ const EventsList = () => {
     <Container id="events" as="section" className="text-center">
       <Row>
         <Col>
-          <h3 className="my-5">{TITLE}</h3>
+          <h3 className="display-4 my-5">{TITLE}</h3>
         </Col>
       </Row>
       <Row>
