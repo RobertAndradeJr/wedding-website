@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import EventsList from './components/EventsList';
 import HowWeMet from './components/HowWeMet';
 import Invitation from './components/Invitation';
+import EngagementPics from './components/EngagementPics';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <EventsList />
       <HowWeMet />
       <Invitation />
+      <EngagementPics />
     </div>
   );
 }
