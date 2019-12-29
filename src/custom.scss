@@ -6,6 +6,16 @@ $body-text-color: #fff;
 
 body{
   color: $white;
+  fill: currentColor;
+}
+
+svg {
+  fill: currentColor;
+}
+footer {
+  background-color: #343a40;
+  margin-top: 2em;
+  border-top: 1px solid #6c757d;
 }
 section {
   padding-top: 60px;
@@ -29,6 +39,9 @@ section {
    }
 }
 
+#navbar {
+  transition: background ease-in-out 250ms;
+}
 #video {
   position: relative;
 }
@@ -51,4 +64,8 @@ section {
   & .jumbotron { 
     padding: 0;
   }
+}
+
+#rsvp {
+  height: 100vh;
 }
