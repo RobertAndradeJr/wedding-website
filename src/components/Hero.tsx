@@ -3,7 +3,7 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import EngagementPhoto from "../assets/engagement_photo.jpg";
-import { HomeStrings, CountdownStrings } from "./Strings/Strings";
+import { HomeStrings, CountdownStrings } from "./Strings";
 import UseCountdown from "../utils/UseCountdown";
 
 const { detail, title } = HomeStrings;

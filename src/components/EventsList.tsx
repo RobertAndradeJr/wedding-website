@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal"
-import { EventsListStrings } from "./Strings/Strings";
+import { EventsListStrings } from "./Strings";
 
 const {
   TITLE,
