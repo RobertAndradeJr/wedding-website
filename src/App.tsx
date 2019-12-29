@@ -1,32 +1,34 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Hero from './components/Hero';
 import NavBar from './components/NavBar';
 import EventsList from './components/EventsList';
 import HowWeMet from './components/HowWeMet';
 import Invitation from './components/Invitation';
 import EngagementPics from './components/EngagementPics';
-import SocialSection from './components/SocialSection';
-import City from './components/City';
-import Directions from './components/Directions';
-import Map from './components/Map';
 import RSVP from './components/RSVP';
+import Footer from './components/Footer';
+const City = lazy(() => import('./components/City'));
+const Directions = lazy(() => import('./components/Directions'));
+const Map = lazy(() => import('./components/Map'));
+const Social = lazy(() => import('./components/Social'))
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <NavBar />
-      <div data-spy="scroll" data-target="#navbar" data-offset="0">
-        {/* <Hero />
-        <EventsList />
-        <HowWeMet />
+        <Hero />
         <Invitation />
+        <HowWeMet />
+        <EventsList />
         <EngagementPics />
-        <SocialSection />
-        <City />
-        <Directions />
-        <Map /> */}
+        <Suspense fallback={<h1>...loading</h1>}>
+          <Social />
+          <City />
+          <Map />
+          <Directions />
+        </Suspense>
         <RSVP />
-      </div>
+      <Footer />
     </div>
   );
 }
