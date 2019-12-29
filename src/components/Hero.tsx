@@ -1,6 +1,5 @@
 import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import EngagementPhoto from "../assets/engagement_photo.jpg";
@@ -19,7 +18,8 @@ const Hero: React.FC = () => {
   const countdownOutput = `${Days}d ${Hours}h ${Minutes}m ${Seconds}s`;
   return (
     <Jumbotron
-      className="vh-100"
+      fluid
+      className="vh-100 text-white d-flex flex-column justify-content-end text-center"
       style={{
         backgroundColor: "black",
         backgroundImage: `linear-gradient(
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         backgroundPosition: "center"
       }}
     >
-      <Container className="text-white">
+
         <Row>
           <Col>
             <h1 className="display-4">{title}</h1>{" "}
@@ -45,10 +45,8 @@ const Hero: React.FC = () => {
         <Row>
           <Col>
             {countdownOutput}
-            {/* <Button onClick={handleClick} {color} {buttonText} /> */}
           </Col>
         </Row>
-      </Container>
     </Jumbotron>
   );
 };
