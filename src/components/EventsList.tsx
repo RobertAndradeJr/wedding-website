@@ -31,9 +31,9 @@ const EventsList: React.FC = () => {
           <h3 className="display-4 my-5">{TITLE}</h3>
         </Col>
       </Row>
-      <Row>
+      <Row className="events-list">
         {columns.map((column, i) => (
-          <Col className={i === 0 ? 'border-right border-white' : ''} key={i}>
+          <Col xs="12" md className={`column${i}`} key={i}>
             {column.map(({ TITLE, TIME, DESCRIPTION }) => (
               <Container key={TITLE}>
                 <Row>

@@ -49,7 +49,7 @@ const Directions: React.SFC = () => (
       <Container>
         <Jumbotron className="bg-transparent">
           <Row>
-            <Col>
+            <Col className="my-5" xs="12" md="6">
               <Row>
                 <Col>
                   <h3>{VENUE_NAME}</h3>
@@ -73,7 +73,7 @@ const Directions: React.SFC = () => (
                 </Col>
               </Row>
             </Col>
-            <Col>
+            <Col className="my-5" xs="12" md="6">
               <Row>
                 <Col>
                   <h3 className="text-xl">{CONTACT}</h3>

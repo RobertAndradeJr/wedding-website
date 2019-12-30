@@ -14,7 +14,11 @@ const Invitation: React.SFC = () => (
     </Row>
     <Row>
       <Col>
-        <img src={InvitationIllustration} alt="invitation illustration" />
+        <img
+          className="mw-100"
+          src={InvitationIllustration}
+          alt="invitation illustration"
+        />
       </Col>
     </Row>
   </Container>

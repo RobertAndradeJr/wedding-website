@@ -46,12 +46,8 @@ const Social: React.FC = () => {
       </Row>
       <Row>
         {Pictures.map((pic: any) => (
-          <Col className="instagram--image" xs="1" md="3" key={pic.node.id}>
-            <img
-              src={pic.node.display_url}
-              alt=""
-              className="w-9/12 md:w-4/12 p-6"
-            />
+          <Col className="instagram--image" xs="6" md="3" key={pic.node.id}>
+            <img src={pic.node.display_url} alt="" />
           </Col>
         ))}
       </Row>
