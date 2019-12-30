@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import { RSVPForm } from './RSVPForm';
+import RSVPForm from './RSVPForm';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
