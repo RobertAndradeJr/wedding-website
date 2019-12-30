@@ -7,19 +7,17 @@ import Button from 'react-bootstrap/Button';
 const RSVPForm: React.FC = () => {
   const [validated, setValidated] = useState(false);
 
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const handleSubmit = (event: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    currentTarget: any;
+    currentTarget: Element;
     preventDefault: () => void;
     stopPropagation: () => void;
-  }) => {
+  }): void => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
-    setValidated(true);
+    return setValidated(true);
   };
 
   return (

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from 'react';
 import { InstagramPicsStrings } from './Strings';
 import Container from 'react-bootstrap/Container';
@@ -45,7 +44,7 @@ const Social: React.FC = () => {
         </Col>
       </Row>
       <Row>
-        {Pictures.map((pic: any) => (
+        {Pictures.map((pic: Response) => (
           <Col className="instagram--image" xs="6" md="3" key={pic.node.id}>
             <img src={pic.node.display_url} alt="" />
           </Col>
