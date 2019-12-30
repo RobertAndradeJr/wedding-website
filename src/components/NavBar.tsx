@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { NavStrings } from './Strings';
@@ -23,20 +23,25 @@ const scrollTargets = [...buttonLabels, 'directions', 'rsvp'].map(target =>
 
 export const NavBar: React.SFC = () => {
   const scroll = UseScrollSpy(150);
+  const [open, setOpen] = useState(false);
+
   return (
     <ScrollspyNav scrollTargetIds={scrollTargets} activeNavClass="active">
       <Navbar
         collapseOnSelect
         expand="lg"
-        bg={scroll ? 'warning' : ''}
-        variant={scroll ? 'light' : 'dark'}
+        bg={scroll || open ? 'warning' : ''}
+        variant={scroll || open ? 'light' : 'dark'}
         fixed="top"
         id="navbar"
       >
         <Navbar.Brand href="#home">
           R<HeartLogo />M
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={(): void => setOpen(!open)}
+        />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             {buttonLabels.map(link => (
