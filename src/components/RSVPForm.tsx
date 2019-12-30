@@ -29,8 +29,9 @@ const RSVPForm: React.FC = () => {
       onSubmit={handleSubmit}
       method="POST"
       data-netlify="true"
-      name="RSVP"
+      name="rsvp"
     >
+      <input type="hidden" name="form-name" value="rsvp" />
       <Form.Row>
         <Form.Group as={Col} md="4" controlId="validationCustom01">
           <Form.Label>First name</Form.Label>
