@@ -10,27 +10,27 @@ import Footer from './components/Footer';
 const City = lazy(() => import('./components/City'));
 const Directions = lazy(() => import('./components/Directions'));
 const Map = lazy(() => import('./components/Map'));
-const Social = lazy(() => import('./components/Social'))
+const Social = lazy(() => import('./components/Social'));
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <NavBar />
-        <Hero />
-        <Invitation />
-        <HowWeMet />
-        <EventsList />
-        <EngagementPics />
-        <Suspense fallback={<h1>...loading</h1>}>
-          <Social />
-          <City />
-          <Map />
-          <Directions />
-        </Suspense>
-        <RSVP />
+      <Hero />
+      <Invitation />
+      <HowWeMet />
+      <EventsList />
+      <EngagementPics />
+      <Suspense fallback={<h1>...loading</h1>}>
+        <Social />
+        <City />
+        <Map />
+        <Directions />
+      </Suspense>
+      <RSVP />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
