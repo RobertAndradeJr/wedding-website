@@ -8,7 +8,7 @@ const RSVPForm: React.FC = () => {
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event: {
-    currentTarget: Element;
+    currentTarget: HTMLFormElement;
     preventDefault: () => void;
     stopPropagation: () => void;
   }): void => {
