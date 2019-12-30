@@ -2,8 +2,12 @@
   height: 500px;
   padding-bottom: 50px;
 }
-
+.figure-caption {
+  text-align: left;
+}
 .instagram--image {
+  display: flex;
+  flex-direction: column;
   word-break: break-word;
   & img {
     padding: 1em;
