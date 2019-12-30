@@ -45,7 +45,12 @@ const Footer: React.SFC = () => (
       <Col>
         <p className="text-muted">
           {TITLE}
-          <a className="underline" href="http://robertandradejr.dev">
+          <a
+            className="underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://robertandradejr.dev"
+          >
             {AUTHOR}
           </a>
           {NOTE}

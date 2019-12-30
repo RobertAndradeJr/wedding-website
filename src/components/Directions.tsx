@@ -67,7 +67,12 @@ const Directions: React.SFC = () => (
               </Row>
               <Row>
                 <Col>
-                  <Button as="a" href={UBER_LINK}>
+                  <Button
+                    as="a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={UBER_LINK}
+                  >
                     {BOOK_UBER}
                   </Button>
                 </Col>
@@ -86,14 +91,23 @@ const Directions: React.SFC = () => (
               </Row>
               <Row>
                 <Col>
-                  <a href={BELL_MUSEUM_TEL_LINK}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={BELL_MUSEUM_TEL_LINK}
+                  >
                     <p>{CONTACT_NUMBER}</p>
                   </a>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <Button href={GOOGLE_MAPS_LINK}>
+                  <Button
+                    as="a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={GOOGLE_MAPS_LINK}
+                  >
                     <svg
                       className="inline my-1 mr-1"
                       xmlns="http://www.w3.org/2000/svg"
