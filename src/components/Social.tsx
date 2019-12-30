@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from 'react';
 import { InstagramPicsStrings } from './Strings';
 import Container from 'react-bootstrap/Container';
@@ -9,6 +10,7 @@ const { HASHTAG, HELP_US, PICTURE_WORTH_THOUSAND_WORDS } = InstagramPicsStrings;
 const INSTAGRAM_LINK = `https://www.instagram.com/explore/tags/${HASHTAG}`;
 const INSTAGRAM_QUERY = `${INSTAGRAM_LINK}/?__a=1`;
 const HASHTAG_LINK = `#${HASHTAG}`;
+
 const Social: React.FC = () => {
   const [Pictures, setPictures] = useState([]);
 
@@ -20,7 +22,6 @@ const Social: React.FC = () => {
       )
       .catch(error => error.json());
   }, []);
-
   return (
     <Container as="section" id="social" className="text-center">
       <Row>
