@@ -33,19 +33,7 @@ const Directions: React.SFC = () => (
         </Col>
       </Row>
     </Container>
-    <Container
-      className="text-center"
-      fluid
-      style={{
-        backgroundImage: `linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)
-      ),url(https://www.bellmuseum.umn.edu/wp-content/uploads/2019/02/horizon-hall-hero.jpg)`,
-        backgroundAttachment: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
-      }}
-    >
+    <Container className="text-center parallax bell-museum" fluid>
       <Container>
         <Jumbotron className="bg-transparent">
           <Row>
