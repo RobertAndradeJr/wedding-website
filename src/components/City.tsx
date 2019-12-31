@@ -5,7 +5,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import YouTubeBackground from 'react-youtube-background';
 
 const { CITY_NAME, CITY_MOTTO } = CityStrings;
 

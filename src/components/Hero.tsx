@@ -2,9 +2,9 @@ import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import EngagementPhoto from '../assets/engagement_photo.jpg';
 import { HomeStrings, CountdownStrings } from './Strings';
 import UseCountdown from '../utils/UseCountdown';
+import Container from 'react-bootstrap/Container';
 
 const { detail, title } = HomeStrings;
 const { WEDDING_DATE, WEDDING_LOCATION } = detail;
@@ -17,34 +17,29 @@ const Hero: React.FC = () => {
   );
   const countdownOutput = `${Days}d ${Hours}h ${Minutes}m ${Seconds}s`;
   return (
-    <Jumbotron
-      fluid
-      id="home"
-      className="vh-100 d-flex flex-column justify-content-end text-center"
-      style={{
-        backgroundColor: 'black',
-        backgroundImage: `linear-gradient(
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.5)
-      ),url(${EngagementPhoto})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center'
-      }}
-    >
-      <Row>
-        <Col>
-          <h1 className="display-4">{title}</h1>{' '}
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <p className="lead">{SUBTITLE}</p>
-        </Col>
-      </Row>
-      <Row>
-        <Col>{countdownOutput}</Col>
-      </Row>
+    <Jumbotron fluid id="home" className="text-center">
+      <Container className="parallax hero" fluid>
+        <Row>
+          <Col>
+            <h1 className="display-4">{title}</h1>{' '}
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p className="lead">{SUBTITLE}</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>{countdownOutput}</Col>
+        </Row>
+        <Row>
+          <Col className="arrow-container">
+            <div className="chevron"></div>
+            <div className="chevron"></div>
+            <div className="chevron"></div>
+          </Col>
+        </Row>
+      </Container>
     </Jumbotron>
   );
 };
