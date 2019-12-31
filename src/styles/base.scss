@@ -7,8 +7,9 @@ svg {
   fill: currentColor;
 }
 footer {
-  background-color: #343a40;
-  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
   border-top: 1px solid #6c757d;
 }
 section {

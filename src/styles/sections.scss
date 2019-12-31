@@ -28,3 +28,10 @@
 #rsvp {
   min-height: 100vh;
 }
+
+#home {
+  &.jumbotron {
+    background-color: transparent;
+    padding: 0;
+  }
+}
