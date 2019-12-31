@@ -9,6 +9,16 @@ import Container from 'react-bootstrap/Container';
 const { detail, title } = HomeStrings;
 const { WEDDING_DATE, WEDDING_LOCATION } = detail;
 
+const DownArrows: React.SFC = () => (
+  <Row>
+    <Col className="arrow-container">
+      <div className="chevron" />
+      <div className="chevron" />
+      <div className="chevron" />
+    </Col>
+  </Row>
+);
+
 const Hero: React.FC = () => {
   const SUBTITLE = `${WEDDING_DATE} · ${WEDDING_LOCATION}`;
   const { Days, Hours, Minutes, Seconds } = UseCountdown(
@@ -32,13 +42,7 @@ const Hero: React.FC = () => {
         <Row>
           <Col>{countdownOutput}</Col>
         </Row>
-        <Row>
-          <Col className="arrow-container">
-            <div className="chevron"></div>
-            <div className="chevron"></div>
-            <div className="chevron"></div>
-          </Col>
-        </Row>
+        <DownArrows />
       </Container>
     </Jumbotron>
   );

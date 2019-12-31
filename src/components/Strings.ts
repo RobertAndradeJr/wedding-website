@@ -99,14 +99,10 @@ export const MapStrings = {
 export const NavStrings = {
   mobileTitle: 'Menu',
   titleText: 'Robert & Mandi',
-  buttonLabels: [
-    'How We Met',
-    'Events',
-    'Engagement',
-    'Social',
-    'Glimpse of the city'
-  ],
-  test: 'yeet'
+  buttonLabels: {
+    left: ['How We Met', 'Events', 'Glimpse of the city'],
+    right: ['Engagement', 'Social', 'Hotel', 'Directions', 'RSVP']
+  }
 };
 
 export const RsvpStrings = {

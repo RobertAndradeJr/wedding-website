@@ -17,8 +17,14 @@ const HeartLogo: React.SFC = () => (
     <path d="M12.76 3.76a6 6 0 0 1 8.48 8.48l-8.53 8.54a1 1 0 0 1-1.42 0l-8.53-8.54a6 6 0 0 1 8.48-8.48l.76.75.76-.75zm7.07 7.07a4 4 0 1 0-5.66-5.66l-1.46 1.47a1 1 0 0 1-1.42 0L9.83 5.17a4 4 0 1 0-5.66 5.66L12 18.66l7.83-7.83z" />
   </svg>
 );
-const scrollTargets = [...buttonLabels, 'directions', 'rsvp'].map(target =>
-  target.toLocaleLowerCase().replace(/\s/g, '')
+
+const addHash = (string: string): string => `#${string}`;
+
+const stringToLink = (string: string): string =>
+  `${string.toLocaleLowerCase().replace(/\s/g, '')}`;
+
+const scrollTargets = [...buttonLabels.left].map(target =>
+  stringToLink(target)
 );
 
 export const NavBar: React.SFC = () => {
@@ -44,20 +50,18 @@ export const NavBar: React.SFC = () => {
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            {buttonLabels.map(link => (
-              <Nav.Link
-                key={link}
-                href={`#${link.toLocaleLowerCase().replace(/\s/g, '')}`}
-              >
+            {buttonLabels.left.map(link => (
+              <Nav.Link key={link} href={addHash(stringToLink(link))}>
                 {link}
               </Nav.Link>
             ))}
           </Nav>
           <Nav>
-            <Nav.Link href="#directions">Directions</Nav.Link>
-            <Nav.Link eventKey={2} href="#rsvp">
-              RSVP
-            </Nav.Link>
+            {buttonLabels.right.map(link => (
+              <Nav.Link key={link} href={addHash(stringToLink(link))}>
+                {link}
+              </Nav.Link>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
