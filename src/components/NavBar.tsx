@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { NavStrings } from './Strings';
-import ScrollspyNav from 'react-scrollspy-nav';
 import UseScrollSpy from '../utils/UseScrollSpy';
 
 const { buttonLabels } = NavStrings;
@@ -20,52 +20,52 @@ const HeartLogo: React.SFC = () => (
 
 const addHash = (string: string): string => `#${string}`;
 
+const addSlash = (string: string): string => `/${string}`;
+
 const stringToLink = (string: string): string =>
   `${string.toLocaleLowerCase().replace(/\s/g, '')}`;
-
-const scrollTargets = [...buttonLabels.left].map(target =>
-  stringToLink(target)
-);
 
 export const NavBar: React.SFC = () => {
   const scroll = UseScrollSpy(150);
   const [open, setOpen] = useState(false);
 
   return (
-    <ScrollspyNav scrollTargetIds={scrollTargets} activeNavClass="active">
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg={scroll || open ? 'warning' : ''}
-        variant={scroll || open ? 'light' : 'dark'}
-        fixed="top"
-        id="navbar"
-      >
-        <Navbar.Brand href="#home">
-          R<HeartLogo />M
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          onClick={(): void => setOpen(!open)}
-        />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            {buttonLabels.left.map(link => (
-              <Nav.Link key={link} href={addHash(stringToLink(link))}>
-                {link}
-              </Nav.Link>
-            ))}
-          </Nav>
-          <Nav>
-            {buttonLabels.right.map(link => (
-              <Nav.Link key={link} href={addHash(stringToLink(link))}>
-                {link}
-              </Nav.Link>
-            ))}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </ScrollspyNav>
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg={scroll || open ? 'warning' : ''}
+      variant={scroll || open ? 'light' : 'dark'}
+      fixed="top"
+      id="navbar"
+    >
+      <Navbar.Brand as={Link} to={addSlash(addHash(stringToLink('home')))}>
+        R<HeartLogo />M
+      </Navbar.Brand>
+      <Navbar.Toggle
+        aria-controls="responsive-navbar-nav"
+        onClick={(): void => setOpen(!open)}
+      />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          {buttonLabels.left.map(link => (
+            <Nav.Link
+              as={Link}
+              key={link}
+              to={addSlash(addHash(stringToLink(link)))}
+            >
+              {link}
+            </Nav.Link>
+          ))}
+        </Nav>
+        <Nav className="ml-auto">
+          {buttonLabels.right.map(link => (
+            <Nav.Link as={Link} key={link} to={addSlash(stringToLink(link))}>
+              {link}
+            </Nav.Link>
+          ))}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 

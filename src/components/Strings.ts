@@ -100,8 +100,8 @@ export const NavStrings = {
   mobileTitle: 'Menu',
   titleText: 'Robert & Mandi',
   buttonLabels: {
-    left: ['How We Met', 'Events', 'Glimpse of the city'],
-    right: ['Engagement', 'Social', 'Hotel', 'Directions', 'RSVP']
+    left: ['How We Met', 'Events', 'Glimpse of the city', 'RSVP'],
+    right: ['Engagement', 'Social', 'Directions', 'Hotel', 'Registry']
   }
 };
 
