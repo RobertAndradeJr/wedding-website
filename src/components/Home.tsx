@@ -3,8 +3,8 @@ import Hero from './Hero';
 import Invitation from './Invitation';
 import EventsList from './EventsList';
 import City from './City';
-import RSVP from './RSVP';
 import HowWeMet from './HowWeMet';
+import Directions from './Directions';
 
 export const Home: React.SFC = () => {
   useEffect(() => {
@@ -22,7 +22,7 @@ export const Home: React.SFC = () => {
       <HowWeMet />
       <EventsList />
       <City />
-      <RSVP />
+      <Directions />
     </>
   );
 };

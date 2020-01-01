@@ -12,14 +12,18 @@ const INSTAGRAM_QUERY = `${INSTAGRAM_LINK}/?__a=1`;
 
 const PicturesGrid: React.FC = () => {
   const [pictures, setPictures] = useState([]);
-  console.log(pictures);
   useEffect(() => {
-    fetch(INSTAGRAM_QUERY)
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+    fetch(INSTAGRAM_QUERY, { signal: signal })
       .then(response => response.json())
       .then(data =>
         setPictures(data.graphql.hashtag.edge_hashtag_to_media.edges)
       )
-      .catch(error => error.json());
+      .catch(error => console.error(error));
+    return function cleanup(): void {
+      abortController.abort();
+    };
   }, []);
   if (!pictures.length) {
     return <Fallback />;
@@ -28,6 +32,7 @@ const PicturesGrid: React.FC = () => {
       <Row>
         {pictures
           .filter(pic => pic !== undefined)
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           .map((pic: any) => {
             const link = `https://www.instagram.com/p/${pic.node.shortcode}/`;
             const id = pic.node.id;
@@ -45,28 +50,26 @@ const PicturesGrid: React.FC = () => {
               }
             };
             return (
-              <>
-                <Col className="instagram--image mw-100" xs="6" md="3" key={id}>
-                  <Figure>
-                    <a target="_blank" rel="noopener noreferrer" href={link}>
-                      <Figure.Image src={thumb} alt={caption || ''} />
-                    </a>
-                    <Figure.Caption>{trimCaption()}</Figure.Caption>
-                  </Figure>
-                  {caption.length >= captionLength ? (
-                    <a
-                      className="mt-auto"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={link}
-                    >
-                      View more on Instagram
-                    </a>
-                  ) : (
-                    ''
-                  )}
-                </Col>
-              </>
+              <Col className="instagram--image mw-100" xs="6" md="3" key={id}>
+                <Figure>
+                  <a target="_blank" rel="noopener noreferrer" href={link}>
+                    <Figure.Image src={thumb} alt={caption || ''} />
+                  </a>
+                  <Figure.Caption>{trimCaption()}</Figure.Caption>
+                </Figure>
+                {caption.length >= captionLength ? (
+                  <a
+                    className="mt-auto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={link}
+                  >
+                    View more on Instagram
+                  </a>
+                ) : (
+                  ''
+                )}
+              </Col>
             );
           })}
       </Row>

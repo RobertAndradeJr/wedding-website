@@ -25,8 +25,8 @@ const UBER_LINK =
 const GOOGLE_MAPS_LINK = 'https://g.page/BellMuseum?share';
 
 const Contact: React.SFC = () => (
-  <>
-    <Container as="section" id="venue" className="text-center">
+  <section>
+    <Container id="directions" className="text-center">
       <Row>
         <Col>
           <p className="display-4 my-5">{HOW_DO_I_GET_THERE}</p>
@@ -118,7 +118,7 @@ const Contact: React.SFC = () => (
         </Jumbotron>
       </Container>
     </Container>
-  </>
+  </section>
 );
 
 export default Contact;

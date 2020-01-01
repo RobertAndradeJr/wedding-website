@@ -13,7 +13,7 @@ const MAP_QUERY =
 const MAP_URL = `https://www.google.com/maps/embed?${MAP_QUERY}`;
 
 const Directions: React.SFC = () => (
-  <Container as="section" id="directions" className="text-center mb-5">
+  <Container as="section" className="text-center mb-5">
     <Row>
       <Col>
         <h3 className="display-4 my-5">{EASIER_THAN_YOU_THINK}</h3>

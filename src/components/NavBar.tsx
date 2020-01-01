@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import Scrollspy from 'react-scrollspy';
 import { NavStrings } from './Strings';
 import UseScrollSpy from '../utils/UseScrollSpy';
 
@@ -24,6 +25,9 @@ const addSlash = (string: string): string => `/${string}`;
 
 const stringToLink = (string: string): string =>
   `${string.toLocaleLowerCase().replace(/\s/g, '')}`;
+
+const scrollSpyItems = (): string[] =>
+  buttonLabels.left.map(label => stringToLink(label));
 
 const complexSelect = (): void =>
   document
@@ -56,7 +60,12 @@ export const NavBar: React.SFC = () => {
         onClick={(): void => setOpen(!open)}
       />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
+        <Scrollspy
+          items={scrollSpyItems()}
+          className="mr-auto"
+          currentClassName="active"
+          componentTag={Nav}
+        >
           {buttonLabels.left.map(link => (
             <Nav.Link
               as={Link}
@@ -67,7 +76,8 @@ export const NavBar: React.SFC = () => {
               {link}
             </Nav.Link>
           ))}
-        </Nav>
+        </Scrollspy>
+        {/* </Nav> */}
         <Nav className="ml-auto">
           {buttonLabels.right.map(link => (
             <Nav.Link

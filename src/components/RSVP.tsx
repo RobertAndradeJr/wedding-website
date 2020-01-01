@@ -12,7 +12,7 @@ const RSVP: React.SFC = () => (
       </Col>
     </Row>
     <Row>
-      <Col md={{ span: 8, offset: 2 }}>
+      <Col md={{ span: 8, offset: 2 }} className="bg-warning p-5 rounded-sm">
         <RSVPForm />
       </Col>
     </Row>
