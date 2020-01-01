@@ -15,7 +15,7 @@ const Social = lazy(() => import('./components/Social'));
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Suspense fallback={Fallback}>
+      <Suspense fallback={<Fallback />}>
         <Router>
           <NavBar />
           <Switch>

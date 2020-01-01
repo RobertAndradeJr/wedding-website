@@ -25,10 +25,14 @@ const addSlash = (string: string): string => `/${string}`;
 const stringToLink = (string: string): string =>
   `${string.toLocaleLowerCase().replace(/\s/g, '')}`;
 
-export const NavBar: React.SFC = () => {
-  const scroll = UseScrollSpy(150);
-  const [open, setOpen] = useState(false);
+const complexSelect = (): void =>
+  document
+    .querySelectorAll('.nav-link.active')
+    .forEach(el => el.classList.remove('active'));
 
+export const NavBar: React.SFC = () => {
+  const scroll = UseScrollSpy(50);
+  const [open, setOpen] = useState(false);
   return (
     <Navbar
       collapseOnSelect
@@ -37,10 +41,16 @@ export const NavBar: React.SFC = () => {
       variant={scroll || open ? 'light' : 'dark'}
       fixed="top"
       id="navbar"
+      onSelect={complexSelect}
     >
-      <Navbar.Brand as={Link} to={addSlash(addHash(stringToLink('home')))}>
+      <Nav.Link
+        as={Link}
+        className="navbar-brand"
+        eventKey={'home'}
+        to={addSlash(addHash(stringToLink('home')))}
+      >
         R<HeartLogo />M
-      </Navbar.Brand>
+      </Nav.Link>
       <Navbar.Toggle
         aria-controls="responsive-navbar-nav"
         onClick={(): void => setOpen(!open)}
@@ -51,6 +61,7 @@ export const NavBar: React.SFC = () => {
             <Nav.Link
               as={Link}
               key={link}
+              eventKey={link}
               to={addSlash(addHash(stringToLink(link)))}
             >
               {link}
@@ -59,7 +70,12 @@ export const NavBar: React.SFC = () => {
         </Nav>
         <Nav className="ml-auto">
           {buttonLabels.right.map(link => (
-            <Nav.Link as={Link} key={link} to={addSlash(stringToLink(link))}>
+            <Nav.Link
+              as={Link}
+              eventKey={link}
+              key={link}
+              to={addSlash(stringToLink(link))}
+            >
               {link}
             </Nav.Link>
           ))}
