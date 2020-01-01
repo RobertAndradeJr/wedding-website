@@ -4,7 +4,6 @@ import Footer from './components/Footer';
 import Fallback from './components/Fallback';
 import NavBar from './components/NavBar';
 
-const Directions = lazy(() => import('./components/Directions'));
 const Engagement = lazy(() => import('./components/Engagement'));
 const Home = lazy(() => import('./components/Home'));
 const Hotel = lazy(() => import('./components/Hotel'));
@@ -22,7 +21,6 @@ const App: React.FC = () => {
             <Route exact path="/" component={Home} />
             <Route path="/engagement" component={Engagement} />
             <Route path="/social" component={Social} />
-            <Route path="/directions" component={Directions} />
             <Route path="/rsvp" component={RSVP} />
             <Route path="/hotel" component={Hotel} />
             <Route path="/registry" component={Registry} />
