@@ -127,10 +127,14 @@ export const HowWeMetStrings = {
     "Back in spring of 2007 we met for the first time in the halls of Simley High School, our mutual friend Jess introduced us in front of our lockers. We instantly were friends because Robert made Mandi laugh. In the summer, we started dating & spent the rest of our high school years as a couple. We didn't plan to live in the same dorms freshman year of college, but were miraculously both placed at Sanford Hall. Robert studied US History, French, and Korean while Mandi studied architecture & Spanish at the University of MN. As we graduated in 2014, we made plans to go to South Korea to teach ESL in public schools and were again miraculously placed in the same city, Gwangju, in neighborhoods only 10 minutes walking distance apart. After a couple of wonderful years, we returned to Minnesota and have since been working on our careers. 13 years after first meeting, we can't wait to get married & start the next chapter of our lives with our beloved dog Lola. Mandi plans to go to grad school for social work and Robert wants to code in React & go to school for computer science."
 };
 
+export const Hashtag = 'xoloitzcuintli';
+export const InstaLink = `https://www.instagram.com/explore/tags/${Hashtag}`;
+
 export const InstagramPicsStrings = {
   PICTURE_WORTH_THOUSAND_WORDS: 'A picture is worth a thousand words!',
   HELP_US: 'Help us capture the moment, tag your photos with the hashtag: ',
-  HASHTAG: 'xoloitzcuintli'
+  HASHTAG_LINK: `#${Hashtag}`,
+  INSTAGRAM_QUERY: `${InstaLink}/?__a=1`
 };
 
 export const InvitationStrings = {
@@ -152,7 +156,6 @@ export const MapStrings = {
 };
 
 export const NavStrings = {
-  mobileTitle: 'Menu',
   titleText: 'Robert & Mandi',
   buttonLabels: {
     left: ['How We Met', 'Events', 'Glimpse of the city', 'Directions'],
@@ -162,10 +165,4 @@ export const NavStrings = {
 
 export const RsvpStrings = {
   RSVP: 'RSVP'
-};
-
-export const ShareBarStrings = {
-  TWITTER: 'Tweet #RobertMandiWedding',
-  FACEBOOK: 'Like us on Facebook',
-  INSTAGRAM: 'Post on Social'
 };

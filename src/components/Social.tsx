@@ -1,14 +1,15 @@
 import React, { lazy } from 'react';
-import { InstagramPicsStrings } from './Strings';
+import { InstagramPicsStrings, InstaLink } from './Strings';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 const PicturesGrid = lazy(() => import('./PicturesGrid'));
 
-const { HASHTAG, HELP_US, PICTURE_WORTH_THOUSAND_WORDS } = InstagramPicsStrings;
-
-const INSTAGRAM_LINK = `https://www.instagram.com/explore/tags/${HASHTAG}`;
-const HASHTAG_LINK = `#${HASHTAG}`;
+const {
+  HASHTAG_LINK,
+  HELP_US,
+  PICTURE_WORTH_THOUSAND_WORDS
+} = InstagramPicsStrings;
 
 const Social: React.FC = () => (
   <Container as="section" id="social" className="text-center">
@@ -23,7 +24,7 @@ const Social: React.FC = () => (
           {HELP_US}
           <a
             className="text-blue-500"
-            href={INSTAGRAM_LINK}
+            href={InstaLink}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -33,7 +34,6 @@ const Social: React.FC = () => (
       </Col>
     </Row>
     <Row>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <PicturesGrid />
     </Row>
   </Container>

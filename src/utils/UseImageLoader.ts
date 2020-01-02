@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 
-const importAll = (r: any) => r.keys().map(r);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const importAll = (r: any): never[] => r.keys().map(r);
 
-const UseImageLoader = () => {
+const UseImageLoader = (): string[] => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const importItems = () =>
+    const importItems = (): never[] =>
       importAll(
         require.context('../assets/engagement', false, /\.(png|jpe?g|svg)$/)
       );
