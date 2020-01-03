@@ -1,8 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { useState, useEffect } from 'react';
 
-const UseFetch = (url: string): any => {
+interface InstagramResponse {
+  data: Array<{}>;
+  error: {};
+}
+
+const UseFetch = (url: string): InstagramResponse => {
   const [data, setData] = useState([]);
   const [error, setError] = useState({});
   useEffect(() => {
@@ -13,7 +16,7 @@ const UseFetch = (url: string): any => {
       .then(res => res.json())
       .then(json => setData(json.graphql.hashtag.edge_hashtag_to_media.edges))
       .catch(error => setError(error));
-    return () => {
+    return (): void => {
       abortController.abort();
     };
   }, [url]);
