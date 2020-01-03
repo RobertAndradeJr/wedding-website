@@ -6,21 +6,10 @@ import Scrollspy from 'react-scrollspy';
 import { NavStrings } from './Strings';
 import UseScrollSpy from '../utils/UseScrollSpy';
 import HeartLogo from './HeartLogo';
-import {
-  stringToLink,
-  addSlash,
-  addHash,
-  linkifyAll
-} from '../utils/StringHelpers';
+import { linkifyAll, localLink, externalLink } from '../utils/StringHelpers';
+import removeActiveClasses from '../utils/RemoveActiveClasses';
 
 const { buttonLabels } = NavStrings;
-
-const scrollSpyItems = (): string[] => linkifyAll(buttonLabels.left);
-
-const complexSelect = (): void =>
-  document
-    .querySelectorAll('.nav-link.active')
-    .forEach(el => el.classList.remove('active'));
 
 export const NavBar: React.SFC = () => {
   const scroll = UseScrollSpy(50);
@@ -33,13 +22,13 @@ export const NavBar: React.SFC = () => {
       variant={scroll || open ? 'light' : 'dark'}
       fixed="top"
       id="navbar"
-      onSelect={complexSelect}
+      onSelect={removeActiveClasses}
     >
       <Nav.Link
         as={Link}
         className="navbar-brand"
         eventKey={'home'}
-        to={addSlash(addHash(stringToLink('home')))}
+        to={localLink('home')}
       >
         R<HeartLogo />M
       </Nav.Link>
@@ -49,18 +38,13 @@ export const NavBar: React.SFC = () => {
       />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Scrollspy
-          items={scrollSpyItems()}
+          items={linkifyAll(buttonLabels.left)}
           className="mr-auto"
           currentClassName="active"
           componentTag={Nav}
         >
           {buttonLabels.left.map(link => (
-            <Nav.Link
-              as={Link}
-              key={link}
-              eventKey={link}
-              to={addSlash(addHash(stringToLink(link)))}
-            >
+            <Nav.Link as={Link} key={link} eventKey={link} to={localLink(link)}>
               {link}
             </Nav.Link>
           ))}
@@ -71,7 +55,7 @@ export const NavBar: React.SFC = () => {
               as={Link}
               eventKey={link}
               key={link}
-              to={addSlash(stringToLink(link))}
+              to={externalLink(link)}
             >
               {link}
             </Nav.Link>

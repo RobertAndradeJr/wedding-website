@@ -4,24 +4,13 @@ import Col from 'react-bootstrap/Col';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import { formStrings } from './Strings';
-import { findKey } from 'lodash';
+import { formInputFactory } from '../utils/FormHelpers';
 
 const { valid, lName, fName, invalid, city, state, zip, submit } = formStrings;
 
 const formInputs = [fName, lName, city, state, zip];
-const formInputFactory = (labels: string[]): Array<{}> => {
-  return labels.map((label: string) => {
-    const key = findKey(formStrings, v => v === label);
-    return {
-      type: 'text',
-      placeholder: label,
-      name: key,
-      defaultValue: '',
-      controlId: `validationCustom${key}`
-    };
-  });
-};
-const inputFields = formInputFactory(formInputs);
+
+const inputFields = formInputFactory(formInputs, formStrings);
 
 const RSVPForm: React.FC = () => {
   const [validated, setValidated] = useState(false);

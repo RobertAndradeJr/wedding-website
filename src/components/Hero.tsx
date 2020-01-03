@@ -5,21 +5,12 @@ import Col from 'react-bootstrap/Col';
 import { HomeStrings, CountdownStrings } from './Strings';
 import UseCountdown from '../utils/UseCountdown';
 import Container from 'react-bootstrap/Container';
+import DownArrows from './animations/DownArrows';
 
 const { detail, title } = HomeStrings;
 const { WEDDING_DATE, WEDDING_LOCATION } = detail;
 const date = CountdownStrings.WEDDING_DATE;
 const SUBTITLE = `${WEDDING_DATE} · ${WEDDING_LOCATION}`;
-
-const DownArrows: React.SFC = () => (
-  <Row>
-    <Col className="arrow-container">
-      <div className="chevron" />
-      <div className="chevron" />
-      <div className="chevron" />
-    </Col>
-  </Row>
-);
 
 const Hero: React.FC = () => {
   const { Days, Hours, Minutes, Seconds } = UseCountdown(date, {});
