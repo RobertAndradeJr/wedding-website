@@ -8,7 +8,7 @@ import Fallback from './Fallback';
 import Error from './Error';
 import UseFetch from '../utils/UseDataFetch';
 
-const { INSTAGRAM_QUERY } = InstagramPicsStrings;
+const { INSTAGRAM_QUERY, viewMore } = InstagramPicsStrings;
 
 const PicturesGrid: React.FC = () => {
   const res = UseFetch(INSTAGRAM_QUERY);
@@ -55,7 +55,7 @@ const PicturesGrid: React.FC = () => {
                   rel="noopener noreferrer"
                   href={link}
                 >
-                  View more on Instagram
+                  {viewMore}
                 </a>
               ) : (
                 ''

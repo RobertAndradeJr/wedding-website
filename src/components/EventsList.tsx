@@ -7,6 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 import { EventsListStrings } from './Strings';
 
 const {
+  buttonText,
   TITLE,
   DRESS_CODE,
   CEREMONY,
@@ -73,7 +74,7 @@ const EventsList: React.FC = () => {
         </Modal.Header>
         <Modal.Body>{DRESS_CODE.DESCRIPTION}</Modal.Body>
         <Modal.Footer>
-          <Button onClick={handleClose}>Close</Button>
+          <Button onClick={handleClose}>{buttonText}</Button>
         </Modal.Footer>
       </Modal>
     </Container>

@@ -77,7 +77,6 @@ export const NavBar: React.SFC = () => {
             </Nav.Link>
           ))}
         </Scrollspy>
-        {/* </Nav> */}
         <Nav className="ml-auto">
           {buttonLabels.right.map(link => (
             <Nav.Link

@@ -3,12 +3,13 @@ import Container from 'react-bootstrap/Container';
 import RSVPForm from './RSVPForm';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { RsvpString } from './Strings';
 
 const RSVP: React.SFC = () => (
   <Container as="section" id="rsvp">
     <Row className="text-center">
       <Col>
-        <h3 className="display-4 my-5">RSVP</h3>
+        <h3 className="display-4 my-5">{RsvpString}</h3>
       </Col>
     </Row>
     <Row>

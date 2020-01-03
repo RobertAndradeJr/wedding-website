@@ -2,12 +2,15 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { errorStrings } from './Strings';
+
+const { error, sub, description, buttonText } = errorStrings;
 
 export const Error: React.SFC = () => (
   <Container className="error border-rounded">
     <Row>
       <Col>
-        <h1 className="error-text">404 error</h1>
+        <h1 className="error-text">{error}</h1>
         <div className="sheep">
           <div className="top">
             <div className="body" />
@@ -25,13 +28,10 @@ export const Error: React.SFC = () => (
             <div className="leg" />
           </div>
         </div>
-        <h4>Oops! There was an error loading the data!</h4>
-        <p>
-          Sorry bit the page you are looking for has failed to load due to
-          network connectivity issues.
-        </p>
+        <h4>{sub}</h4>
+        <p>{description}</p>
         <a href="/social" className="btn btn-primary btn-round">
-          Reload Page
+          {buttonText}
         </a>
       </Col>
     </Row>

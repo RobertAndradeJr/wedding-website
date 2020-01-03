@@ -3,6 +3,25 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import { formStrings } from './Strings';
+import { findKey } from 'lodash';
+
+const { valid, lName, fName, invalid, city, state, zip, submit } = formStrings;
+
+const formInputs = [fName, lName, city, state, zip];
+const formInputFactory = (labels: string[]): Array<{}> => {
+  return labels.map((label: string) => {
+    const key = findKey(formStrings, v => v === label);
+    return {
+      type: 'text',
+      placeholder: label,
+      name: key,
+      defaultValue: '',
+      controlId: `validationCustom${key}`
+    };
+  });
+};
+const inputFields = formInputFactory(formInputs);
 
 const RSVPForm: React.FC = () => {
   const [validated, setValidated] = useState(false);
@@ -32,79 +51,90 @@ const RSVPForm: React.FC = () => {
     >
       <input type="hidden" name="form-name" value="rsvp" />
       <Form.Row>
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+        {inputFields.map((field: any) => {
+          const { type, placeholder, name, defaultValue, controlId } = field;
+          console.log('field', type);
+          return (
+            <Form.Group as={Col} md="4" controlId={controlId} key={controlId}>
+              <Form.Label>{placeholder}</Form.Label>
+              <Form.Control
+                required
+                type={type}
+                placeholder={placeholder}
+                name={name}
+                defaultValue={defaultValue}
+              />
+              <Form.Control.Feedback>{valid}</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">
+                {invalid + placeholder}
+              </Form.Control.Feedback>
+            </Form.Group>
+          );
+        })}
         <Form.Group as={Col} md="4" controlId="validationCustom01">
-          <Form.Label>First name</Form.Label>
+          <Form.Label>{fName}</Form.Label>
           <Form.Control
             required
             type="text"
-            placeholder="First name"
+            placeholder={fName}
             name="fName"
             defaultValue="Mark"
           />
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+          <Form.Control.Feedback>{valid}</Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="validationCustom02">
-          <Form.Label>Last name</Form.Label>
+          <Form.Label>{lName}</Form.Label>
           <Form.Control
             required
             type="text"
             name="lName"
-            placeholder="Last name"
+            placeholder={lName}
             defaultValue="Otto"
           />
-          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+          <Form.Control.Feedback>{valid}</Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-          <Form.Label>Username</Form.Label>
+          <Form.Label>{fName}</Form.Label>
           <InputGroup>
-            <InputGroup.Prepend>
-              <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
-            </InputGroup.Prepend>
             <Form.Control
               type="text"
-              placeholder="Username"
-              name="username"
-              aria-describedby="inputGroupPrepend"
+              placeholder={fName}
+              name={fName}
               required
             />
             <Form.Control.Feedback type="invalid">
-              Please choose a username.
+              {invalid}
             </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
       </Form.Row>
       <Form.Row>
-        <Form.Group as={Col} md="6" controlId="validationCustom03">
-          <Form.Label>City</Form.Label>
-          <Form.Control type="text" placeholder="City" name="city" required />
+        <Form.Group as={Col} md="4" controlId="validationCustom03">
+          <Form.Label>{city}</Form.Label>
+          <Form.Control type="text" placeholder={city} name={city} required />
           <Form.Control.Feedback type="invalid">
-            Please provide a valid city.
+            {invalid}
           </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="3" controlId="validationCustom04">
-          <Form.Label>State</Form.Label>
+        <Form.Group as={Col} md="4" controlId="validationCustom04">
+          <Form.Label>{state}</Form.Label>
           <Form.Control type="text" placeholder="State" name="state" required />
           <Form.Control.Feedback type="invalid">
-            Please provide a valid state.
+            {invalid}
           </Form.Control.Feedback>
         </Form.Group>
-        <Form.Group as={Col} md="3" controlId="validationCustom05">
-          <Form.Label>Zip</Form.Label>
+        <Form.Group as={Col} md="4" controlId="validationCustom05">
+          <Form.Label>{zip}</Form.Label>
           <Form.Control type="text" placeholder="Zip" name="zip" required />
           <Form.Control.Feedback type="invalid">
-            Please provide a valid zip.
+            {invalid}
           </Form.Control.Feedback>
         </Form.Group>
       </Form.Row>
-      <Form.Group>
-        <Form.Check
-          required
-          label="Agree to terms and conditions"
-          feedback="You must agree before submitting."
-          name="agree"
-        />
-      </Form.Group>
-      <Button type="submit">Submit form</Button>
+      <Button className="float-right" type="submit">
+        {submit}
+      </Button>
     </Form>
   );
 };

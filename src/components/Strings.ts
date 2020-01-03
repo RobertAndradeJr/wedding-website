@@ -57,6 +57,14 @@ export const captions = [
   'Only shooting stars break the mold'
 ];
 
+export const errorStrings = {
+  error: 'Network Error',
+  sub: 'Oops! There was an error loading the data',
+  description:
+    'Sorry bit the page you are looking for has failed to load due to network connectivity issues.',
+  buttonText: 'Reload Page'
+};
+
 const LoremIpsum =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nisl eget magna placerat ullamcorper eu eget turpis. Quisque accumsan maximus est nec efficitur. Proin ullamcorper tristique malesuada. In tempus, nisi a cursus ullamcorper, est nisl feugiat eros, id vulputate dolor odio ac sapien. Donec sit amet condimentum metus. In vitae viverra tortor, quis cursus ante. Phasellus venenatis orci eu luctus imperdiet. In hac habitasse platea dictumst. Nam at tempor nunc.';
 
@@ -78,6 +86,7 @@ export const EngagementPicsStrings = {
 export const EventsListStrings = {
   TITLE: 'Events Poop',
   DATE: 'October 31st',
+  buttonText: 'Close',
   CEREMONY: {
     TITLE: 'Ceremony',
     TIME: '5-6pm',
@@ -139,12 +148,21 @@ export const InstagramPicsStrings = {
   PICTURE_WORTH_THOUSAND_WORDS: 'A picture is worth a thousand words!',
   HELP_US: 'Help us capture the moment, tag your photos with the hashtag: ',
   HASHTAG_LINK: `#${Hashtag}`,
-  INSTAGRAM_QUERY: `${InstaLink}/?__a=1`
+  INSTAGRAM_QUERY: `${InstaLink}/?__a=1`,
+  viewMore: 'View more on Instagram'
 };
 
 export const InvitationStrings = {
   GETTING_HITCHED: 'We are getting hitched',
   TITLE: 'Please join us for a night of fun festivities'
+};
+
+export const HotelStrings = {
+  title: 'yeet'
+};
+
+export const registryStrings = {
+  title: 'yeet'
 };
 
 export const MapStrings = {
@@ -174,11 +192,20 @@ export const NavStrings = {
   }
 };
 
-export const RsvpStrings = {
-  RSVP: 'RSVP'
-};
+export const RsvpString = 'RSVP';
 
 export const shrekGreen = '589b00';
 export const TEL_LINK = `tel:${MapStrings.CONTACT_NUMBER}`;
 export const personalWebsite = 'https://robertandradejr.dev';
 export const googleMapsURL = `https://www.google.com/maps/embed?${MapStrings.MAP_QUERY}`;
+
+export const formStrings = {
+  valid: 'Looks good!',
+  fName: 'First name',
+  lName: 'Last name',
+  city: 'City',
+  state: 'State',
+  zip: 'Zip',
+  invalid: 'Please choose a valid',
+  submit: 'Submit'
+};
