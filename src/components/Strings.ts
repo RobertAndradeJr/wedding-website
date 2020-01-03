@@ -1,3 +1,8 @@
+export const altTitles = {
+  Robert: 'Robert (he/him)',
+  Mandi: 'Mandi (they/them)'
+};
+
 export const captions = [
   'Somebody once told me the world is gonna roll me',
   "I ain't the sharpest tool in the shed",
@@ -138,13 +143,17 @@ export const InstagramPicsStrings = {
 };
 
 export const InvitationStrings = {
-  GETTING_HITCHED: 'We are getting hitched'
+  GETTING_HITCHED: 'We are getting hitched',
+  TITLE: 'Please join us for a night of fun festivities'
 };
 
 export const MapStrings = {
   HOW_DO_I_GET_THERE: 'How do I get there?',
+  GOOGLE_MAPS_LINK: 'https://g.page/BellMuseum?share',
   EASIER_THAN_YOU_THINK: "It's way easier than you think!",
   SHOW_INFO: 'Show info',
+  MAP_QUERY:
+    'pb=!1m18!1m12!1m3!1d2821.6629251229833!2d-93.19008618446358!3d44.99115817909827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32d172d3e3a05%3A0x63d7830833a56d3b!2sBell%20Museum!5e0!3m2!1sen!2sus!4v1577630237248!5m2!1sen!2sus',
   VENUE_NAME: 'Bell Museum',
   VENUE_ADDRESS: '2088 Larpenteur Ave W,',
   VENUE_ADDRESS_2: 'St Paul, MN 55113',
@@ -152,7 +161,9 @@ export const MapStrings = {
   SHOW_MAP: 'Show Map',
   CONTACT: 'Contact Info',
   CONTACT_NAME: 'Bell Museum',
-  CONTACT_NUMBER: '(612) 626-9660'
+  CONTACT_NUMBER: '(612) 626-9660',
+  UBER_LINK:
+    'https://m.uber.com/ul/?action=setPickup&client_id=WQvddpr5mKEbJ_eFl1uvVOQvi_LCEPWe&pickup=my_location&dropoff[formatted_address]=Bell%20Museum%2C%20Larpenteur%20Avenue%20West%2C%20Saint%20Paul%2C%20MN%2C%20USA&dropoff[latitude]=44.991158&dropoff[longitude]=-93.187898'
 };
 
 export const NavStrings = {
@@ -166,3 +177,8 @@ export const NavStrings = {
 export const RsvpStrings = {
   RSVP: 'RSVP'
 };
+
+export const shrekGreen = '589b00';
+export const TEL_LINK = `tel:${MapStrings.CONTACT_NUMBER}`;
+export const personalWebsite = 'https://robertandradejr.dev';
+export const googleMapsURL = `https://www.google.com/maps/embed?${MapStrings.MAP_QUERY}`;

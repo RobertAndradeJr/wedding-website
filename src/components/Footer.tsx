@@ -1,13 +1,16 @@
 import React from 'react';
-import { FooterStrings, InstagramPicsStrings, Hashtag } from './Strings';
+import {
+  FooterStrings,
+  InstagramPicsStrings,
+  Hashtag,
+  personalWebsite
+} from './Strings';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const { TITLE, AUTHOR, NOTE } = FooterStrings;
 const { HASHTAG_LINK } = InstagramPicsStrings;
-
-const websiteLink = 'https://robertandradejr.dev';
 
 const Footer: React.SFC = () => (
   <Container as="footer" id="footer" className="text-center" fluid>
@@ -22,7 +25,7 @@ const Footer: React.SFC = () => (
       <Col>
         <p className="text-muted">
           {TITLE}
-          <a target="_blank" rel="noopener noreferrer" href={websiteLink}>
+          <a target="_blank" rel="noopener noreferrer" href={personalWebsite}>
             {AUTHOR}
           </a>
           {NOTE}

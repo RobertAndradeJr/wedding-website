@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MapStrings } from './Strings';
+import { MapStrings, TEL_LINK } from './Strings';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -12,17 +12,14 @@ const {
   CONTACT,
   CONTACT_NAME,
   CONTACT_NUMBER,
+  GOOGLE_MAPS_LINK,
   HOW_DO_I_GET_THERE,
   SHOW_MAP,
+  UBER_LINK,
   VENUE_ADDRESS,
   VENUE_ADDRESS_2,
   VENUE_NAME
 } = MapStrings;
-
-const BELL_MUSEUM_TEL_LINK = `tel:${CONTACT_NUMBER}`;
-const UBER_LINK =
-  'https://m.uber.com/ul/?action=setPickup&client_id=WQvddpr5mKEbJ_eFl1uvVOQvi_LCEPWe&pickup=my_location&dropoff[formatted_address]=Bell%20Museum%2C%20Larpenteur%20Avenue%20West%2C%20Saint%20Paul%2C%20MN%2C%20USA&dropoff[latitude]=44.991158&dropoff[longitude]=-93.187898';
-const GOOGLE_MAPS_LINK = 'https://g.page/BellMuseum?share';
 
 const Contact: React.SFC = () => (
   <section>
@@ -79,11 +76,7 @@ const Contact: React.SFC = () => (
               </Row>
               <Row>
                 <Col>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={BELL_MUSEUM_TEL_LINK}
-                  >
+                  <a target="_blank" rel="noopener noreferrer" href={TEL_LINK}>
                     <p>{CONTACT_NUMBER}</p>
                   </a>
                 </Col>

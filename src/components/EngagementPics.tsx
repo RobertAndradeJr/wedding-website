@@ -1,5 +1,5 @@
 import React from 'react';
-import { EngagementPicsStrings, captions } from './Strings';
+import { EngagementPicsStrings, captions, shrekGreen } from './Strings';
 import UseImageLoader from '../utils/UseImageLoader';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Carousel from 'react-bootstrap/Carousel';
 
 const { SUBTITLE, TITLE } = EngagementPicsStrings;
-const shrekGreen = '#589b00';
+
 const EngagementPics: React.SFC = () => {
   const items = UseImageLoader();
 
