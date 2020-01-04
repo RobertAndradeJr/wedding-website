@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 
 const { EASIER_THAN_YOU_THINK } = MapStrings;
 
-const Directions: React.SFC = () => (
+const Directions: React.FC = () => (
   <Container as="section" className="text-center mb-5">
     <Row>
       <Col>

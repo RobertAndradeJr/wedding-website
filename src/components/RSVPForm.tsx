@@ -21,7 +21,7 @@ const RSVPForm: React.FC = () => {
     stopPropagation: () => void;
   }): void => {
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
+    if (!form.checkValidity()) {
       event.preventDefault();
       event.stopPropagation();
     }

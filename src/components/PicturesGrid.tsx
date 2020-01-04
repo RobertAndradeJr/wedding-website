@@ -14,7 +14,7 @@ const PicturesGrid: React.FC = () => {
   const res = UseFetch(INSTAGRAM_QUERY);
   const pictures = res.data;
   const hasErrors = isEmpty(res.error);
-  return hasErrors === false ? (
+  return !hasErrors ? (
     <Error />
   ) : !pictures.length ? (
     <Fallback />

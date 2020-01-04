@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { RsvpString } from './Strings';
 
-const RSVP: React.SFC = () => (
+const RSVP: React.FC = () => (
   <Container as="section" id="rsvp">
     <Row className="text-center">
       <Col>

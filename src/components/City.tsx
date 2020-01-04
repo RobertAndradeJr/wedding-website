@@ -8,7 +8,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 
 const { CITY_NAME, CITY_MOTTO } = CityStrings;
 
-const City: React.SFC = () => (
+const City: React.FC = () => (
   <Container className="text-center parallax city" id="glimpseofthecity" fluid>
     <Jumbotron className="video-content">
       <Row>

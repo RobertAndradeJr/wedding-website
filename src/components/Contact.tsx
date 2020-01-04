@@ -22,7 +22,7 @@ const {
   VENUE_NAME
 } = MapStrings;
 
-const Contact: React.SFC = () => (
+const Contact: React.FC = () => (
   <section>
     <Container id="directions" className="text-center">
       <Row>

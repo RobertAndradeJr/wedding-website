@@ -9,7 +9,7 @@ import Figure from 'react-bootstrap/Figure';
 
 const { DESCRIPTION, TITLE } = HowWeMetStrings;
 
-const HowWeMet: React.SFC = () => (
+const HowWeMet: React.FC = () => (
   <Container as="section" id="howwemet" className="text-center">
     <Row>
       <Col>

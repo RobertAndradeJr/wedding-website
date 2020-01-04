@@ -19,7 +19,7 @@ export const isValid = (event: {
   stopPropagation: () => void;
 }): boolean => {
   const form = event.currentTarget;
-  if (form.checkValidity() === false) {
+  if (!form.checkValidity()) {
     event.preventDefault();
     event.stopPropagation();
   }

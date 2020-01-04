@@ -8,7 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const { SUBTITLE, TITLE } = EngagementPicsStrings;
 
-const EngagementPics: React.SFC = () => {
+const EngagementPics: React.FC = () => {
   const items = UseImageLoader();
 
   return (

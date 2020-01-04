@@ -12,7 +12,7 @@ import Col from 'react-bootstrap/Col';
 const { TITLE, AUTHOR, NOTE } = FooterStrings;
 const { HASHTAG_LINK } = InstagramPicsStrings;
 
-const Footer: React.SFC = () => (
+const Footer: React.FC = () => (
   <Container as="footer" id="footer" className="text-center" fluid>
     <Row>
       <Col>

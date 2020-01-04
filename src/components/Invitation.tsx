@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import { InvitationStrings } from './Strings';
 const { TITLE } = InvitationStrings;
 
-const Invitation: React.SFC = () => (
+const Invitation: React.FC = () => (
   <Container as="section" className="text-center" id="invitation">
     <Row>
       <Col>

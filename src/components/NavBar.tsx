@@ -11,7 +11,7 @@ import removeActiveClasses from '../utils/RemoveActiveClasses';
 
 const { buttonLabels } = NavStrings;
 
-export const NavBar: React.SFC = () => {
+export const NavBar: React.FC = () => {
   const scroll = UseScrollSpy(50);
   const [open, setOpen] = useState(false);
   return (

@@ -7,7 +7,7 @@ import SheepAnimation from './animations/SheepAnimation';
 
 const { error, sub, description, buttonText } = errorStrings;
 
-export const Error: React.SFC = () => (
+export const Error: React.FC = () => (
   <Container className="error border-rounded">
     <Row>
       <Col>

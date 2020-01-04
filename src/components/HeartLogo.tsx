@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const HeartLogo: React.SFC = () => (
+export const HeartLogo: React.FC = () => (
   <svg
     height="16"
     width="16"

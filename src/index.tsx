@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './custom.scss'
+import './custom.scss';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 import App from './App';

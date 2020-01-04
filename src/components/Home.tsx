@@ -6,7 +6,7 @@ import City from './City';
 import HowWeMet from './HowWeMet';
 import Directions from './Directions';
 
-export const Home: React.SFC = () => {
+export const Home: React.FC = () => {
   useEffect(() => {
     const location = window.location.hash;
     const scrollTo = document.getElementById(location.replace(/#/, ''));
