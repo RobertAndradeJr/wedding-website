@@ -84,7 +84,7 @@ export const EngagementPicsStrings = {
 };
 
 export const EventsListStrings = {
-  TITLE: 'Events Poop',
+  TITLE: 'Events',
   DATE: 'October 31st',
   buttonText: 'Close',
   CEREMONY: {
