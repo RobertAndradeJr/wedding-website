@@ -44,7 +44,13 @@ export const NavBar: React.FC = () => {
           componentTag={Nav}
         >
           {buttonLabels.left.map(link => (
-            <Nav.Link as={Link} key={link} eventKey={link} to={localLink(link)}>
+            <Nav.Link
+              as={Link}
+              key={link}
+              eventKey={link}
+              to={localLink(link)}
+              active={false}
+            >
               {link}
             </Nav.Link>
           ))}
