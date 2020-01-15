@@ -5,9 +5,11 @@ import EventsList from './EventsList';
 import City from './City';
 import HowWeMet from './HowWeMet';
 import Directions from './Directions';
+import removeActiveClasses from '../utils/RemoveActiveClasses';
 
 export const Home: React.FC = () => {
   useEffect(() => {
+    removeActiveClasses();
     const location = window.location.hash;
     const scrollTo = document.getElementById(location.replace(/#/, ''));
     scrollTo !== null &&
