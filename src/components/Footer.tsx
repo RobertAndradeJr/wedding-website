@@ -17,7 +17,7 @@ const Footer: React.FC = () => (
     <Row>
       <Col>
         <a target="_blank" rel="noopener noreferrer" href={HASHTAG_LINK}>
-          {Hashtag}
+          #{Hashtag}
         </a>
       </Col>
     </Row>
