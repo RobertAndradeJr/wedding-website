@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Scrollspy from 'react-scrollspy';
 import { NavStrings } from './Strings';
 import UseScrollSpy from '../utils/UseScrollSpy';
-import HeartLogo from './HeartLogo';
+import HeartLogo from './icons/HeartLogo';
 import { linkifyAll, localLink, externalLink } from '../utils/StringHelpers';
 import removeActiveClasses from '../utils/RemoveActiveClasses';
 

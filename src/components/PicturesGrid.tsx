@@ -11,25 +11,26 @@ import UseFetch from '../utils/UseDataFetch';
 const { INSTAGRAM_QUERY, viewMore } = InstagramPicsStrings;
 
 const PicturesGrid: React.FC = () => {
-  const res = UseFetch(INSTAGRAM_QUERY);
-  const pictures = res.data;
-  const hasErrors = isEmpty(res.error);
-  return !hasErrors ? (
+  const { data, error } = UseFetch(INSTAGRAM_QUERY);
+  return !isEmpty(error) ? (
     <Error />
-  ) : !pictures.length ? (
+  ) : !data.length ? (
     <Fallback />
   ) : (
     <Row>
-      {pictures
+      {data
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         .filter((pic: any) => pic !== undefined)
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         .map((pic: any) => {
-          const link = `https://www.instagram.com/p/${pic.node.shortcode}/`;
-          const id = pic.node.id;
-          const thumb = pic.node.thumbnail_resources[2].src;
-          const caption =
-            pic?.node?.edge_media_to_caption?.edges[0]?.node?.text || '';
+          const {
+            // eslint-disable-next-line @typescript-eslint/camelcase
+            node: { shortcode, id, thumbnail_resources, edge_media_to_caption }
+          } = pic;
+          const link = `https://www.instagram.com/p/${shortcode}/`;
+          // eslint-disable-next-line @typescript-eslint/camelcase
+          const thumb = thumbnail_resources[2].src;
+          const caption = edge_media_to_caption?.edges[0]?.node?.text || '';
           const captionLength = 140;
           const trimCaption = (): string => {
             if (!caption) {

@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Figure from 'react-bootstrap/Figure';
 
 const { DESCRIPTION, TITLE } = HowWeMetStrings;
+const { Robert, Mandi } = altTitles;
 
 const HowWeMet: React.FC = () => (
   <Container as="section" id="howwemet" className="text-center">
@@ -22,14 +23,14 @@ const HowWeMet: React.FC = () => (
       </Col>
       <Col sm={{ span: 6, order: 2 }} lg={{ order: 1 }}>
         <Figure>
-          <Figure.Image src={HowWeMetMandi} alt={altTitles.Mandi} />
-          <Figure.Caption>{altTitles.Mandi}</Figure.Caption>
+          <Figure.Image src={HowWeMetMandi} alt={Mandi} />
+          <Figure.Caption>{Mandi}</Figure.Caption>
         </Figure>
       </Col>
       <Col sm={{ span: 6, order: 3 }} lg={{ order: 3 }}>
         <Figure>
-          <Figure.Image src={HowWeMetRobert} alt={altTitles.Robert} />
-          <Figure.Caption>{altTitles.Robert}</Figure.Caption>
+          <Figure.Image src={HowWeMetRobert} alt={Robert} />
+          <Figure.Caption>{Robert}</Figure.Caption>
         </Figure>
       </Col>
     </Row>

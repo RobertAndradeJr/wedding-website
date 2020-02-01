@@ -10,7 +10,7 @@ const UseFetch = (url: string): InstagramResponse => {
   const [error, setError] = useState({});
   useEffect(() => {
     const abortController = new AbortController();
-    const signal = abortController.signal;
+    const { signal } = abortController;
     const opts = { signal };
     fetch(url, opts)
       .then(res => res.json())

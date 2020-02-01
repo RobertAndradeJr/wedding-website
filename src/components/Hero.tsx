@@ -7,8 +7,10 @@ import UseCountdown from '../utils/UseCountdown';
 import Container from 'react-bootstrap/Container';
 import DownArrows from './animations/DownArrows';
 
-const { detail, title } = HomeStrings;
-const { WEDDING_DATE, WEDDING_LOCATION } = detail;
+const {
+  detail: { WEDDING_DATE, WEDDING_LOCATION },
+  title
+} = HomeStrings;
 const date = CountdownStrings.WEDDING_DATE;
 const SUBTITLE = `${WEDDING_DATE} · ${WEDDING_LOCATION}`;
 
