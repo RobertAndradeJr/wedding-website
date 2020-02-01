@@ -2,11 +2,12 @@ import React from 'react';
 
 export const MapIcon: React.FC = () => (
   <svg
-    className="inline my-1 mr-1"
+    className="inline mr-1"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="18"
-    height="18"
+    viewBox="0 0 22 22"
+    width="12"
+    height="12"
+    style={{ marginTop: -5 }}
   >
     <path
       style={{ fill: '#fff' }}
