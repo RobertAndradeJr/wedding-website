@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const importAll = (r: any): never[] => r.keys().map(r);
+const importAll = (r: __WebpackModuleApi.RequireContext): any =>
+  r.keys().map(r);
 
 const UseImageLoader = (): string[] => {
   const [items, setItems] = useState([]);
