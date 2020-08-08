@@ -3,6 +3,29 @@ export const altTitles = {
   Mandi: 'Mandi (they/them)'
 };
 
+export const FAQS = [
+  'Where is the ceremony?',
+  'Where is the reception?',
+  'What time should I arrive?',
+  'Do I have to mail back my RSVP or can I RSVP online?',
+  'When should I RSVP by?',
+  'What is the dress code for your wedding?',
+  'Are there any colours you would prefer me not to wear?',
+  'Will there be a shuttle to and/or from the hotel?',
+  'Have you reserved hotel room blocks?',
+  'Are there any local places you’d recommend I visit while I’m in town?',
+  'Is there parking available near the ceremony and reception venues?',
+  'Can I bring a plus one?',
+  'Can I bring my children?',
+  'Will the ceremony be taking place indoors or outdoors?',
+  'What type of food will be served?',
+  'Will there be vegan/vegetarian/gluten-free food options?',
+  'Where are you registered?',
+  'Can I take pictures and/or post photos of your wedding on social media?',
+  'What time is the reception scheduled to end?',
+  'Is there someone I can contact if I have any other questions about the wedding?'
+];
+
 export const captions = [
   'Somebody once told me the world is gonna roll me',
   "I ain't the sharpest tool in the shed",
@@ -84,7 +107,7 @@ export const EngagementPicsStrings = {
 };
 
 export const EventsListStrings = {
-  TITLE: 'Events',
+  TITLE: 'VIPs',
   DATE: 'October 31st',
   buttonText: 'Close',
   CEREMONY: {
@@ -145,6 +168,7 @@ export const Hashtag = 'xoloitzcuintli';
 export const InstaLink = `https://www.instagram.com/explore/tags/${Hashtag}`;
 
 export const InstagramPicsStrings = {
+  TITLE: 'Social',
   PICTURE_WORTH_THOUSAND_WORDS: 'A picture is worth a thousand words!',
   HELP_US: 'Help us capture the moment, tag your photos with the hashtag: ',
   HASHTAG_LINK: `#${Hashtag}`,
@@ -154,7 +178,7 @@ export const InstagramPicsStrings = {
 
 export const InvitationStrings = {
   GETTING_HITCHED: 'We are getting hitched',
-  TITLE: 'Please join us for a night of fun festivities'
+  TITLE: 'Wedding Updates'
 };
 
 export const HotelStrings = {
@@ -162,7 +186,7 @@ export const HotelStrings = {
 };
 
 export const registryStrings = {
-  title: 'yeet'
+  TITLE: 'Registry'
 };
 
 export const MapStrings = {
@@ -184,16 +208,24 @@ export const MapStrings = {
     'https://m.uber.com/ul/?action=setPickup&client_id=WQvddpr5mKEbJ_eFl1uvVOQvi_LCEPWe&pickup=my_location&dropoff[formatted_address]=Bell%20Museum%2C%20Larpenteur%20Avenue%20West%2C%20Saint%20Paul%2C%20MN%2C%20USA&dropoff[latitude]=44.991158&dropoff[longitude]=-93.187898'
 };
 
+export const RsvpString = 'FAQ';
+
 export const NavStrings = {
   titleText: 'Robert & Mandi',
   buttonLabels: {
-    left: ['How We Met', 'Events', 'Glimpse of the city', 'Directions'],
-    right: ['Engagement', 'Social', 'Hotel', 'Registry', 'RSVP']
+    left: [
+      InvitationStrings.TITLE,
+      HowWeMetStrings.TITLE,
+      EventsListStrings.TITLE
+    ],
+    right: [
+      EngagementPicsStrings.TITLE,
+      InstagramPicsStrings.TITLE,
+      registryStrings.TITLE,
+      RsvpString
+    ]
   }
 };
-
-export const RsvpString = 'RSVP';
-
 export const shrekGreen = '589b00';
 export const TEL_LINK = `tel:${MapStrings.CONTACT_NUMBER}`;
 export const personalWebsite = 'https://robertandradejr.dev';

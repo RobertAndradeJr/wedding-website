@@ -11,7 +11,11 @@ const { DESCRIPTION, TITLE } = HowWeMetStrings;
 const { Robert, Mandi } = altTitles;
 
 const HowWeMet: React.FC = () => (
-  <Container as="section" id="howwemet" className="text-center">
+  <Container
+    as="section"
+    id="howwemet"
+    className="text-center bg-danger rounded-sm"
+  >
     <Row>
       <Col>
         <h3 className="display-4">{TITLE}</h3>

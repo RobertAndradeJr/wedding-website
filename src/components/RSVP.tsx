@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Container from 'react-bootstrap/Container';
-import RSVPForm from './RSVPForm';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { RsvpString } from './Strings';
+import { RsvpString, FAQS, captions } from './Strings';
 
 const RSVP: React.FC = () => (
   <Container as="section" id="rsvp">
@@ -13,8 +12,15 @@ const RSVP: React.FC = () => (
       </Col>
     </Row>
     <Row>
-      <Col md={{ span: 8, offset: 2 }} className="bg-warning p-5 rounded-sm">
-        <RSVPForm />
+      <Col md={{ span: 8, offset: 2 }} className="bg-info p-5 rounded-sm">
+        <ul>
+          {FAQS.map((question, index) => (
+            <Fragment key={question}>
+              <li>{question}</li>
+              <li className="ml-2 list-unstyled">{captions[index]}</li>
+            </Fragment>
+          ))}
+        </ul>
       </Col>
     </Row>
   </Container>

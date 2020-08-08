@@ -16,3 +16,9 @@ export const localLink = (string: string): string =>
 
 export const externalLink = (string: string): string =>
   addSlash(stringToLink(string));
+
+export const createId = (string: string): string =>
+  string
+    .split(' ')
+    .join('')
+    .toLocaleLowerCase();
