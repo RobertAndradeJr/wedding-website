@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import removeActiveClasses from './RemoveActiveClasses';
 
-const UseSmoothScroll = (): void => {
+export default (): void => {
   const scrollTarget = window.location.hash;
   useEffect(() => {
     removeActiveClasses();
@@ -12,5 +12,3 @@ const UseSmoothScroll = (): void => {
       });
   }, [scrollTarget]);
 };
-
-export default UseSmoothScroll;

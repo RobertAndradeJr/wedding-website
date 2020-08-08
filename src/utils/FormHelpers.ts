@@ -1,7 +1,7 @@
 import { findKey } from 'lodash';
 
-export const formInputFactory = (labels: string[], obj: {}): Array<{}> => {
-  return labels.map((label: string) => {
+export const formInputFactory = (labels: string[], obj: {}): Array<{}> =>
+  labels.map((label: string) => {
     const key = findKey(obj, v => v === label);
     return {
       type: 'text',
@@ -11,7 +11,6 @@ export const formInputFactory = (labels: string[], obj: {}): Array<{}> => {
       controlId: `validationCustom${key}`
     };
   });
-};
 
 export const isValid = (event: {
   currentTarget: HTMLFormElement;

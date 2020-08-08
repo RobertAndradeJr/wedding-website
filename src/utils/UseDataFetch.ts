@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { InstagramResponse, InstaEdge } from '../types/types';
 
-const UseFetch = (url: string): InstagramResponse => {
+export default (url: string): InstagramResponse => {
   const [data, setData] = useState([]);
   const [error, setError] = useState({});
   useEffect(() => {
@@ -44,5 +44,3 @@ const UseFetch = (url: string): InstagramResponse => {
 
   return { data, error };
 };
-
-export default UseFetch;

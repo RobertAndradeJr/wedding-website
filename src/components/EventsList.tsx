@@ -26,7 +26,11 @@ const EventsList: React.FC = () => {
   const handleClose = (): void => setShow(false);
   const handleShow = (): void => setShow(true);
   return (
-    <Container id="events" as="section" className="text-center">
+    <Container
+      id={TITLE.toLowerCase()}
+      as="section"
+      className="text-center bg-warning rounded-sm"
+    >
       <Row>
         <Col>
           <h3 className="display-4 my-5">{TITLE}</h3>

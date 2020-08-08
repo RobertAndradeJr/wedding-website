@@ -1,13 +1,12 @@
 $base: 0.5rem;
 
 .arrow-container {
- display: flex;
- justify-content: center;
- align-items: center;
- margin-top: 1rem;
- height: 75px;
- width: 100%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  height: 75px;
+  width: 100%;
 }
 
 .chevron {
@@ -30,39 +29,39 @@ $base: 0.5rem;
 
 .chevron:before,
 .chevron:after {
- content: '';
- position: absolute;
- top: 0;
- height: 100%;
- width: 50%;
- background: $white;
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: $white;
 }
 
 .chevron:before {
- left: 0;
- transform: skewY(30deg);
+  left: 0;
+  transform: skewY(30deg);
 }
 
 .chevron:after {
- right: 0;
- width: 50%;
- transform: skewY(-30deg);
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
 }
 
 @keyframes move-chevron {
- 25% {
-  opacity: 1;
-	}
- 33.3% {
-  opacity: 1;
-  transform: translateY($base * 3.8);
- }
- 66.6% {
-  opacity: 1;
-  transform: translateY($base * 5.2);
- }
- 100% {
-  opacity: 0;
-  transform: translateY($base * 8) scale(0.5);
- }
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY($base * 3.8);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY($base * 5.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY($base * 8) scale(0.5);
+  }
 }

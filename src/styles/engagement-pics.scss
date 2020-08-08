@@ -1,3 +1,9 @@
+.engagement-pics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .carousel {
   min-height: 550px;
   & img {
@@ -5,7 +11,7 @@
     padding-bottom: 50px;
   }
   &-caption {
-    background: rgba(0,0,0,0.75);
+    background: rgba(0, 0, 0, 0.75);
     width: 101%;
     position: absolute;
     bottom: 0;
@@ -34,5 +40,3 @@
     }
   }
 }
-
-

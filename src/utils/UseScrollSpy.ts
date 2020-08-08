@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const UseScrollSpy = (scrollDistance = 10): boolean => {
+export default (scrollDistance = 10): boolean => {
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
@@ -19,5 +19,3 @@ const UseScrollSpy = (scrollDistance = 10): boolean => {
   }, [scroll, setScroll, scrollDistance]);
   return scroll;
 };
-
-export default UseScrollSpy;

@@ -9,14 +9,17 @@ interface HumanReadableTime {
 
 const getDays = (timeRemaining: number): number =>
   Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+
 const getHours = (timeRemaining: number): number =>
   Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
 const getMinutes = (timeRemaining: number): number =>
   Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+
 const getSeconds = (timeRemaining: number): number =>
   Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-const UseCountdown = (
+export default (
   date: string,
   options: Record<string, number> = {}
 ): HumanReadableTime => {
@@ -48,5 +51,3 @@ const UseCountdown = (
     Seconds: getSeconds(timeRemaining)
   };
 };
-
-export default UseCountdown;

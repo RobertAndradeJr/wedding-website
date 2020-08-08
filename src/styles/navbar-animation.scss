@@ -34,7 +34,7 @@
 }
 
 .navbar-toggler-icon::before {
-  content: " ";
+  content: ' ';
   transform: translate3d(0, -9px, 0);
 
   .navbar-toggler:not(.collapsed) & {
@@ -43,7 +43,7 @@
 }
 
 .navbar-toggler-icon::after {
-  content: " ";
+  content: ' ';
   transform: translate3d(0, 9px, 0);
 
   .navbar-toggler:not(.collapsed) & {

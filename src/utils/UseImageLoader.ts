@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 const importAll = (r: __WebpackModuleApi.RequireContext): any =>
   r.keys().map(r);
 
-const UseImageLoader = (): string[] => {
+export default (): string[] => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -17,5 +17,3 @@ const UseImageLoader = (): string[] => {
 
   return items;
 };
-
-export default UseImageLoader;
