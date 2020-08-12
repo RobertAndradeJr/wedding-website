@@ -6,8 +6,9 @@ import NavBar from './components/NavBar';
 import {
   EngagementPicsStrings,
   InstagramPicsStrings,
-  RsvpString,
-  registryStrings
+  RsvpStrings,
+  registryStrings,
+  FAQStrings
 } from './components/Strings';
 import { createId, addSlash } from './utils/StringHelpers';
 
@@ -16,6 +17,7 @@ const Home = lazy(() => import('./components/Home'));
 const Registry = lazy(() => import('./components/Registry'));
 const RSVP = lazy(() => import('./components/RSVP'));
 const Social = lazy(() => import('./components/Social'));
+const FAQ = lazy(() => import('./components/FAQ'));
 
 const App: React.FC = () => (
   <div className="App">
@@ -32,11 +34,15 @@ const App: React.FC = () => (
             path={addSlash(createId(InstagramPicsStrings.TITLE))}
             component={Social}
           />
-          <Route path={addSlash(createId(RsvpString))} component={RSVP} />
+          <Route
+            path={addSlash(createId(RsvpStrings.TITLE))}
+            component={RSVP}
+          />
           <Route
             path={addSlash(createId(registryStrings.TITLE))}
             component={Registry}
           />
+          <Route path={addSlash(createId(FAQStrings.TITLE))} component={FAQ} />
         </Switch>
         <Footer />
       </Router>

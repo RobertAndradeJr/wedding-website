@@ -208,7 +208,13 @@ export const MapStrings = {
     'https://m.uber.com/ul/?action=setPickup&client_id=WQvddpr5mKEbJ_eFl1uvVOQvi_LCEPWe&pickup=my_location&dropoff[formatted_address]=Bell%20Museum%2C%20Larpenteur%20Avenue%20West%2C%20Saint%20Paul%2C%20MN%2C%20USA&dropoff[latitude]=44.991158&dropoff[longitude]=-93.187898'
 };
 
-export const RsvpString = 'FAQ';
+export const RsvpStrings = {
+  TITLE: 'RSVP'
+};
+
+export const FAQStrings = {
+  TITLE: 'FAQ'
+};
 
 export const NavStrings = {
   titleText: 'Robert & Mandi',
@@ -222,7 +228,8 @@ export const NavStrings = {
       EngagementPicsStrings.TITLE,
       InstagramPicsStrings.TITLE,
       registryStrings.TITLE,
-      RsvpString
+      RsvpStrings.TITLE,
+      FAQStrings.TITLE
     ]
   }
 };
@@ -235,6 +242,7 @@ export const formStrings = {
   valid: 'Looks good!',
   fName: 'First name',
   lName: 'Last name',
+  email: 'email',
   city: 'City',
   state: 'State',
   zip: 'Zip',
