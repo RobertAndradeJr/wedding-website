@@ -32,7 +32,7 @@ const Invitation: React.FC = () => {
         <Col className="invitation__pics">
           <img
             src={changeDateFront}
-            alt="invitation illustration"
+            alt="Robert and Mandi"
             onClick={(): void => {
               handleShow();
               setActive(changeDateFront);
@@ -50,7 +50,7 @@ const Invitation: React.FC = () => {
       </Row>
       <Modal size="lg" show={show} onHide={handleClose}>
         <Modal.Body className="text-dark">
-          <img src={active} className="mw-100" />
+          <img src={active} className="mw-100" alt="zoom" />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
