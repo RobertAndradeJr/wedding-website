@@ -12,6 +12,11 @@ const RSVP: React.FC = () => (
         <h3 className="display-4 my-5">{RsvpStrings.TITLE}</h3>
       </Col>
     </Row>
+    <Row className="text-center">
+      <Col>
+        <p className="my-5">{RsvpStrings.DESCRIPTION}</p>
+      </Col>
+    </Row>
     <Row>
       <Col md={{ span: 8, offset: 2 }} className="bg-info p-5 rounded-sm">
         <RSVPForm />

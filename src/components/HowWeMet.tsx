@@ -11,11 +11,7 @@ const { DESCRIPTION, TITLE } = HowWeMetStrings;
 const { Robert, Mandi } = altTitles;
 
 const HowWeMet: React.FC = () => (
-  <Container
-    as="section"
-    id="howwemet"
-    className="text-center bg-danger rounded-sm"
-  >
+  <Container as="section" id="howwemet" className="text-center rounded-sm">
     <Row>
       <Col>
         <h3 className="display-4">{TITLE}</h3>
@@ -26,7 +22,7 @@ const HowWeMet: React.FC = () => (
         <p>{DESCRIPTION}</p>
       </Col>
       <Col sm={{ span: 6, order: 2 }} lg={{ order: 1 }}>
-        <Figure>
+        <Figure className="mandi">
           <Figure.Image src={HowWeMetMandi} alt={Mandi} />
           <Figure.Caption>{Mandi}</Figure.Caption>
         </Figure>
