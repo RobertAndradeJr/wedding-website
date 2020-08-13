@@ -108,27 +108,31 @@ export const EngagementPicsStrings = {
 
 export const EventsListStrings = {
   TITLE: 'VIPs',
+  DESCRIPTION:
+    'We are using the term "VIP" to describe our wedding party for gender inclusivity',
   DATE: 'October 31st',
   buttonText: 'Close',
   CEREMONY: {
-    TITLE: 'Ceremony',
-    TIME: '5-6pm',
-    DESCRIPTION: LoremIpsum
+    TITLE: 'Kayla',
+    TIME: "Mandi's VVIP",
+    DESCRIPTION: 'Kayla and Mandi became friends in college.'
   },
   COCKTAIL: {
-    TITLE: 'Cocktail Hour',
-    TIME: '6-7pm',
-    DESCRIPTION: LoremIpsum
+    TITLE: 'Erick, Krys, Marx, and Tes',
+    TIME: "Mandi's VIPs",
+    DESCRIPTION:
+      "Erick and Mandi have known each for years, as partners to Lisa and Robert. Erick & Lisa visited Robert & Mandi in Korea, and celebrated their wedding last June. Robert & Mandi look up to Krystle & Tes. Krystle is Robert's oldest cousin. Marx is Robert's brother, and fellow Pisces to Mandi."
   },
   DINNER: {
-    TITLE: 'Dinner from Chow Girls',
-    TIME: '7-8pm',
-    DESCRIPTION: LoremIpsum
+    TITLE: 'Lisa',
+    TIME: "Robert's VVIP",
+    DESCRIPTION: 'Robert and Lisa are cousins and grew up together.'
   },
   DANCE: {
-    TITLE: 'Dancing the night away',
-    TIME: '8-midnight',
-    DESCRIPTION: LoremIpsum
+    TITLE: 'Aaron, Jess, Julissa, and Mike',
+    TIME: "Robert's VIPs",
+    DESCRIPTION:
+      "Aaron and Robert became friends in college. Jess is Robert's cousin and Mike is her husband (and Robert's favorite cousin). Julissa is Robert's sister and owner of a cool pink gaming chair."
   },
   DRESS_CODE: {
     TITLE: 'Dress Code',
@@ -209,7 +213,8 @@ export const MapStrings = {
 };
 
 export const RsvpStrings = {
-  TITLE: 'RSVP'
+  TITLE: 'Email List',
+  DESCRIPTION: 'Sign up to be notified whenever we have more to share.'
 };
 
 export const FAQStrings = {

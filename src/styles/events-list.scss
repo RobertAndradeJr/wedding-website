@@ -5,3 +5,20 @@
     }
   }
 }
+
+.invitation__pics {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  img {
+    margin-top: 5%;
+    flex-basis: 48%;
+    // max-width: 40%;
+  }
+}
+
+.modal-body {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+}
