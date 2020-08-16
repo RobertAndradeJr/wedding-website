@@ -8,7 +8,7 @@ export const Fallback: React.FC = () => (
   <Container className="text-center">
     <Row>
       <Col>
-        <Spinner animation="grow" variant="warning" />
+        <Spinner animation="grow" variant="primary" />
       </Col>
     </Row>
   </Container>

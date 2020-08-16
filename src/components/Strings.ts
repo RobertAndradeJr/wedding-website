@@ -2,28 +2,52 @@ export const altTitles = {
   Robert: 'Robert (he/him)',
   Mandi: 'Mandi (they/them)'
 };
+export const Hashtag = 'xoloitzcuintli';
+
+export const InstaLink = `https://www.instagram.com/explore/tags/${Hashtag}`;
 
 export const FAQS = [
-  'Where is the ceremony?',
-  'Where is the reception?',
-  'What time should I arrive?',
-  'Do I have to mail back my RSVP or can I RSVP online?',
-  'When should I RSVP by?',
-  'What is the dress code for your wedding?',
-  'Are there any colours you would prefer me not to wear?',
-  'Will there be a shuttle to and/or from the hotel?',
-  'Have you reserved hotel room blocks?',
-  'Are there any local places you’d recommend I visit while I’m in town?',
-  'Is there parking available near the ceremony and reception venues?',
-  'Can I bring a plus one?',
-  'Can I bring my children?',
-  'Will the ceremony be taking place indoors or outdoors?',
-  'What type of food will be served?',
-  'Will there be vegan/vegetarian/gluten-free food options?',
-  'Where are you registered?',
-  'Can I take pictures and/or post photos of your wedding on social media?',
-  'What time is the reception scheduled to end?',
-  'Is there someone I can contact if I have any other questions about the wedding?'
+  {
+    question: 'Where is the ceremony?',
+    answer:
+      'At the Bell Museum planetarium in St. Paul, Minnesota. It will be a smaller ceremony with fewer than 20 people present.'
+  },
+
+  {
+    question: 'Have you reserved hotel room blocks?',
+
+    answer: `Since we're no longer having guests and borders are literally closed due to COVID-19, we didn't reserve hotel room blocks. We hope to do this in the future when a reception/celebration gets rescheduled.`
+  },
+  {
+    question: 'When should I RSVP by?',
+    answer: `You do not need to RSVP at this time. Please sign up for future Updates at the "Email List" tab of our website. If you have questions, please contact Mandi or Robert.`
+  },
+  {
+    question: 'When is the ceremony?',
+    answer: `The ceremony is on Saturday 10/31/20 at 6:30pm. Please feel free to check out the countdown featured on our wedding website home page!`
+  },
+  {
+    question: 'Will the ceremony be livestreamed?',
+    answer: `We do not plan to livestream the ceremony. If this changes, you will receive an Email Update if you have signed up for the Email List.`
+  },
+  {
+    question: 'Will you have pictures of the ceremony?',
+    answer: `<a href="https://www.facebook.com/chantellestoutcreations/">Chantelle Stout Creations</a> will be the photographer and videographer on our wedding day. Chantelle is the photographer, and her husband Isaiah is the videographer. Please check out our wedding website after 10/31/20 to see these photos and videos!`
+  },
+  {
+    question: 'Will the ceremony be taking place indoors or outdoors?',
+    answer: `The small ceremony will take place indoors. It will be inside the planetarium. Everyone present will be wearing face masks and stand 6 feet apart for social distancing practices & safety.`
+  },
+  {
+    question:
+      'Can I take pictures and/or post photos of your wedding on social media?',
+    answer: `We welcome any contributions to our wedding hashtag, either memories or selfies of you & family celebrating on the wedding day or leading up to it. Since there is a pandemic, we are thinking of creative ways to celebrate together virtually & safely. Our wedding hashtag <a href="${InstaLink}">#${Hashtag}</a>`
+  },
+  {
+    question:
+      'Is there someone I can contact if I have any other questions about the wedding?',
+    answer: `Please email Mandi at <a href="mailto: amanda.e.holst@gmail.com">amanda.e.holst@gmail.com</a> if you have any questions.`
+  }
 ];
 
 export const captions = [
@@ -167,9 +191,6 @@ export const HowWeMetStrings = {
   DESCRIPTION:
     "Back in spring of 2007 we met for the first time in the halls of Simley High School, our mutual friend Jess introduced us in front of our lockers. We instantly were friends because Robert made Mandi laugh. In the summer, we started dating & spent the rest of our high school years as a couple. We didn't plan to live in the same dorms freshman year of college, but were miraculously both placed at Sanford Hall. Robert studied US History, French, and Korean while Mandi studied architecture & Spanish at the University of MN. As we graduated in 2014, we made plans to go to South Korea to teach ESL in public schools and were again miraculously placed in the same city, Gwangju, in neighborhoods only 10 minutes walking distance apart. After a couple of wonderful years, we returned to Minnesota and have since been working on our careers. 13 years after first meeting, we can't wait to get married & start the next chapter of our lives with our beloved dog Lola. Mandi plans to go to grad school for social work and Robert wants to code in React & go to school for computer science."
 };
-
-export const Hashtag = 'xoloitzcuintli';
-export const InstaLink = `https://www.instagram.com/explore/tags/${Hashtag}`;
 
 export const InstagramPicsStrings = {
   TITLE: 'Social',

@@ -2,25 +2,28 @@ import React, { Fragment } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FAQStrings, FAQS, captions } from './Strings';
+import { FAQStrings, FAQS } from './Strings';
 
 const FAQ: React.FC = () => (
-  <Container as="section" id="rsvp">
+  <Container as="section" id="faq">
     <Row className="text-center">
       <Col>
         <h3 className="display-4 my-5">{FAQStrings.TITLE}</h3>
       </Col>
     </Row>
     <Row>
-      <Col md={{ span: 8, offset: 2 }} className="bg-info p-5 rounded-sm">
-        <ul>
-          {FAQS.map((question, index) => (
-            <Fragment key={question}>
-              <li>{question}</li>
-              <li className="ml-2 list-unstyled">{captions[index]}</li>
+      <Col className="rounded-sm faqs">
+        <ol>
+          {FAQS.map(({ question, answer }, index) => (
+            <Fragment key={index}>
+              <li className="question">{question}</li>
+              <li
+                dangerouslySetInnerHTML={{ __html: answer }}
+                className="list-unstyled answer"
+              />
             </Fragment>
           ))}
-        </ul>
+        </ol>
       </Col>
     </Row>
   </Container>

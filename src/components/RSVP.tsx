@@ -18,7 +18,7 @@ const RSVP: React.FC = () => (
       </Col>
     </Row>
     <Row>
-      <Col md={{ span: 8, offset: 2 }} className="bg-info p-5 rounded-sm">
+      <Col md={{ span: 8, offset: 2 }} className="p-5 rounded-sm rsvp-form">
         <RSVPForm />
       </Col>
     </Row>

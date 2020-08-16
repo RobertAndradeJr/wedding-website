@@ -18,8 +18,8 @@ export const NavBar: React.FC = () => {
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg={scroll || open ? 'warning' : ''}
-      variant={scroll || open ? 'light' : 'dark'}
+      bg={scroll || open ? 'danger' : ''}
+      variant={scroll || open ? 'dark' : 'light'}
       fixed="top"
       id="navbar"
       onSelect={removeActiveClasses}

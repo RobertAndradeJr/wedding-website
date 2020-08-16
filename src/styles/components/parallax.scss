@@ -1,20 +1,21 @@
 .parallax {
   &.bell-museum {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('../assets/MandiRobert-11.jpg');
+      url('../../assets/MandiRobert-11.jpg');
     background-size: contain;
   }
   &.city {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('../assets/msp.gif');
+      url('../../assets/msp.gif');
   }
   &.hero {
     height: 98vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('../assets/engagement_photo.jpg');
+      url('../../assets/engagement_photo.jpg');
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    color: $beige;
   }
 
   /* Create the parallax scrolling effect */
