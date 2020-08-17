@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Scrollspy from 'react-scrollspy';
 import { NavStrings } from './Strings';
-import UseScrollSpy from '../utils/UseScrollSpy';
 import HeartLogo from './icons/HeartLogo';
 import { linkifyAll, localLink, externalLink } from '../utils/StringHelpers';
 import removeActiveClasses from '../utils/RemoveActiveClasses';
@@ -12,14 +11,13 @@ import removeActiveClasses from '../utils/RemoveActiveClasses';
 const { buttonLabels } = NavStrings;
 
 export const NavBar: React.FC = () => {
-  const scroll = UseScrollSpy(50);
   const [open, setOpen] = useState(false);
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg={scroll || open ? 'danger' : ''}
-      variant={scroll || open ? 'dark' : 'light'}
+      bg="danger"
+      variant="dark"
       fixed="top"
       id="navbar"
       onSelect={removeActiveClasses}
