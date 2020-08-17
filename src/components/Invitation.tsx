@@ -8,6 +8,7 @@ import { createId } from '../utils/StringHelpers';
 import changeDateFront from '../assets/changdatefront.jpg';
 import changeDateBack from '../assets/changedateback.jpg';
 import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
 const { TITLE } = InvitationStrings;
 
 const Invitation: React.FC = () => {
@@ -25,12 +26,13 @@ const Invitation: React.FC = () => {
     >
       <Row>
         <Col>
-          <h2 className="display-4">{TITLE}</h2>
+          <h2 className="display-4 my-4">{TITLE}</h2>
         </Col>
       </Row>
       <Row>
-        <Col className="invitation__pics">
-          <img
+        <Col lg="6">
+          <Image
+            className="mw-100 my-3"
             src={changeDateFront}
             alt="Robert and Mandi"
             onClick={(): void => {
@@ -38,7 +40,10 @@ const Invitation: React.FC = () => {
               setActive(changeDateFront);
             }}
           />
-          <img
+        </Col>
+        <Col lg="6">
+          <Image
+            className="mw-100 my-3"
             src={changeDateBack}
             alt="invitation illustration"
             onClick={(): void => {
@@ -53,7 +58,7 @@ const Invitation: React.FC = () => {
           <img src={active} className="mw-100" alt="zoom" />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleClose}>
             Close
           </Button>
         </Modal.Footer>

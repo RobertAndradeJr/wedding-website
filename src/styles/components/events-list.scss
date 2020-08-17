@@ -17,8 +17,17 @@
   }
 }
 
+.modal-content {
+  background-color: $red;
+}
 .modal-body {
-  background-color: darkgray;
+  padding-top: 4em;
+  background-color: $red;
   display: flex;
   justify-content: center;
+}
+
+.modal-footer {
+  background-color: $red;
+  border: none;
 }
