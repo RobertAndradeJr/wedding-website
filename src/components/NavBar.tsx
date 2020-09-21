@@ -54,16 +54,22 @@ export const NavBar: React.FC = () => {
           ))}
         </Scrollspy>
         <Nav className="ml-auto">
-          {buttonLabels.right.map(link => (
-            <Nav.Link
-              as={Link}
-              eventKey={link}
-              key={link}
-              to={externalLink(link)}
-            >
-              {link}
-            </Nav.Link>
-          ))}
+          {buttonLabels.right.map(link =>
+            link === 'Registry' ? (
+              <Nav.Link href="https://www.myregistry.com/wedding-registry/mandi-holst-and-robert-andrade-minneapolis-mn/2531202">
+                {link}
+              </Nav.Link>
+            ) : (
+              <Nav.Link
+                as={Link}
+                eventKey={link}
+                key={link}
+                to={externalLink(link)}
+              >
+                {link}
+              </Nav.Link>
+            )
+          )}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
