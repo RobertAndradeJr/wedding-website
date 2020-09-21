@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Scrollspy from 'react-scrollspy';
-import { NavStrings } from './Strings';
+import { NavStrings, registryStrings } from './Strings';
 import HeartLogo from './icons/HeartLogo';
 import { linkifyAll, localLink, externalLink } from '../utils/StringHelpers';
 import removeActiveClasses from '../utils/RemoveActiveClasses';
@@ -56,9 +56,7 @@ export const NavBar: React.FC = () => {
         <Nav className="ml-auto">
           {buttonLabels.right.map(link =>
             link === 'Registry' ? (
-              <Nav.Link href="https://www.myregistry.com/wedding-registry/mandi-holst-and-robert-andrade-minneapolis-mn/2531202">
-                {link}
-              </Nav.Link>
+              <Nav.Link href={registryStrings.URL}>{link}</Nav.Link>
             ) : (
               <Nav.Link
                 as={Link}
