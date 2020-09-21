@@ -17,9 +17,9 @@ const FAQ: React.FC = () => (
           {FAQS.map(({ question, answer }, index) => (
             <Fragment key={index}>
               <li className="question">{question}</li>
-              <li
+              <p
                 dangerouslySetInnerHTML={{ __html: answer }}
-                className="list-unstyled answer"
+                className="answer"
               />
             </Fragment>
           ))}
